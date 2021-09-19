@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- jqueryを -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link href="./dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./dist/jquery.vmap.js"></script>
+  <script type="text/javascript" src="./dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+
+  <title>Top</title>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/new_header.png" alt="旅する衣" /></a>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+      <div id="navArea">
+        <nav>
+          <div class="inner">
+            <ul>
+              <li class="info"><a href="#">■ NEW INFORMATION</a></li>
+              <li class="info2"><a href="#">■ NEW INFORMATION</a></li>
+
+              <li class="about"><a href="#">■ ABOUT US</a></li>
+              <li class="about2"><a href="#">■ ABOUT US</a></li>
+
+              <li class="create"><a href="#">■ WHO CREATE?</a></li>
+              <li class="create2"><a href="#">■ WHO CREATE?</a></li>
+
+              <li class="contact"><a href="#">■ CONTACT US</a></li>
+              <li class="contact2"><a href="#">■ CONTACT US</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="toggle_btn1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="toggle_btn2">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- <div id="mask"></div> -->
+      </div>
+    </header>
+
+    <!--ここからコンテンツ-->
+
+    <!-- サブメニュー -->
+
+    <input id="acd-check1" class="acd-check" type="checkbox">
+    <label for="acd-check1" class="acd-label">
+      <div class="triangle">
+      </div>
+      <div class="triangle1">
+      </div>
+    </label>
+
+
+    <div class="acd-content">
+      <ul>
+        <li>
+          <h2>北アメリカ</h2>
+
+          <label for="trigger" class="open_btn">>アメリカ</label>
+          <label for="trigger" class="open_btn">>カナダ</label>
+          <label for="trigger" class="open_btn">>メキシコ</label>
+          <label for="trigger" class="open_btn">>キューバ</label>
+          <label for="trigger" class="open_btn">>ジャマイカ</label>
+          <label for="trigger" class="open_btn">>グアテマラ</label>
+          <label for="trigger" class="open_btn">>ホンジュラス</label>
+          <label for="trigger" class="open_btn">>エルサルバドル</label>
+          <label for="trigger" class="open_btn">>ニカラグア</label>
+          <label for="trigger" class="open_btn">>コスタリカ</label>
+          <label for="trigger" class="open_btn">>パナマ</label>
+          <label for="trigger" class="open_btn">>グリーンランド</label>
+          <label for="trigger" class="open_btn">>バハマ</label>
+          <label for="trigger" class="open_btn">>ハイチ</label>
+          <label for="trigger" class="open_btn">>ドミニカ共和国</label>
+          <label for="trigger" class="open_btn">>セントクリストファーネイビス</label>
+          <label for="trigger" class="open_btn">>アンティグア・バーブーダ</label>
+          <label for="trigger" class="open_btn">>ドミニカ</label>
+          <label for="trigger" class="open_btn">>セントルシア</label>
+          <label for="trigger" class="open_btn">>バルバドス</label>
+          <label for="trigger" class="open_btn">>グレナダ</label>
+          <label for="trigger" class="open_btn">>トリニダード・トバゴ</label>
+
+          <h2>南アメリカ</h2>
+          <label for="trigger" class="open_btn">>ベネゼエラ</label>
+          <label for="trigger" class="open_btn">>コロンビア</label>
+          <label for="trigger" class="open_btn">>エクアドル</label>
+          <label for="trigger" class="open_btn">>ペルー</label>
+          <label for="trigger" class="open_btn">>チリ</label>
+          <label for="trigger" class="open_btn">>ガイアナ</label>
+          <label for="trigger" class="open_btn">>スリナム</label>
+          <label for="trigger" class="open_btn">>仏領ギアナ</label>
+          <label for="trigger" class="open_btn">>ブラジル</label>
+          <label for="trigger" class="open_btn">>ボリビア</label>
+          <label for="trigger" class="open_btn">>パラグアイ</label>
+          <label for="trigger" class="open_btn">>ウルグアイ</label>
+          <label for="trigger" class="open_btn">>アルゼンチン</label>
+
+          <h2>オセアニア</h2>
+          <label for="trigger" class="open_btn">>オーストラリア</label>
+          <label for="trigger" class="open_btn">>パプアニューギニア</label>
+          <label for="trigger" class="open_btn">>ニュージーランド</label>
+          <label for="trigger" class="open_btn">>ソロモン諸島</label>
+          <label for="trigger" class="open_btn">>バヌアツ</label>
+          <label for="trigger" class="open_btn">>フィジー</label>
+          <label for="trigger" class="open_btn">>ニューカレドニア</label>
+        </li>
+
+        <li>
+          <h2>アジア</h2>
+          <label for="trigger" class="open_btn">>日本</label>
+          <label for="trigger" class="open_btn">>韓国</label>
+          <label for="trigger" class="open_btn">>北朝鮮</label>
+          <label for="trigger" class="open_btn">>中国</label>
+          <label for="trigger" class="open_btn">>モンゴル</label>
+          <label for="trigger" class="open_btn">>カザフスタン</label>
+          <label for="trigger" class="open_btn">>キルギス</label>
+          <label for="trigger" class="open_btn">>ウズベキスタン</label>
+          <label for="trigger" class="open_btn">>タジキスタン</label>
+          <label for="trigger" class="open_btn">>トルクメニスタン</label>
+          <label for="trigger" class="open_btn">>アフガニスタン</label>
+          <label for="trigger" class="open_btn">>パキスタン</label>
+          <label for="trigger" class="open_btn">>インド</label>
+          <label for="trigger" class="open_btn">>モルディブ</label>
+          <label for="trigger" class="open_btn">>スリランカ</label>
+          <label for="trigger" class="open_btn">>ネパール</label>
+          <label for="trigger" class="open_btn">>ブータン</label>
+          <label for="trigger" class="open_btn">>バングラディシュ</label>
+          <label for="trigger" class="open_btn">>マイアミ</label>
+          <label for="trigger" class="open_btn">>タイ</label>
+          <label for="trigger" class="open_btn">>ベトナム</label>
+          <label for="trigger" class="open_btn">>ラオス</label>
+          <label for="trigger" class="open_btn">>カンボジア</label>
+          <label for="trigger" class="open_btn">>マレーシア</label>
+          <label for="trigger" class="open_btn">>インドネシア</label>
+          <label for="trigger" class="open_btn">>フィリピン</label>
+          <label for="trigger" class="open_btn">>ティモール</label>
+          <label for="trigger" class="open_btn">>イラン</label>
+          <label for="trigger" class="open_btn">>アゼルバイジャン</label>
+          <label for="trigger" class="open_btn">>アルメニア</label>
+          <label for="trigger" class="open_btn">>ジョージア</label>
+          <label for="trigger" class="open_btn">>トルコ</label>
+          <label for="trigger" class="open_btn">>シリア</label>
+          <label for="trigger" class="open_btn">>イラク</label>
+          <label for="trigger" class="open_btn">>レバノン</label>
+          <label for="trigger" class="open_btn">>イスラエル</label>
+          <label for="trigger" class="open_btn">>ジョーダン</label>
+          <label for="trigger" class="open_btn">>キプロス</label>
+          <label for="trigger" class="open_btn">>サウジアラビア</label>
+          <label for="trigger" class="open_btn">>カタール</label>
+          <label for="trigger" class="open_btn">>アラブ首長国連邦</label>
+          <label for="trigger" class="open_btn">>オマーン</label>
+          <label for="trigger" class="open_btn">>イエメン</label>
+        </li>
+
+        <li>
+          <h2>ヨーロッパ</h2>
+          <label for="trigger" class="open_btn">>ロシア</label>
+          <label for="trigger" class="open_btn">>フィンランド</label>
+          <label for="trigger" class="open_btn">>スウェーデン</label>
+          <label for="trigger" class="open_btn">>ノルウェー</label>
+          <label for="trigger" class="open_btn">>エストニア</label>
+          <label for="trigger" class="open_btn">>ラトヴィア</label>
+          <label for="trigger" class="open_btn">>リトアニア</label>
+          <label for="trigger" class="open_btn">>ベラルーシ</label>
+          <label for="trigger" class="open_btn">>ウクライナ</label>
+          <label for="trigger" class="open_btn">>モルディブ</label>
+          <label for="trigger" class="open_btn">>ポーランド</label>
+          <label for="trigger" class="open_btn">>スロバキア</label>
+          <label for="trigger" class="open_btn">>チェコ</label>
+          <label for="trigger" class="open_btn">>ハンガリー</label>
+          <label for="trigger" class="open_btn">>ルーマニア</label>
+          <label for="trigger" class="open_btn">>ブルガリア</label>
+          <label for="trigger" class="open_btn">>ギリシャ</label>
+          <label for="trigger" class="open_btn">>マケドニア</label>
+          <label for="trigger" class="open_btn">>アルバニア</label>
+          <label for="trigger" class="open_btn">>セルビア</label>
+          <label for="trigger" class="open_btn">>ボスニア</label>
+          <label for="trigger" class="open_btn">>クロアチア</label>
+          <label for="trigger" class="open_btn">>スロベニア</label>
+          <label for="trigger" class="open_btn">>オーストリア</label>
+          <label for="trigger" class="open_btn">>ドイツ</label>
+          <label for="trigger" class="open_btn">>デンマーク</label>
+          <label for="trigger" class="open_btn">>ベルギー</label>
+          <label for="trigger" class="open_btn">>スイス</label>
+          <label for="trigger" class="open_btn">>イタリア</label>
+          <label for="trigger" class="open_btn">>マルタ諸島</label>
+          <label for="trigger" class="open_btn">>フランス</label>
+          <label for="trigger" class="open_btn">>イギリス</label>
+          <label for="trigger" class="open_btn">>アイルランド</label>
+          <label for="trigger" class="open_btn">>スペイン</label>
+          <label for="trigger" class="open_btn">>ポルトガル</label>
+        </li>
+
+        <li>
+          <h2>アフリカ</h2>
+          <label for="trigger" class="open_btn">>エジプト</label>
+          <label for="trigger" class="open_btn">>リビア</label>
+          <label for="trigger" class="open_btn">>アルジェリア</label>
+          <label for="trigger" class="open_btn">>チュニジア</label>
+          <label for="trigger" class="open_btn">>モロッコ</label>
+          <label for="trigger" class="open_btn">>モーリタニア</label>
+          <label for="trigger" class="open_btn">>マリ</label>
+          <label for="trigger" class="open_btn">>ニジェール</label>
+          <label for="trigger" class="open_btn">>チャド</label>
+          <label for="trigger" class="open_btn">>スーダン</label>
+          <label for="trigger" class="open_btn">>エリトリア</label>
+          <label for="trigger" class="open_btn">>エチオピア</label>
+          <label for="trigger" class="open_btn">>ソマリア</label>
+          <label for="trigger" class="open_btn">>ケニア</label>
+          <label for="trigger" class="open_btn">>スーダン</label>
+          <label for="trigger" class="open_btn">>中央アフリカ</label>
+          <label for="trigger" class="open_btn">>カメルーン</label>
+          <label for="trigger" class="open_btn">>ナイジェリア</label>
+          <label for="trigger" class="open_btn">>ベナン</label>
+          <label for="trigger" class="open_btn">>トーゴ</label>
+          <label for="trigger" class="open_btn">>ブルキナファソ</label>
+          <label for="trigger" class="open_btn">>ガーナ</label>
+          <label for="trigger" class="open_btn">>コートジボワール</label>
+          <label for="trigger" class="open_btn">>リベリア</label>
+          <label for="trigger" class="open_btn">>シエラレオネ</label>
+          <label for="trigger" class="open_btn">>ギニア</label>
+          <label for="trigger" class="open_btn">>セネガル</label>
+          <label for="trigger" class="open_btn">>ギニアビサウ</label>
+          <label for="trigger" class="open_btn">>ガンビア</label>
+          <label for="trigger" class="open_btn">>カーボベルデ</label>
+          <label for="trigger" class="open_btn">>サントメプリンシペ</label>
+          <label for="trigger" class="open_btn">>赤道ギニア</label>
+          <label for="trigger" class="open_btn">>ガホン</label>
+          <label for="trigger" class="open_btn">>コンゴ</label>
+          <label for="trigger" class="open_btn">>ウガンダ</label>
+          <label for="trigger" class="open_btn">>タンザニア</label>
+          <label for="trigger" class="open_btn">>ルワンダ</label>
+          <label for="trigger" class="open_btn">>ブルンジ</label>
+          <label for="trigger" class="open_btn">>アンゴラ</label>
+          <label for="trigger" class="open_btn">>ザンビア</label>
+          <label for="trigger" class="open_btn">>マラウイ</label>
+          <label for="trigger" class="open_btn">>モザンビーク</label>
+          <label for="trigger" class="open_btn">>コモロ</label>
+          <label for="trigger" class="open_btn">>マダガスカル</label>
+          <label for="trigger" class="open_btn">>セイシェル</label>
+          <label for="trigger" class="open_btn">>モーリシャス</label>
+          <label for="trigger" class="open_btn">>レユニオン</label>
+          <label for="trigger" class="open_btn">>ジンバブエ</label>
+          <label for="trigger" class="open_btn">>ボツワナ</label>
+          <label for="trigger" class="open_btn">>ナミビア</label>
+          <label for="trigger" class="open_btn">>南アフリカ</label>
+          <label for="trigger" class="open_btn">>レソト</label>
+          <label for="trigger" class="open_btn">>エスティワニ</label>
+        </li>
+
+
+        <div class="popup_wrap">
+          <input id="trigger" type="checkbox">
+          <div class="popup_overlay">
+            <label for="trigger" class="popup_trigger"></label>
+            <div class="popup_content">
+              <label for="trigger" class="close_btn">×</label>
+              <div class="pic">
+                <img src="img/megami.jpg" class="megami">
+                <a href="https://ja.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E3%81%AE%E5%A5%B3%E7%A5%9E%E5%83%8F_(%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF)"
+                  class="usa">詳細はこちら</a>
+              </div>
+              <p>あいうえおかきくけこさしすせそ
+                たちつてとなにぬねのはひふへほ
+              </p>
+              <a href="https://isenti.base.shop/" target="_blank" rel="noopener noreferrer" class="base_link">ご購入はこちら>>></a>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <!-- 世界地図 -->
+    <div id="vmap" style="
+    width: 100%;
+    height: 800px;
+    top: 80px;">
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="content_koromo">
+
+      <h2 class="midasi">旅する衣とは?<br />-Whats is TABISURU KOROMO-</h2>
+      <h2 class="midasi_white">
+        旅する衣とは?<br />-Whats is TBISURU KOROMO-
+      </h2>
+
+      <div class="content_mini">
+        <img src="img/body.png" alt="ボディ1" />
+
+        <div class="text">
+          <h2>「衣で世界を旅しよう」</h2>
+          <p>
+            このテーマを基に<br />
+            全世界の〇〇をポップに形にしていく<br />
+            ひそかに壮大なプロジェクトなのだ。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <h2 class="info_green">NEW INFORMATION</h2>
+      <h2 class="info_white">NEW INFORMATION</h2>
+    </div>
+
+    <div class="about_us">
+      <h2 class="about_green">ABOUT US</h2>
+      <h2 class="about_white">ABOUT US</h2>
+
+      <div class="content_about">
+        <div class="content_about2">
+
+          <img src="img/isenti_logo.jpg" alt="ロゴ" class="isenti_logo">
+
+          <div class="text2">
+            <p>ISENTIは群馬の素人3人が始めた小さなブランドです。<br>
+              右も左も分からないながらも少しずつ成長していく僕らを見ていてください。
+            </p>
+          </div>
+
+          <p class="text3">Details</p>
+
+          <div class="triangle_green"></div>
+          <div class="triangle_white"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--ここからフッター-->
+
+    <footer>
+      <div>
+        <h2 class="more_green">MORE</h2>
+        <h2 class="more_white">MORE</h2>
+      </div>
+
+      <div id="maru">
+        <div class="circle"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+      </div>
+
+
+      <div id="sns">
+        <div class="half_moon_a">
+          <div class="sns_maru1">
+            <!-- BASE -->
+            <a href="https://isenti.base.shop/" target="_blank" rel="noopener noreferrer">
+              <img src="img/base.png" alt="BASE" class="base">
+            </a>
+          </div>
+          <div class="sns_maru2">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/isenti_official/" target="_blank" rel="noopener noreferrer">
+              <img src="img/insta.png.png" alt="Instagram" class="insta">
+            </a>
+          </div>
+          <div class="sns_maru3">
+            <!-- Twitter -->
+            <a href="https://twitter.com/isenti_official" target="_blank" rel="noopener noreferrer">
+              <img src="img/twitter.png" alt="Twitter" class="twitter">
+            </a>
+          </div>
+
+          <h2 class="sns_text">Social<br>Networking<br>Services</h2>
+          <h2 class="sns_text2">Social<br>Networking<br>Services</h2>
+
+        </div>
+        <div class="half_moon_b"></div>
+        <div class="half_moon_c"></div>
+        <div class="half_moon_d"></div>
+
+        <img src="img/ibow.png" alt="アイボー" class="ibow">
+
+      </div>
+      <small>© 2021 ISENTI</small>
+    </footer>
+  </div>
+  <script src="js/script_oshimo.js"></script>
+</body>
+
+</html>

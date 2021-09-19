@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style_demo.css" rel="stylesheet" />
+
+  <!-- jqueryを -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link href="./dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./dist/jquery.vmap.js"></script>
+  <script type="text/javascript" src="./dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+
+  <title>Top</title>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header>
+      <div class="logo">
+        <a href="index_demo.html" class="title"><span class="tabi">旅</span> <span class="title_text">する衣 </span> <span
+            class="title_koromo">-TABISURU KOROMO-</span></a>
+        <a href="index_demo.html" class="title2"><span class="tabi">旅</span> <span class="title_text">する衣 </span> <span
+            class="title_koromo2">-TABISURU KOROMO-</span></a>
+      </div>
+
+      <!-- ハンバーガーメニュー -->
+      <div id="navArea">
+        <nav>
+          <div class="inner">
+            <ul>
+              <li class="illust"><a href="#new_post">■ ILLUSTRATION</a></li>
+              <li class="illust2"><a href="#new_post">■ ILLUSTRATION</a></li>
+
+              <li class="about"><a href="#about_us">■ ABOUT US</a></li>
+              <li class="about2"><a href="#about_us">■ ABOUT US</a></li>
+
+              <li class="create"><a href="../info/info.html">■ WHO CREATE?</a></li>
+              <li class="create2"><a href="../info/info.html">■ WHO CREATE?</a></li>
+
+              <li class="contact"><a href="../contact/contact.php">■ CONTACT US</a></li>
+              <li class="contact2"><a href="../contact/contact.php">■ CONTACT US</a></li>
+
+              <li class="spt"><a href="../support/support.html">■ SUPPORTERS</a></li>
+              <li class="spt2"><a href="../support/support.html">■ SUPPORTERS</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="toggle_btn1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="toggle_btn2">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- <div id="mask"></div> -->
+      </div>
+    </header>
+
+    <!--ここからコンテンツ-->
+
+    <!-- サブメニュー -->
+
+    <input id="acd-check1" class="acd-check" type="checkbox">
+    <label for="acd-check1" class="acd-label">
+      <div class="triangle">
+      </div>
+      <div class="triangle1">
+      </div>
+    </label>
+
+    <div class="acd-content">
+      <ul>
+        <li>
+          <h2>北アメリカ</h2>
+
+          <a class="js-modal-open" href="" data-target="modal01">>アメリカ</a><br>
+          <a class="js-modal-open" href="" data-target="modal09">>カナダ</a><br>
+          <a class="js-modal-none" href="" data-target="">>メキシコ</a><br>
+          <a class="js-modal-none" href="" data-target="">>キューバ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ジャマイカ</a><br>
+          <a class="js-modal-none" href="" data-target="">>グアテマラ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ホンジュラス</a><br>
+          <a class="js-modal-none" href="" data-target="">>エルサルバドル</a><br>
+          <a class="js-modal-none" href="" data-target="">>ニカラグア</a><br>
+          <a class="js-modal-none" href="" data-target="">>コスタリカ</a><br>
+          <a class="js-modal-none" href="" data-target="">>パナマ</a><br>
+          <a class="js-modal-none" href="" data-target="">>グリーンランド</a><br>
+          <a class="js-modal-none" href="" data-target="">>バハマ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ハイチ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ドミニカ共和国</a><br>
+          <a class="js-modal-none" href="" data-target="">>セントクリストファーネイビス</a><br>
+          <a class="js-modal-none" href="" data-target="">>アンティグア・バーブーダ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ドミニカ</a><br>
+          <a class="js-modal-none" href="" data-target="">>セントルシア</a><br>
+          <a class="js-modal-none" href="" data-target="">>バルバドス</a><br>
+          <a class="js-modal-none" href="" data-target="">>グレナダ</a><br>
+          <a class="js-modal-none" href="" data-target="">>トリニダード・トバゴ</a><br>
+
+          <h2>南アメリカ</h2>
+          <a class="js-modal-none" href="" data-target="">>ベネズエラ</a><br>
+          <a class="js-modal-none" href="" data-target="">>コロンビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>エクアドル</a><br>
+          <a class="js-modal-none" href="" data-target="">>ペルー</a><br>
+          <a class="js-modal-none" href="" data-target="">>チリ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ガイアナ</a><br>
+          <a class="js-modal-none" href="" data-target="">>スリナム</a><br>
+          <a class="js-modal-none" href="" data-target="">>仏領ギアナ</a><br>
+          <a class="js-modal-open" href="" data-target="modal08">>ブラジル</a><br>
+          <a class="js-modal-none" href="" data-target="">>ボリビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>パラグアイ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ウルグアイ</a><br>
+          <a class="js-modal-none" href="" data-target="">>アルゼンチン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ベリーズ</a><br>
+
+          <h2>オセアニア</h2>
+          <a class="js-modal-none" href="" data-target="">>オーストラリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>パプアニューギニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ニュージーランド</a><br>
+          <a class="js-modal-none" href="" data-target="">>ソロモン諸島</a><br>
+          <a class="js-modal-none" href="" data-target="">>バヌアツ</a><br>
+          <a class="js-modal-none" href="" data-target="">>フィジー</a><br>
+          <a class="js-modal-none" href="" data-target="">>ニューカレドニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ミクロネシア連邦</a><br>
+          <a class="js-modal-none" href="" data-target="">>サモア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ツバル</a><br>
+        </li>
+
+        <li>
+          <h2>アジア</h2>
+          <a class="js-modal-none" href="" data-target="">>日本</a><br>
+          <a class="js-modal-none" href="" data-target="">>韓国</a><br>
+          <a class="js-modal-none" href="" data-target="">>北朝鮮</a><br>
+          <a class="js-modal-open" href="" data-target="modal02">>中国</a><br>
+          <a class="js-modal-none" href="" data-target="">>モンゴル</a><br>
+          <a class="js-modal-none" href="" data-target="">>カザフスタン</a><br>
+          <a class="js-modal-none" href="" data-target="">>キルギス</a><br>
+          <a class="js-modal-none" href="" data-target="">>ウズベキスタン</a><br>
+          <a class="js-modal-none" href="" data-target="">>タジキスタン</a><br>
+          <a class="js-modal-none" href="" data-target="">>トルクメニスタン</a><br>
+          <a class="js-modal-none" href="" data-target="">>アフガニスタン</a><br>
+          <a class="js-modal-none" href="" data-target="">>パキスタン</a><br>
+          <a class="js-modal-open" href="" data-target="modal04">>インド</a><br>
+          <a class="js-modal-none" href="" data-target="">>モルディブ</a><br>
+          <a class="js-modal-none" href="" data-target="">>スリランカ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ネパール</a><br>
+          <a class="js-modal-none" href="" data-target="">>ブータン</a><br>
+          <a class="js-modal-none" href="" data-target="">>バングラディシュ</a><br>
+          <a class="js-modal-none" href="" data-target="">>マイアミ</a><br>
+          <a class="js-modal-none" href="" data-target="">>タイ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ベトナム</a><br>
+          <a class="js-modal-none" href="" data-target="">>ラオス</a><br><br>
+          <a class="js-modal-none" href="" data-target="">>カンボジア</a><br>
+          <a class="js-modal-none" href="" data-target="">>マレーシア</a><br>
+          <a class="js-modal-none" href="" data-target="">>インドネシア</a><br>
+          <a class="js-modal-none" href="" data-target="">>フィリピン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ティモール</a><br>
+          <a class="js-modal-none" href="" data-target="">>イラン</a><br>
+          <a class="js-modal-none" href="" data-target="">>アゼルバイジャン</a><br>
+          <a class="js-modal-none" href="" data-target="">>アルメニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ジョージア</a><br>
+          <a class="js-modal-none" href="" data-target="">>トルコ</a><br>
+          <a class="js-modal-none" href="" data-target="">>シリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>イラク</a><br>
+          <a class="js-modal-none" href="" data-target="">>レバノン</a><br>
+          <a class="js-modal-none" href="" data-target="">>イスラエル</a><br>
+          <a class="js-modal-none" href="" data-target="">>ジョーダン</a><br>
+          <a class="js-modal-none" href="" data-target="">>キプロス</a><br>
+          <a class="js-modal-none" href="" data-target="">>サウジアラビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>カタール</a><br>
+          <a class="js-modal-none" href="" data-target="">>アラブ首長国連邦</a><br>
+          <a class="js-modal-none" href="" data-target="">>オマーン</a><br>
+          <a class="js-modal-none" href="" data-target="">>イエメン</a><br>
+          <a class="js-modal-none" href="" data-target="">>バーレーン王国</a><br>
+          <a class="js-modal-none" href="" data-target="">>ブルネイ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ヨルダン</a><br>
+          <a class="js-modal-none" href="" data-target="">>クウェート</a><br>
+          <a class="js-modal-none" href="" data-target="">>キルギスタン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ミャンマー</a><br>
+          <a class="js-modal-none" href="" data-target="">>ナウル</a><br>
+          <a class="js-modal-none" href="" data-target="">>パラオ</a><br>
+          <a class="js-modal-none" href="" data-target="">>シンガポール</a><br>
+          <a class="js-modal-none" href="" data-target="">>東ティモール</a><br>
+
+        </li>
+
+        <li>
+          <h2>ヨーロッパ</h2>
+          <a class="js-modal-open" href="" data-target="modal10">>ロシア</a><br>
+          <a class="js-modal-none" href="" data-target="">>フィンランド</a><br>
+          <a class="js-modal-none" href="" data-target="">>スウェーデン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ノルウェー</a><br>
+          <a class="js-modal-none" href="" data-target="">>エストニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ラトヴィア</a><br>
+          <a class="js-modal-none" href="" data-target="">>リトアニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ベラルーシ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ウクライナ</a><br>
+          <a class="js-modal-none" href="" data-target="">>モルディブ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ポーランド</a><br>
+          <a class="js-modal-none" href="" data-target="">>スロバキア</a><br>
+          <a class="js-modal-none" href="" data-target="">>チェコ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ハンガリー</a><br>
+          <a class="js-modal-none" href="" data-target="">>ルーマニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ブルガリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ギリシャ</a><br>
+          <a class="js-modal-none" href="" data-target="">>マケドニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>アルバニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>セルビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ボスニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>クロアチア</a><br>
+          <a class="js-modal-none" href="" data-target="">>スロベニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>オーストリア</a><br>
+          <a class="js-modal-open" href="" data-target="modal03">>ドイツ</a><br>
+          <a class="js-modal-none" href="" data-target="">>デンマーク</a><br>
+          <a class="js-modal-none" href="" data-target="">>ベルギー</a><br>
+          <a class="js-modal-none" href="" data-target="">>スイス</a><br>
+          <a class="js-modal-open" href="" data-target="modal07">>イタリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>マルタ諸島</a><br>
+          <a class="js-modal-open" href="" data-target="modal06">>フランス</a><br>
+          <a class="js-modal-open" href="" data-target="modal05">>イギリス</a><br>
+          <a class="js-modal-none" href="" data-target="">>アイルランド</a><br>
+          <a class="js-modal-none" href="" data-target="">>スペイン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ポルトガル</a><br>
+          <a class="js-modal-none" href="" data-target="">>アンドラ</a><br>
+          <a class="js-modal-none" href="" data-target="">>キリバス</a><br>
+          <a class="js-modal-none" href="" data-target="">>ラトビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>リヒテンシュタイン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ルクセンブルク</a><br>
+          <a class="js-modal-none" href="" data-target="">>マーシャル諸島</a><br>
+          <a class="js-modal-none" href="" data-target="">>モナコ</a><br>
+          <a class="js-modal-none" href="" data-target="">>モンテネグロ</a><br>
+          <a class="js-modal-none" href="" data-target="">>オランダ</a><br>
+          <a class="js-modal-none" href="" data-target="">>北マケドニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>モルドバ</a><br>
+          <a class="js-modal-none" href="" data-target="">>サンマリノ</a><br>
+
+        </li>
+
+        <li>
+          <h2>アフリカ</h2>
+          <a class="js-modal-none" href="" data-target="">>エジプト</a><br>
+          <a class="js-modal-none" href="" data-target="">>リビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>アルジェリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>チュニジア</a><br>
+          <a class="js-modal-none" href="" data-target="">>モロッコ</a><br>
+          <a class="js-modal-none" href="" data-target="">>モーリタニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>マリ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ニジェール</a><br>
+          <a class="js-modal-none" href="" data-target="">>チャド</a><br>
+          <a class="js-modal-none" href="" data-target="">>エリトリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>エチオピア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ソマリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ケニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>スーダン</a><br>
+          <a class="js-modal-none" href="" data-target="">>中央アフリカ</a><br>
+          <a class="js-modal-none" href="" data-target="">>カメルーン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ナイジェリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ベナン</a><br>
+          <a class="js-modal-none" href="" data-target="">>トーゴ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ブルキナファソ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ガーナ</a><br>
+          <a class="js-modal-none" href="" data-target="">>コートジボワール</a><br>
+          <a class="js-modal-none" href="" data-target="">>リベリア</a><br>
+          <a class="js-modal-none" href="" data-target="">>シエラレオネ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ギニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>セネガル</a><br>
+          <a class="js-modal-none" href="" data-target="">>ギニアビサウ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ガンビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>カーボベルデ</a><br>
+          <a class="js-modal-none" href="" data-target="">>サントメプリンシペ</a><br>
+          <a class="js-modal-none" href="" data-target="">>赤道ギニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ガホン</a><br>
+          <a class="js-modal-none" href="" data-target="">>コンゴ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ウガンダ</a><br>
+          <a class="js-modal-none" href="" data-target="">>タンザニア</a><br>
+          <a class="js-modal-none" href="" data-target="">>ルワンダ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ブルンジ</a><br>
+          <a class="js-modal-none" href="" data-target="">>アンゴラ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ザンビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>マラウイ</a><br>
+          <a class="js-modal-none" href="" data-target="">>モザンビーク</a><br>
+          <a class="js-modal-none" href="" data-target="">>コモロ</a><br>
+          <a class="js-modal-none" href="" data-target="">>マダガスカル</a><br>
+          <a class="js-modal-none" href="" data-target="">>セイシェル</a><br>
+          <a class="js-modal-none" href="" data-target="">>モーリシャス</a><br>
+          <a class="js-modal-none" href="" data-target="">>レユニオン</a><br>
+          <a class="js-modal-none" href="" data-target="">>ジンバブエ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ボツワナ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ナミビア</a><br>
+          <a class="js-modal-none" href="" data-target="">>南アフリカ</a><br>
+          <a class="js-modal-none" href="" data-target="">>レソト</a><br>
+          <a class="js-modal-none" href="" data-target="">>エスティワニ</a><br>
+          <a class="js-modal-none" href="" data-target="">>コンゴ民主共和国</a><br>
+          <a class="js-modal-none" href="" data-target="">>ジブチ</a><br>
+          <a class="js-modal-none" href="" data-target="">>ガボン</a><br>
+          <a class="js-modal-none" href="" data-target="">>マラウィ</a><br>
+          <a class="js-modal-none" href="" data-target="">>セントビンセント</a><br>
+          <a class="js-modal-none" href="" data-target="">>南スーダン</a><br>
+        </li>
+
+        <!-------------------- アメリカ -------------------->
+        <div id="modal01" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">自由の女神</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/自由の女神(アメリカ)SNS.png" alt="アメリカ" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E3%81%AE%E5%A5%B3%E7%A5%9E%E5%83%8F_(%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF)"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                自由の女神像はアメリカ合衆国の独立100周年を記念して、独立運動を支援したフランス人の募金によって贈呈され1886年に完成した。アメリカ合衆国の自由と民主主義の象徴であるとともに、19世紀以来絶えることなく世界各地から観光客が訪れている。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- 中国 -------------------->
+        <div id="modal02" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">万里の長城</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/万里の長城(中国)SNS.png" alt="中国" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E4%B8%87%E9%87%8C%E3%81%AE%E9%95%B7%E5%9F%8E" target="_blank"
+                rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                匈奴のような北方の異民族が侵攻してくるのを迎撃するために、秦代の紀元前214年に始皇帝によって建設された。長城は始皇帝によって建設されたと一般には考えられているが、実際にはその後いくつかの王朝によって修築と移転が繰り返され、現存の「万里の長城」の大部分は明代に作られたものである。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- ドイツ -------------------->
+        <div id="modal03" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">ケルン大聖堂</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/ケルン大聖堂(ドイツ)SNS.png" alt="ドイツ" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%AB%E3%83%B3%E5%A4%A7%E8%81%96%E5%A0%82"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                ケルン大聖堂はドイツのケルンにあるゴシック様式の大聖堂。正式名称はザンクト・ペーター・ウント・マリア大聖堂。ゴシック様式の建築物としては世界最大であり、ローマ・カトリック教会のミサが行われている。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- インド -------------------->
+        <div id="modal04" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">タージ・マハル</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/タージマハル(インド)SNS.png" alt="インド" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E3%82%BF%E3%83%BC%E3%82%B8%E3%83%BB%E3%83%9E%E3%83%8F%E3%83%AB"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                タージ・マハルは、インド北部アーグラにある、総大理石の墓廟。ムガル帝国第5代皇帝シャー・ジャハーンが、1631年に死去した愛妃ムムターズ・マハルのため建設した。インド・イスラーム文化の代表的建築である。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- イギリス -------------------->
+        <div id="modal05" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">ビック・ベン</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/ビッグベン(イギリス)SNS.png" alt="イギリス" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E3%83%93%E3%83%83%E3%82%B0%E3%83%BB%E3%83%99%E3%83%B3"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                ビッグ・ベンは、イギリスの首都ロンドンにあるウェストミンスター宮殿（英国国会議事堂）に付属する時計台の大時鐘の愛称。現在では、転じて時計台全体・大時計そのものの名称として使われている。1859年5月31日に作られた。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- フランス -------------------->
+        <div id="modal06" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">エッフェル塔</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/エッフェル塔(フランス)SNS.png" alt="フランス" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%83%E3%83%95%E3%82%A7%E3%83%AB%E5%A1%94"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                エッフェル塔は、フランスの首都パリの象徴的な名所となっている塔である。パリ7区、シャン・ド・マルス公園の北西に位置する。エッフェル塔の名は、塔の設計および建設者であるギュスターヴ・エッフェルに由来する。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- イタリア -------------------->
+        <div id="modal07" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">ピサの斜塔</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/ピサの斜塔(イタリア)SNS.png" alt="イタリア" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2" target="_blank"
+                rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                ピサの斜塔は、イタリアのピサ市にあるピサ大聖堂の鐘楼であり、世界遺産「ピサのドゥオモ広場」を構成する観光スポットである。かつてのガリレオの実験に対して行われた異端審問の弾圧に関連してローマ法王が詫びの公式声明を塔の頂上にて行ったことも有名。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- ブラジル -------------------->
+        <div id="modal08" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">コルコバードのキリスト像</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/キリスト(ブラジル)SNS.png" alt="ブラジル" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%AB%E3%82%B3%E3%83%90%E3%83%BC%E3%83%89%E3%81%AE%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E5%83%8F"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                1922年のブラジル独立100周年を記念して、1922年から1931年にかけて建設された。高さ39.6メートル（内台座の高さが9.5メートル）、左右30メートルであり、635トンの重量がある。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- カナダ -------------------->
+        <div id="modal09" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">メープル金貨</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/金貨(カナダ)SNS.png" alt="カナダ" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%97%E3%83%AB%E3%83%AA%E3%83%BC%E3%83%95%E9%87%91%E8%B2%A8"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                1979年に創鋳され、以後毎年発行されている。表面にエリザベス2世の肖像、裏面にサトウカエデの葉が浮き彫りされている。純度99.99パーセント（.9999）以上の純金製（24カラット）である。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+        <!-------------------- ロシア -------------------->
+        <div id="modal10" class="modal js-modal">
+          <div class="modal__bg"></div>
+          <div class="modal__content">
+
+            <div class="content_midasi">聖ワシリィ大聖堂</div>
+
+            <!-- コンテンツ左半分 -->
+            <div class="content_left">
+              <img src="img/聖ワシリィ大聖堂(ロシア)SNS.png" alt="ロシア" class="modal_logo">
+              <a href="https://ja.wikipedia.org/wiki/%E8%81%96%E3%83%AF%E3%82%B7%E3%83%AA%E3%82%A4%E5%A4%A7%E8%81%96%E5%A0%82"
+                target="_blank" rel="norefferrer" class="wiki_link">詳 細</a>
+            </div>
+
+            <!-- コンテンツ右半分 -->
+            <div class="content_right">
+              <p class="modal_text">
+                「1551年から1560年にかけて、イヴァン4世（雷帝）が、カザン・ハーンを捕虜とし勝利したことを記念して建立した。ロシアの聖堂でもっとも美しい建物のひとつと言われる。1990年にユネスコの世界遺産に登録された。
+              </p>
+              <div class="ranking_midasi">ご購入者様ランキング</div>
+              <div class="ranking_overall">
+                <div class="ranking">1位：<br />2位：<br />3位：<br /></div>
+                <div class="ranking_name">アイボー<br />アイボー<br />アイボー<br /></div>
+              </div>
+              <a href="https://isenti.base.shop/" class="shop_link">ご購入はこちら>>></a>
+            </div>
+            <a class="js-modal-close-btn" href="">×</a>
+          </div>
+        </div>
+
+      </ul>
+    </div>
+
+    <!-- 世界地図 -->
+    <div id="vmap" style="
+    width: 100%;
+    height: 800px;
+    top: 100px;
+    margin: 0 auto;">
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="content_koromo">
+
+      <h1 class="midasi">
+        旅する衣とは?<br />-Whats is <span class="naname">"TABISURU KOROMO"</span>-
+      </h1>
+      <h1 class="midasi_green">
+        旅する衣とは?<br />-Whats is "TBISURU KOROMO"-
+      </h1>
+
+      <div class="content_mini">
+        <img src="img/body.png" alt="ボディ1" class="t-shirt" />
+
+        <div class="text_midasi">
+          <h2>「衣で世界を旅しよう」</h2>
+          <p class="text_contents">
+            このテーマを基に、<br />
+            全世界196ヶ国の有名な〇〇を<br />ポップに形にしていく。<br />
+            ひそかに壮大なプロジェクトなのだ。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ここからサポーター -->
+    <div class="support">
+      <h1 class="support_green">SUPPORTER</h1>
+      <h1 class="support_white">SUPPORTER</h1>
+    </div>
+
+    <!-- 背景の白マスク -->
+    <div class="back_mask"></div>
+
+    <div class="supporter">
+      <img src="img/isenti_logo.jpg" alt="仮画像" class="company_logo">
+      <img src="img/isenti_logo.jpg" alt="仮画像" class="company_logo">
+      <img src="img/isenti_logo.jpg" alt="仮画像" class="company_logo">
+    </div>
+
+    <div class="company_name">
+      <p>アイボー株式会社　様</p>
+      <p>アイボー株式会社　様</p>
+      <p>アイボー株式会社　様</p>
+    </div>
+
+    <div class="support_info">
+      <a href="../support/support.html" class="support_btn">
+        支援者ページはこちら
+      </a>
+      <a href="../support/support.html" class="support_btn2">
+        支援者ページはこちら
+      </a>
+    </div>
+
+    <!-- ここからPOST　 -->
+    <div id="new_post">
+      <h1 class="post_green">NEW POST</h1>
+      <h1 class="post_white">NEW POST</h1>
+
+      <div class="post_overall">
+        <img src="img/spring_ibou.jpg" alt="" class="fuwafuwa">
+        <img src="img/summer_ibou.jpg" alt="" class="post_single">
+        <img src="img/autumm_ibou.jpg" alt="" class="post_single">
+        <img src="img/winter_ibou.jpg" alt="" class="post_single">
+        <img src="img/plane_ibou.jpg" alt="" class="post_single">
+      </div>
+
+      <div class="post_name">
+        <p>春アイボー</p>
+        <p>夏アイボー</p>
+        <p>秋アイボー</p>
+        <p>冬アイボー</p>
+        <p>旅アイボー</p>
+      </div>
+    </div>
+
+    <div id="about_us">
+      <h1 class="about_green">ABOUT US</h1>
+      <h1 class="about_white">ABOUT US</h1>
+
+      <div class="content_about">
+        <div class="content_about2">
+
+          <img src="img/isenti_logo.jpg" alt="ロゴ" class="isenti_logo">
+
+          <div class="about_text">
+            <p>"ISENTI"は群馬の素人3人が始めた小さなブランドです。<br>
+              右も左も分からないながらも少しずつ成長していく僕らを見ていてください。
+            </p>
+          </div>
+
+          <a href="../info/info.html" class="details">Details</a>
+
+          <div class="triangle_green"></div>
+          <div class="triangle_white"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- その他サポーター -->
+    <div class="other_support">
+      <h1 class="other_green">OTHER SUPPORTER</h1>
+      <h1 class="other_white">OTHER SUPPORTER</h1>
+    </div>
+
+    <div class="other_pic">
+      <img src="img/isenti_logo.jpg" alt="" class="other_company_logo">
+      <img src="img/isenti_logo.jpg" alt="" class="other_company_logo">
+      <img src="img/isenti_logo.jpg" alt="" class="other_company_logo">
+      <img src="img/isenti_logo.jpg" alt="" class="other_company_logo">
+      <img src="img/isenti_logo.jpg" alt="" class="other_company_logo">
+    </div>
+
+    <div class="other_company_name">
+      <p>アイボー株式会社　様</p>
+      <p>アイボー株式会社　様</p>
+      <p>アイボー株式会社　様</p>
+      <p>アイボー株式会社　様</p>
+      <p>アイボー株式会社　様</p>
+    </div>
+
+    <div class="other_text">
+      <a href="../support/index.html" class="other_flow">その他の支援者を見る</a>
+
+      <div class="support_triangle_g"></div>
+      <div class="support_triangle_w"></div>
+    </div>
+
+    <!-- ※コンプリートは支援者が出たら制作 -->
+
+    <!-- <div class="complete_overall">
+      <div class="complete">
+        <h1 class="complete_green">COMPLETER</h1>
+        <h1 class="complete_white">COMPLETER</h1>
+      </div>
+
+
+    </div> -->
+
+    <!--　MOREのとこ -->
+    <div class="more">
+      <h1 class="more_green">MORE</h1>
+      <h1 class="more_white">MORE</h1>
+
+      <div class="maru">
+        <div class="circle"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+      </div>
+
+      <div class="sns">
+        <div class="half_moon_a">
+          <div class="sns_maru1">
+            <!-- BASE -->
+            <a href="https://isenti.base.shop/" target="_blank" rel="noopener noreferrer">
+              <img src="img/base.png" alt="BASE" class="base">
+            </a>
+          </div>
+          <div class="sns_maru2">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/isenti_official/" target="_blank" rel="noopener noreferrer">
+              <img src="img/insta.png" alt="Instagram" class="insta">
+            </a>
+          </div>
+          <div class="sns_maru3">
+            <!-- Twitter -->
+            <a href="https://twitter.com/isenti_official" target="_blank" rel="noopener noreferrer">
+              <img src="img/twitter.png" alt="Twitter" class="twitter">
+            </a>
+          </div>
+
+          <h2 class="sns_text">Social<br>Networking<br>Services</h2>
+          <h2 class="sns_text2">Social<br>Networking<br>Services</h2>
+
+        </div>
+
+        <div class="half_moon_b"></div>
+        <div class="half_moon_c"></div>
+        <div class="half_moon_d"></div>
+
+        <img src="img/ibou.png" alt="アイボー" class="ibou">
+
+      </div>
+
+      <footer>
+        <small>© 2021 ISENTI</small>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script_oshimo.js"></script>
+
+</body>
+
+</html>
