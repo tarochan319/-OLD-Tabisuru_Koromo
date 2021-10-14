@@ -18,12 +18,12 @@
   <div class="wrap">
 
     <header>
-        <div class="logo">
-          <a href="../top/index_demo.html" class="title"><span class="tabi">旅</span> <span class="title_text">する衣 </span> <span
-              class="title_koromo">-TABISURU KOROMO-</span></a>
-          <a href="../top/index_demo.html" class="title2"><span class="tabi">旅</span> <span class="title_text">する衣 </span>
-            <span class="title_koromo2">-TABISURU KOROMO-</span></a>
-        </div>
+      <div class="logo">
+        <a href="../top/index_demo.html" class="title"><span class="tabi">旅</span> <span class="title_text">する衣 </span>
+          <span class="title_koromo">-TABISURU KOROMO-</span></a>
+        <a href="../top/index_demo.html" class="title2"><span class="tabi">旅</span> <span class="title_text">する衣 </span>
+          <span class="title_koromo2">-TABISURU KOROMO-</span></a>
+      </div>
 
       <!-- ハンバーガーメニュー -->
       <div id="navArea">
@@ -82,17 +82,16 @@
     </div>
 
     <div class="contact_form">
-      <form action="" method="POST" novalidate>
+      <form action="contact.html" method="POST" novalidate>
         <dl>
           <dt><span class="name">Name -お名前-</span></dt>
-          <dd><input type="text" name="name" class="name_form" required></dd>
-          <!-- required：入力必須にすること -->
+          <dd><input type="text" name="name" class="name_form" value="<?php echo $_SESSION["name"] ?>" required></dd>
 
           <dt><span class="mail">Email -メールアドレス-</span></dt>
-          <dd><input type="text" name="email" class="mail_form" required></dd>
+          <dd><input type="text" name="email" class="mail_form" value="<?php echo $_SESSION["email"] ?>" required></dd>
 
           <dt><span class="content">Contents -内容-</span></dt>
-          <dd><textarea name="message" class="message"></textarea></dd>
+          <dd><textarea name="message" class="message" value="<?php echo $_SESSION["message"] ?>"></textarea></dd>
         </dl>
 
         <button type="submit" class="btn"><span>送　信</span><button type="submit" class="btn2"></button>

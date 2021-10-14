@@ -19,8 +19,6 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-/*ヘッダー*/
-
 header {
     display: flex;
     justify-content: space-between;
@@ -271,7 +269,6 @@ nav .inner ul li a {
 
 .illust a:hover {
     transform: translate(0px, 3.5px);
-    /* transform: scale(1.1, 1.1); */
 }
 
 .illust2 a {
@@ -296,7 +293,6 @@ nav .inner ul li a {
 
 .about a:hover {
     transform: translate(0px, 3.5px);
-    /* transform: scale(1.1, 1.1); */
 }
 
 .about2 a {
@@ -321,7 +317,6 @@ nav .inner ul li a {
 
 .create a:hover {
     transform: translate(0px, 3.5px);
-    /* transform: scale(1.1, 1.1); */
 }
 
 .create2 a {
@@ -346,7 +341,6 @@ nav .inner ul li a {
 
 .contact a:hover {
     transform: translate(0px, 3.5px);
-    /* transform: scale(1.1, 1.1); */
 }
 
 .contact2 a {
@@ -371,7 +365,6 @@ nav .inner ul li a {
 
 .spt a:hover {
     transform: translate(0px, 3.5px);
-    /* transform: scale(1.1, 1.1); */
 }
 
 .spt2 a {
@@ -415,15 +408,9 @@ nav .inner ul li a {
     cursor: pointer;
 }
 
-.triangle1:hover {
-    /* transform: scale(1.3, 1.3); */
-}
-
 .acd-check {
     display: none;
 }
-
-.acd-label {}
 
 .acd-content {
     height: 0;
@@ -462,7 +449,7 @@ nav .inner ul li a {
     text-align: left;
 }
 
-/* ポップアップ表示 */
+/* サブメニューから開くモーダルウィンドウ */
 
 .js-modal-none {
     /* 販売前の国は透過し、クリック不可にする。 */
@@ -631,9 +618,6 @@ nav .inner ul li a {
     border: 1px solid black;
     margin: 0 auto;
     font-size: 22px;
-    /* background-size: 10px 10px;
-    background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
-    background-position: 0 0, 15px 15px; */
 }
 
 .naname {
@@ -1077,7 +1061,6 @@ nav .inner ul li a {
     height: 20px;
     border-radius: 50%;
     background: #2BBF00;
-    /*背景色*/
     border: 1px solid black;
 }
 
@@ -1086,7 +1069,6 @@ nav .inner ul li a {
     height: 20px;
     border-radius: 50%;
     background: white;
-    /*背景色*/
     border: 1px solid black;
     position: relative;
     bottom: 5px;
@@ -1101,7 +1083,6 @@ nav .inner ul li a {
     height: 20px;
     border-radius: 50%;
     background: #40C7FF;
-    /*背景色*/
     border: 1px solid black;
     position: relative;
     bottom: 10px;
@@ -1134,7 +1115,6 @@ nav .inner ul li a {
     height: 90px;
     border-radius: 50%;
     background: white;
-    /*背景色*/
     position: relative;
     bottom: 3px;
     margin-left: 55px;
@@ -1171,7 +1151,6 @@ nav .inner ul li a {
     height: 90px;
     border-radius: 50%;
     background: white;
-    /*背景色*/
     position: relative;
     bottom: 3px;
     margin-right: 50px;
@@ -1198,7 +1177,6 @@ nav .inner ul li a {
     height: 90px;
     border-radius: 50%;
     background: white;
-    /*背景色*/
     position: relative;
     bottom: 3px;
     top: 1;

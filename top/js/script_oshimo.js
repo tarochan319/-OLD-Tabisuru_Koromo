@@ -35,7 +35,7 @@ jQuery(document).ready(function () {
         // });
 
         // let midasiUS = $("<div>自由の女神</div>").css({
-        //     "display": "flex", "justify-content": "center", "font-size": "30px", "font-weight": "bold", "position": "relative", "bottom": "10px", "letter-spacing": "2px",
+        //   "display": "flex", "justify-content": "center", "font-size": "30px", "font-weight": "bold", "position": "relative", "bottom": "10px", "letter-spacing": "2px",
         // });
 
         // // コンテンツ左半分
@@ -909,6 +909,7 @@ $(document).ready(function () {
 });
 
 
+
 // サブメニュー 
 // ※時折ポップアップ表示がイカれる？
 $(function () {
@@ -925,6 +926,7 @@ $(function () {
     return false;
   });
 });
+
 
 
 // メインメニュー：illustration
@@ -962,9 +964,3 @@ $(function () {
     return false;
   });
 });
-
-
-// ▼座標取得
-// const pos = $('#').offset();
- // console.log(pos);
-
