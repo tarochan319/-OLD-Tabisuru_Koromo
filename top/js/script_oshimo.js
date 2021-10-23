@@ -1,5 +1,6 @@
 "use script";
 
+
 // 世界地図
 jQuery(document).ready(function () {
   jQuery("#vmap").vectorMap({

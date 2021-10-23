@@ -1,6 +1,22 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php
 
+
+ mb_language("japanese");
+ mb_internal_encoding("UTF-8");
+ $name = $_SESSION['name'];
+ $email = $_SESSION['email'];
+ $message = $_SESSION['message'];
+  if(mb_send_mail($name, $email, $message)) {
+    echo "送信完了しました";
+  } else {
+    echo "エラー";
+  };
+?>
+
+
+<!DOCTYPE html>
+
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,8 +55,8 @@
               <li class="create"><a href="../info/info.html">■ WHO CREATE?</a></li>
               <li class="create2"><a href="../info/info.html">■ WHO CREATE?</a></li>
 
-              <li class="contact"><a href="contact.html">■ CONTACT US</a></li>
-              <li class="contact2"><a href="contact.html">■ CONTACT US</a></li>
+              <li class="contact"><a href="contact.php">■ CONTACT US</a></li>
+              <li class="contact2"><a href="contact.php">■ CONTACT US</a></li>
 
               <li class="spt"><a href="../support/support.html">■ SUPPORTERS</a></li>
               <li class="spt2"><a href="../support/support.html">■ SUPPORTERS</a></li>
@@ -60,7 +76,6 @@
           <span></span>
         </div>
 
-        <!-- <div id="mask"></div> -->
       </div>
     </header>
 
@@ -82,13 +97,13 @@
     </div>
 
     <div class="contact_form">
-      <form action="contact.html" method="POST" novalidate>
+      <form action="contact.php" method="POST" novalidate>
         <dl>
           <dt><span class="name">Name -お名前-</span></dt>
           <dd><input type="text" name="name" class="name_form" value="<?php echo $_SESSION["name"] ?>" required></dd>
 
           <dt><span class="mail">Email -メールアドレス-</span></dt>
-          <dd><input type="text" name="email" class="mail_form" value="<?php echo $_SESSION["email"] ?>" required></dd>
+          <dd><input type="email" name="email" class="mail_form" value="<?php echo $_SESSION["email"] ?>" required></dd>
 
           <dt><span class="content">Contents -内容-</span></dt>
           <dd><textarea name="message" class="message" value="<?php echo $_SESSION["message"] ?>"></textarea></dd>
