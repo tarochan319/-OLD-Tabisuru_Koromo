@@ -1,6 +1,5 @@
 <?php
 
-session_start();
  mb_language("japanese");
  mb_internal_encoding("UTF-8");
 
@@ -39,7 +38,7 @@ $_POST['email']    = htmlspecialchars($_POST['email'], ENT_QUOTES);
 $_POST['message'] = htmlspecialchars($_POST['message'], ENT_QUOTES);
 
  mb_send_mail("isenti.fashion@gmail.com", "お問い合わせが届いたよ！", $message);
- $_POST = array();
+ 
 ?>
 
 
