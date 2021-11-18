@@ -1,0 +1,23 @@
+{
+  "name": "tabisuru_koromo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarochan319/xampp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarochan319/xampp/issues"
+  },
+  "homepage": "https://github.com/tarochan319/xampp#readme",
+  "dependencies": {
+    "firebase": "^9.4.1"
+  }
+}

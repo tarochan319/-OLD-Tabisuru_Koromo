@@ -1,5 +1,10 @@
 "use script";
 
+// ロード画面
+window.onload = function () {
+const loader_element = document.getElementById('loader_wrap');
+loader_element.classList.add('loaded');
+};
 
 // 世界地図
 jQuery(document).ready(function () {

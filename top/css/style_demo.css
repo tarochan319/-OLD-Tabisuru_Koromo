@@ -15,6 +15,85 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+/* 画面全体の設定 */
+
+#loader_wrap {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background: #fff;
+}
+
+/* ローディングアニメーションの設定 */
+
+.loading-inner {
+    text-align: center;
+}
+
+.loading-inner img {
+    width: 150px;
+    animation: loading_anime 1s infinite;
+}
+
+.loading-inner span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-inner span::before {
+    animation: text_anime 1s infinite;
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+}
+
+@keyframes loading_anime {
+    0% {
+        transform: scale(1.0, 1.0) translate3d(0, 0, 0);
+    }
+    30% {
+        transform: scale(1.0, 1.06) translate3d(-3%, -2%, 0) skew(4deg, 0deg);
+    }
+    50% {
+        transform: scale(1.0, 0.97) translate3d(-1%, -1%, 0) skew(1deg, 0deg);
+    }
+    75% {
+        transform: scale(1.0, 1.06) translate3d(3%, -2%, 0) skew(-4deg, 0deg);
+    }
+    90% {
+        transform: scale(1.0, 0.97) translate3d(1%, -1%, 0) skew(-1deg, 0deg);
+    }
+    100% {
+        transform: scale(1.0, 1.0) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes text_anime {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* ローディング終了後 */
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .wrap {
     overflow: hidden;
 }
