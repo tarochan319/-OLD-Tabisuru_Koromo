@@ -5,7 +5,6 @@
  $name = null;
  $email = null;
  $message = null;
- $success = null;
 
 // 名前フォーム
  $name = $_POST['name'];
@@ -14,7 +13,7 @@
  } elseif (mb_strlen($_POST['name']) > 20) {
      $errmessage[] = "名前は20文字以内にしてください";
  }
-$_POST['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES);
+$_POST['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES); //エスケープ処理
 
 // メールフォーム
  $email = $_POST['email'];
@@ -149,7 +148,7 @@ $_POST['message'] = htmlspecialchars($_POST['message'], ENT_QUOTES);
           <p class="success"><?php echo $success; ?></p>
         <?php endif; ?>
 
-        <button type="submit" class="btn"><span>送　信</span><button type="submit" class="btn2"></button>
+        <button type="submit" id="btn"><span>送　信</span><button type="submit" class="btn2"></button>
         </button>
       </form>
     </div>
