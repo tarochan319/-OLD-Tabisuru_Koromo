@@ -2,8 +2,12 @@
 
  mb_language("japanese");
  mb_internal_encoding("UTF-8");
+ $name = null;
+ $email = null;
+ $message = null;
+ $success = null;
 
-//  名前フォーム
+// 名前フォーム
  $name = $_POST['name'];
  if (!$_POST['name']) {
      $errmessage[] = "名前を入力してください";
@@ -37,7 +41,11 @@ $_POST['email']    = htmlspecialchars($_POST['email'], ENT_QUOTES);
  }
 $_POST['message'] = htmlspecialchars($_POST['message'], ENT_QUOTES);
 
- mb_send_mail("isenti.fashion@gmail.com", "お問い合わせが届いたよ！", $message);
+ if (mb_send_mail("isenti.fashion@gmail.com", "お問い合わせが届いたよ！", $message)) {
+     echo $success = "送信完了しました";
+ } else {
+     echo "エラー";
+ }
  
 ?>
 
@@ -136,6 +144,10 @@ $_POST['message'] = htmlspecialchars($_POST['message'], ENT_QUOTES);
           <dt><span class="content">Contents -内容-</span></dt>
           <dd><textarea name="message" class="message" value="<?php echo $_POST["message"] ?>"></textarea></dd>
         </dl>
+
+        <?php if (!empty($success_message)): ?>
+          <p class="success"><?php echo $success; ?></p>
+        <?php endif; ?>
 
         <button type="submit" class="btn"><span>送　信</span><button type="submit" class="btn2"></button>
         </button>
