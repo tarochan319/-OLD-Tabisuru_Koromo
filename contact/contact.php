@@ -5,6 +5,7 @@
  $name = null;
  $email = null;
  $message = null;
+ $header = null;
 
 // 名前フォーム
  $name = $_POST['name'];
@@ -40,7 +41,9 @@ $_POST['email']    = htmlspecialchars($_POST['email'], ENT_QUOTES);
  }
 $_POST['message'] = htmlspecialchars($_POST['message'], ENT_QUOTES);
 
- if (mb_send_mail("isenti.fashion@gmail.com", "お問い合わせが届いたよ！", $message)) {
+$header = "From: あいえうお";
+
+ if (mb_send_mail("isenti.fashion@gmail.com", "お問い合わせが届いたよ！", $message, $header)) {
      echo $success = "送信完了しました";
  } else {
      echo "エラー";
