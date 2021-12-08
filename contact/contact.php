@@ -1,53 +1,4 @@
 <?php
-
- mb_language("japanese");
- mb_internal_encoding("UTF-8");
- $name = null;
- $email = null;
- $message = null;
- $header = null;
-
-// 名前フォーム
- $name = $_POST['name'];
- if (!$_POST['name']) {
-     $errmessage[] = "名前を入力してください";
- } elseif (mb_strlen($_POST['name']) > 20) {
-     $errmessage[] = "名前は20文字以内にしてください";
- }
-$_POST['name'] = htmlspecialchars($_POST['name'], ENT_QUOTES); //エスケープ処理
-
-// メールフォーム
- $email = $_POST['email'];
- if (!$_POST['email']) {
-     $errmessage[] = "Eメールを入力してください";
- } elseif (mb_strlen($_POST['email']) > 50) {
-     $errmessage[] = "Eメールは50文字以内にしてください";
- } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-     $errmessage[] = "メールアドレスが不正です";
- }
-$_POST['email']    = htmlspecialchars($_POST['email'], ENT_QUOTES);
-
-// メッセージ
- $message = "▼内容\r\n"
-           . "名前：".$_POST["name"]."\r\n"
-           . "アドレス：".$_POST['email']."\r\n"
-           . "お問い合わせ内容:\r\n"
-           . preg_replace("/\r\n|\r|\n/", "\r\n", $_POST["message"]);
-           
- if (!$_POST['message']) {
-     $errmessage[] = "お問い合わせ内容を入力してください";
- } elseif (mb_strlen($_POST['message']) > 500) {
-     $errmessage[] = "お問い合わせ内容は500文字以内にしてください";
- }
-$_POST['message'] = htmlspecialchars($_POST['message'], ENT_QUOTES);
-
-$header = "From: あいえうお";
-
- if (mb_send_mail("isenti.fashion@gmail.com", "お問い合わせが届いたよ！", $message, $header)) {
-     echo $success = "送信完了しました";
- } else {
-     echo "エラー";
- }
  
 ?>
 
@@ -138,20 +89,16 @@ $header = "From: あいえうお";
       <form action="contact.php" method="POST">
         <dl>
           <dt><span class="name">Name -お名前-</span></dt>
-          <dd><input type="text" name="name" class="name_form" value="<?php echo $_POST["name"] ?>" required></dd>
+          <dd><input type="text" name="name" class="name_form" required></dd>
 
           <dt><span class="mail">Email -メールアドレス-</span></dt>
-          <dd><input type="email" name="email" class="mail_form" value="<?php echo $_POST["email"] ?>" required></dd>
+          <dd><input type="email" name="email" class="mail_form" required></dd>
 
           <dt><span class="content">Contents -内容-</span></dt>
-          <dd><textarea name="message" class="message" value="<?php echo $_POST["message"] ?>"></textarea></dd>
+          <dd><textarea name="message" class="message"></textarea></dd>
         </dl>
 
-        <?php if (!empty($success_message)): ?>
-          <p class="success"><?php echo $success; ?></p>
-        <?php endif; ?>
-
-        <button type="submit" id="btn"><span>送　信</span><button type="submit" class="btn2"></button>
+        <button type="submit" id="btn"><span id="text">送　信</span><button type="submit" class="btn2"></button>
         </button>
       </form>
     </div>
