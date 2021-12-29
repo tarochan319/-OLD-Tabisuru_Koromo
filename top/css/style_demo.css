@@ -13,95 +13,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/* 画面全体の設定 */
-
-#loader_wrap {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    background: #fff;
-}
-
-/* ローディングアニメーションの設定 */
-
-.loading-inner {
-    text-align: center;
-}
-
-.loading-inner img {
-    width: 150px;
-    animation: loading_anime 1s infinite;
-}
-
-.loading-inner span {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-}
-
-.loading-inner span::before {
-    animation: text_anime 1s infinite;
-    content: "";
-    position: absolute;
-    background-color: #fff;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: block;
-}
-
-@keyframes loading_anime {
-    0% {
-        transform: scale(1.0, 1.0) translate3d(0, 0, 0);
-    }
-    30% {
-        transform: scale(1.0, 1.06) translate3d(-3%, -2%, 0) skew(4deg, 0deg);
-    }
-    50% {
-        transform: scale(1.0, 0.97) translate3d(-1%, -1%, 0) skew(1deg, 0deg);
-    }
-    75% {
-        transform: scale(1.0, 1.06) translate3d(3%, -2%, 0) skew(-4deg, 0deg);
-    }
-    90% {
-        transform: scale(1.0, 0.97) translate3d(1%, -1%, 0) skew(-1deg, 0deg);
-    }
-    100% {
-        transform: scale(1.0, 1.0) translate3d(0, 0, 0);
-    }
-}
-
-@keyframes text_anime {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-/* ローディング終了後 */
-
-.loaded {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.wrap {
-    overflow: hidden;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 /* 旅する衣ロゴ */
 
 .logo {
@@ -506,7 +417,7 @@ nav .inner ul li a {
 .acd-content ul {
     display: flex;
     justify-content: space-around;
-    background-color: rgba( 0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     position: relative;
     z-index: 9999;
@@ -550,7 +461,8 @@ nav .inner ul li a {
     width: 120%;
     height: 120%;
     position: absolute;
-    right: 1px;  /* 何故か画面幅いっぱいに要素がかからないので、無理矢理位置をずらしている。 */
+    right: 1px;
+    /* 何故か画面幅いっぱいに要素がかからないので、無理矢理位置をずらしている。 */
 }
 
 .modal__content {
@@ -1210,6 +1122,7 @@ nav .inner ul li a {
     25% {
         transform: scale(1.1);
     }
+
     75% {
         transform: scale(.9);
     }
@@ -1354,9 +1267,11 @@ nav .inner ul li a {
     0% {
         -webkit-transform: translate(0, 0) rotate(-5deg);
     }
+
     50% {
         -webkit-transform: translate(0, -5px) rotate(0deg);
     }
+
     100% {
         -webkit-transform: translate(0, 0)rotate(5deg);
     }
@@ -1366,9 +1281,11 @@ nav .inner ul li a {
     0% {
         transform: translate(0, 0) rotate(-5deg);
     }
+
     50% {
         transform: translate(0, -5px) rotate(0deg);
     }
+
     100% {
         transform: translate(0, 0)rotate(5deg);
     }
@@ -1386,184 +1303,202 @@ small {
 }
 
 .fuwafuwa {
-    -webkit-animation: fuwafuwa 3s infinite linear alternate;
-    animation: fuwafuwa 3s infinite linear alternate;
     width: 200px;
     height: 200px;
 }
 
-@-webkit-keyframes fuwafuwa {
-    0% {
-        -webkit-transform: translate(0, 0) rotate(-5deg);
-    }
-    50% {
-        -webkit-transform: translate(0, -5px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translate(0, 0)rotate(5deg);
-    }
-}
-
-@keyframes fuwafuwa {
-    0% {
-        transform: translate(0, 0) rotate(-5deg);
-    }
-    50% {
-        transform: translate(0, -5px) rotate(0deg);
-    }
-    100% {
-        transform: translate(0, 0)rotate(5deg);
-    }
-}
-
 @media screen and (max-width: 1024px) {
+
     /* iPad Pro用 */
     .title {
         left: 30px;
     }
+
     .title2 {
         left: 30px;
     }
+
     .toggle_btn1 {
         right: 20px;
     }
+
     .toggle_btn2 {
         right: 20px;
     }
+
     modal {
         width: 55%;
     }
+
     .support {
         margin-top: 98px;
     }
+
     .support_green {
         bottom: 12px;
     }
+
     .support_white {
         bottom: 93px;
     }
+
     .support_btn {
         width: 30%;
         font-size: 25px;
     }
+
     .support_btn2 {
         width: 30%;
         font-size: 25px;
         left: 35.5%;
     }
+
     .post_overall {
         top: 40px;
     }
+
     .post_single {
         width: 150px;
         height: 150px;
     }
+
     .fuwafuwa {
         width: 150px;
         height: 150px;
     }
+
     .about_white {
         bottom: 81px;
     }
+
     .other_white {
         bottom: 81px;
     }
+
     .more_white {
         bottom: 81px;
     }
+
     .half_moon_a {
         left: 32%;
     }
+
     .half_moon_b {
         left: 33%;
     }
+
     .sns_text2 {
         right: 140px;
     }
+
     .ibou {
         right: 32%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+
     /* iPad用 */
     .title {
         left: 30px;
     }
+
     .tabi {
         font-size: 65px;
     }
+
     .title2 {
         left: 30px;
     }
+
     .toggle_btn1 {
         right: 10px;
         top: 50px;
     }
+
     .toggle_btn2 {
         right: 10px;
         top: 52px;
     }
+
     .support_green {
         bottom: 12px;
     }
+
     .support_white {
         bottom: 93px;
     }
+
     .support_btn {
         width: 38%;
         font-size: 25px;
     }
+
     .support_btn2 {
         width: 38%;
         font-size: 25px;
         left: 31.5%;
     }
+
     .post_overall {
         top: 50px;
     }
+
     .post_single {
         width: 130px;
         height: 130px;
     }
+
     .fuwafuwa {
         width: 130px;
         height: 130px;
     }
+
     .post_name {
         top: 55px;
     }
+
     .about_white {
         bottom: 81px;
     }
+
     .content_about {
         width: 590px;
     }
+
     .other_white {
         bottom: 81px;
     }
+
     .more_white {
         bottom: 81px;
     }
+
     .half_moon_a {
         left: 15%;
     }
+
     .half_moon_b {
         left: 15%;
     }
+
     .sns_maru1 {
         margin-left: 30px;
         margin-right: 30px;
     }
+
     .sns_maru2 {
         margin-right: 30px;
     }
+
     .sns_maru3 {
         margin-right: 30px;
     }
+
     .sns_text2 {
         right: 140px;
     }
+
     .ibou {
         right: 28%;
         width: 300px;
@@ -1573,283 +1508,414 @@ small {
 }
 
 @media screen and (max-width:767px) {
+
     /* スマホ用 */
     .title {
         left: 10px;
         letter-spacing: 0px;
         top: 2px;
     }
+
     .tabi {
         font-size: 35px;
         top: 3px;
     }
+
     .title_text {
         font-size: 16px;
     }
+
     .title_koromo {
         font-size: 12px;
-        top: 0;
     }
+
     .title_koromo2 {
         font-size: 12px;
         bottom: 1px;
     }
+
     .title2 {
         left: 10px;
         letter-spacing: 0px;
     }
+
     .toggle_btn1 {
         top: 23px;
         right: -15px;
     }
+
     .toggle_btn1 span {
         width: 25px;
     }
+
     .toggle_btn2 {
         top: 25px;
         right: -15px;
     }
+
     .toggle_btn2 span {
         width: 25px;
     }
+
     .open nav {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    nav .inner {}
+
     nav .inner ul li {
         top: 81px;
     }
+
     .triangle {
         border-left: 13px solid transparent;
         border-right: 13px solid transparent;
         border-top: 13px solid #FF0033;
     }
+
     .triangle1 {
         border-left: 11px solid transparent;
         border-right: 11px solid transparent;
         border-top: 11px solid white;
     }
+
     .acd-content ul {
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: start;
         align-items: center;
     }
+
     /* モーダルウィンドウ */
     .modal__content {
         left: 40%;
         padding: 55px;
     }
+
     .content_midasi {
         font-size: 20px;
     }
+
     .modal_logo {
         width: 150px;
         height: 150px;
     }
+
     .modal_text {
         font-size: 10px;
     }
+
     .ranking_midasi {
         font-size: 10px;
     }
+
     .ranking_overall {
         font-size: 10px;
     }
+
     .wiki_link {
         font-size: 10px;
         left: 50px;
     }
+
     .shop_link {
         font-size: 10px;
         left: 50px;
         top: 23px;
     }
+
     /* ここまで */
     .content_koromo {
         margin: 0;
     }
+
     .midasi {
         margin-left: 0;
         font-size: 16px;
         padding: 20px;
     }
+
     .midasi_green {
         left: 0;
         font-size: 16px;
         padding: 24px;
         top: 10px;
     }
+
     .t-shirt {
         width: 150px;
         height: 150px;
     }
+
     .text_midasi {
         font-size: 12px;
     }
+
     .back_mask {
         top: 1295px;
     }
+
     .support {
         margin-top: 100px;
     }
+
     .supporter {
         bottom: 40px;
     }
+
     .company_logo {
         width: 100px;
         height: 100px;
     }
+
     .company_name {
         font-size: 10px;
     }
+
     .support_btn {
         width: 50%;
         font-size: 16px;
     }
+
     .support_btn2 {
         width: 50%;
         font-size: 16px;
         left: 26.5%;
     }
+
     #new_post {
         height: 350px;
     }
+
     .post_overall {
         overflow-y: scroll;
         justify-content: start;
     }
+
     .fuwafuwa {
         padding: 0px 15px;
     }
+
     .post_single {
         padding: 0px 15px;
     }
+
     .post_name {
         display: none;
     }
+
     .content_about {
         width: 85%;
         height: 202px;
     }
+
     .content_about2 {
         padding: 0;
         height: 94%;
     }
+
     .isenti_logo {
         width: 100px;
         height: 100px;
         position: relative;
         left: 20px;
     }
+
     .about_text {
         font-size: 12px;
     }
+
     .details {
         left: -27vw;
         top: 150px;
         font-size: 12px;
     }
+
     .triangle_green {
         left: -65px;
         top: 150px;
     }
+
     .triangle_white {
         left: -90px;
         top: 150px;
     }
+
     .other_support {
         margin-top: 100px;
     }
+
     .other_green {
         font-size: 30px;
     }
+
     .other_white {
         font-size: 30px;
         bottom: 69px;
     }
-    .other_pic {
-        overflow-y: scroll;
-        justify-content: start;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+
     .other_company_logo {
         margin: 10px;
     }
+
     .other_company_name {
         display: none;
     }
+
     .other_text {
         right: 213px;
         font-size: 12px;
         margin-top: 10px;
     }
+
     .more {
         margin-top: 100px;
     }
+
     .sns {
         height: 250px;
     }
+
     .half_moon_a {
         left: 5%;
         height: 100px;
         justify-content: center;
     }
+
     .sns_maru1 {
         bottom: 0;
         margin: 0;
     }
+
     .base {
         width: 70px;
         height: 70px;
     }
+
     .sns_maru2 {
         bottom: 0;
         margin: 0;
     }
+
     .insta {
         width: 40px;
         height: 40px;
     }
+
     .sns_maru3 {
         bottom: 0;
     }
+
     .twitter {
         width: 40px;
         height: 35px;
     }
+
     .sns_text {
         display: none;
     }
+
     .sns_text2 {
         display: none;
     }
+
     .half_moon_b {
         height: 100px;
         left: 5%;
         bottom: 152px;
     }
+
     .half_moon_c {
         height: 100px;
         right: 5%;
         bottom: 225px;
     }
+
     .half_moon_d {
         height: 100px;
         right: 8%;
         bottom: 325px;
     }
+
     .ibou {
         width: 150px;
         right: 25%;
         bottom: 592px;
         z-index: 999;
     }
+
     footer {
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .midasi {
+        font-size: 14px;
+    }
+
+    .midasi_green {
+        font-size: 14px;
+    }
+
+    .support_green {
+        font-size: 30px;
+    }
+
+    .support_white {
+        font-size: 30px;
+        bottom: 81px;
+    }
+
+    .post_green {
+        font-size: 30px;
+    }
+
+    .post_white {
+        font-size: 30px;
+        bottom: -17px;
+    }
+
+    .about_green {
+        font-size: 30px;
+    }
+
+    .about_white {
+        font-size: 30px;
+        bottom: 69px;
+    }
+
+    .other_green {
+        font-size: 25px;
+    }
+
+    .other_white {
+        font-size: 25px;
+        bottom: 58px;
+    }
+
+    .more_green {
+        font-size: 30px;
+    }
+
+    .more_white {
+        font-size: 30px;
+        bottom: 69px;
+    }
+
+    .text_midasi {
+        font-size: 10px;
+        position: relative;
+        right: 10px;
+    }
+
+    .about_text {
+        font-size: 10px;
+    }
+
+    .other_company_logo {
+        width: 250px;
+        height: 130px;
     }
 }

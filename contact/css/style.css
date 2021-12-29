@@ -7,15 +7,15 @@ body {
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
     position: relative;
     background-repeat: no-repeat;
-    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Maru Gothic ProN', 'ヒラギノ丸ゴ ProN', sans-serif;
-}
-
-body::-webkit-scrollbar {
-    display: none;
+    font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
 }
 
 .wrap {
     overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /*ヘッダー*/

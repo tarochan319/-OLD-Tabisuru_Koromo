@@ -1,11 +1,5 @@
 "use script";
 
-// ロード画面
-window.onload = function () {
-const loader_element = document.getElementById('loader_wrap');
-loader_element.classList.add('loaded');
-};
-
 // 世界地図
 jQuery(document).ready(function () {
   jQuery("#vmap").vectorMap({
@@ -29,85 +23,85 @@ jQuery(document).ready(function () {
       // ！！！アメリカ！！！
       if (code == 'us') {
 
-        // let modal = $("<div></div>", {
-        //   class: 'modalContent',
-        //   css: {
-        //     "position": "absolute", "border-radius": "10px", "top": "35%", "left": "50%", "transform": "translate(-50%,-50%)", "background": "white", "width": "50%", "height": "auto", "transition": "0.5s", "z-index": "1", "padding": "45px",
-        //   },
-        // });
+        let modal = $("<div></div>", {
+          class: 'modalContent',
+          css: {
+            "position": "absolute", "border-radius": "10px", "top": "35%", "left": "50%", "transform": "translate(-50%,-50%)", "background": "white", "width": "50%", "height": "auto", "transition": "0.5s", "z-index": "1", "padding": "45px",
+          },
+        });
 
-        // let close = $("<a>×</a>").attr('href', '').css({
-        //   "color": "#2BBF00", "text-decoration": "none", "font-size": "35px", "position": "absolute", "top": "15px", "right": "25px", "cursor": "pointer",
-        // });
+        let close = $("<a>×</a>").attr('href', '').css({
+          "color": "#2BBF00", "text-decoration": "none", "font-size": "35px", "position": "absolute", "top": "15px", "right": "25px", "cursor": "pointer",
+        });
 
-        // let midasiUS = $("<div>自由の女神</div>").css({
-        //   "display": "flex", "justify-content": "center", "font-size": "30px", "font-weight": "bold", "position": "relative", "bottom": "10px", "letter-spacing": "2px",
-        // });
+        let midasiUS = $("<div>自由の女神</div>").css({
+          "display": "flex", "justify-content": "center", "font-size": "30px", "font-weight": "bold", "position": "relative", "bottom": "10px", "letter-spacing": "2px",
+        });
 
-        // // コンテンツ左半分
-        // let left = $("<div></div>").css({
-        //   "display": "flex", "flex-direction": "column", "align-items": "center", "float": "left", "padding": "10px 25px",
-        // });
-        // let imgUS = document.createElement('img');
-        // imgUS.src = 'img/自由の女神(アメリカ)SNS.png';
-        // imgUS.alt = 'アメリカ';
-        // imgUS.setAttribute("width", "250px");
-        // imgUS.setAttribute("height", "250px");
+        // コンテンツ左半分
+        let left = $("<div></div>").css({
+          "display": "flex", "flex-direction": "column", "align-items": "center", "float": "left", "padding": "10px 25px",
+        });
+        let imgUS = document.createElement('img');
+        imgUS.src = 'img/自由の女神(アメリカ)SNS.png';
+        imgUS.alt = 'アメリカ';
+        imgUS.setAttribute("width", "250px");
+        imgUS.setAttribute("height", "250px");
 
-        // let wikiUS = $("<a>詳  細</a>").attr({
-        //   href: 'https://ja.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E3%81%AE%E5%A5%B3%E7%A5%9E%E5%83%8F_(%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF)',
-        //   target: '_blank',
-        //   rel: 'norefferrer'
-        // })
-        //   .css({
-        //     "text-align": "center", "text-decoration": "none", "background-color": "#FF9900", "color": "white", "position": "absolute", "padding": "5px 20px", "margin": "0 auto", "font-weight": "bold", "border-radius": "5px", "bottom": "37px", "font-size": "18px", "margin": "0 auto",
-        //   });
+        let wikiUS = $("<a>詳  細</a>").attr({
+          href: 'https://ja.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E3%81%AE%E5%A5%B3%E7%A5%9E%E5%83%8F_(%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF)',
+          target: '_blank',
+          rel: 'norefferrer'
+        })
+          .css({
+            "text-align": "center", "text-decoration": "none", "background-color": "#FF9900", "color": "white", "position": "absolute", "padding": "5px 20px", "margin": "0 auto", "font-weight": "bold", "border-radius": "5px", "bottom": "37px", "font-size": "18px", "margin": "0 auto",
+          });
 
-        // // コンテンツ右半分
-        // let right = $("<div></div>").css({
-        //   "display": "flex", "flex-direction": "column", "align-items": "center", "padding": "10px 25px",
-        // });
-        // let modalText = $("<p>自由の女神像はアメリカ合衆国の独立100周年を記念して、独立運動を支援したフランス人の募金によって贈呈され1886年に完成した。アメリカ合衆国の自由と民主主義の象徴であるとともに、19世紀以来絶えることなく世界各地から観光客が訪れている。</p>")
-        //   .css({
-        //     "font-size": "14px"
-        //   });
+        // コンテンツ右半分
+        let right = $("<div></div>").css({
+          "display": "flex", "flex-direction": "column", "align-items": "center", "padding": "10px 25px",
+        });
+        let modalText = $("<p>自由の女神像はアメリカ合衆国の独立100周年を記念して、独立運動を支援したフランス人の募金によって贈呈され1886年に完成した。アメリカ合衆国の自由と民主主義の象徴であるとともに、19世紀以来絶えることなく世界各地から観光客が訪れている。</p>")
+          .css({
+            "font-size": "14px"
+          });
 
-        // let rankMidasi = $("<div>ご購入者様ランキング</div>").css({
-        //   "background-color": "#2EC4B6", "color": "white", "padding": "5px 10px", "margin": "10px 0px", "font-weight": "bold", "font-size": "18px",
-        // });
+        let rankMidasi = $("<div>ご購入者様ランキング</div>").css({
+          "background-color": "#2EC4B6", "color": "white", "padding": "5px 10px", "margin": "10px 0px", "font-weight": "bold", "font-size": "18px",
+        });
 
-        // let rankOverAll = $("<div></div>").css({
-        //   "display": "flex", "margin": "10px 0px", "font-size": "16px",
-        // });
-        // let rank = $("<div>1位：<br>2位：<br>3位：</div>").css({
-        //   "color": "#2EC4B6", "padding": "0px 5px",
-        // });
-        // let rankName = $("<div>アイボー<br>アイボー<br>アイボー</div>").css({
-        //   "color": "#2EC4B6",
-        // });
-        // let base = $("<a>ご購入はこちら＞＞＞</a>").attr('href', "https://isenti.base.shop/").css({
-        //   "position": "relative", "color": "#FF9900", "text-decoration": "none", "font-weight": "bold", "font-size": "18px", "top": "17px", "letter-spacing": "2px",
-        // });
+        let rankOverAll = $("<div></div>").css({
+          "display": "flex", "margin": "10px 0px", "font-size": "16px",
+        });
+        let rank = $("<div>1位：<br>2位：<br>3位：</div>").css({
+          "color": "#2EC4B6", "padding": "0px 5px",
+        });
+        let rankName = $("<div>アイボー<br>アイボー<br>アイボー</div>").css({
+          "color": "#2EC4B6",
+        });
+        let base = $("<a>ご購入はこちら＞＞＞</a>").attr('href', "https://isenti.base.shop/").css({
+          "position": "relative", "color": "#FF9900", "text-decoration": "none", "font-weight": "bold", "font-size": "18px", "top": "17px", "letter-spacing": "2px",
+        });
 
-        // modal.append(close);
-        // modal.append(midasiUS);
-        // left.append(imgUS);
-        // left.append(wikiUS);
-        // right.append(modalText);
-        // right.append(rankMidasi);
-        // rankOverAll.append(rank);
-        // rankOverAll.append(rankName);
-        // right.append(rankOverAll);
-        // right.append(base);
-        // modal.append(left);
-        // modal.append(right);
-        // modal.fadeIn(100);
-        // $('#vmap').append(modal);
+        modal.append(close);
+        modal.append(midasiUS);
+        left.append(imgUS);
+        left.append(wikiUS);
+        right.append(modalText);
+        right.append(rankMidasi);
+        rankOverAll.append(rank);
+        rankOverAll.append(rankName);
+        right.append(rankOverAll);
+        right.append(base);
+        modal.append(left);
+        modal.append(right);
+        modal.fadeIn(100);
+        $('#vmap').append(modal);
 
-        // $(close).on('click', function () {
-        //   $(modal).fadeOut(100);
-        //   $('body,html').stop().animate({ scrollTop: winScrollTop }, 100);
-        // });
+        $(close).on('click', function () {
+          $(modal).fadeOut(100);
+          $('body,html').stop().animate({ scrollTop: winScrollTop }, 100);
+        });
 
       } else if (code == 'cn') {
 

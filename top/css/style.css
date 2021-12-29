@@ -1,94 +1,119 @@
 @charset "utf-8";
-/*文字コード*/
-
-@media screen and (max-width:1024px) {
-  /* タブレット向け表示 */
-  }
-  
-  @media screen and (max-width:540px) {
-  /* スマホ向け表示 */
-  }
 
 body {
-  margin: 0;
-  padding: 0;
-  /*ブラウザごとの初期値を解除*/
-  background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
-  position: relative;
-  background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
+    position: relative;
+    background-repeat: no-repeat;
+    font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
 }
 
-.wrap {
-  overflow: hidden;
-}
-
-/*ヘッダー*/
-
-header {
-  display: flex;
-  justify-content: space-between;
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* 旅する衣ロゴ */
 
 .logo {
+    padding: 5px 0px;
+}
 
+.title {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 40px;
+    z-index: 1;
+    letter-spacing: 2px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.title2 {
+    text-decoration: none;
+    color: #2BBF00;
+    position: absolute;
+    left: 40px;
+    letter-spacing: 2px;
+    top: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.tabi {
+    display: inline-block;
+    font-size: 70px;
+    position: relative;
+    top: 5px;
+    transform: rotate(12deg);
+    margin: 0px 5px;
+}
+
+.title_text {
+    font-size: 35px;
+}
+
+.title_koromo {
+    font-size: 20px;
+}
+
+.title_koromo2 {
+    position: relative;
+    font-size: 20px;
+    bottom: 1.5px;
 }
 
 /* ハンバーガーメニュー */
 
 nav {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: -300px;
-  bottom: 0;
-  width: 300px;
-  background: rgba(255, 255, 255, 0.78);
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  transition: all .5s;
-  z-index: 3;
-  opacity: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    bottom: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.78);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s;
+    z-index: 3;
+    opacity: 0;
 }
 
 .open nav {
-  right: 0;
-  opacity: 1;
-  width: 370px;
+    right: 0;
+    opacity: 1;
+    width: 370px;
+    z-index: 10;
 }
 
 nav .inner {
-  padding: 25px;
+    padding: 0em 2em;
 }
 
 nav .inner ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav .inner ul li {
-  position: relative;
-  margin: 0;
-  /* border-bottom: 1px solid #333; */
-  top: 80px;
+    position: relative;
+    margin: 0;
+    top: 81px;
+    letter-spacing: 0.5px;
 }
 
 nav .inner ul li a {
-  display: block;
-  font-size: 22px;
-  padding: 1.5em;
-  text-decoration: none;
-  transition-duration: 0.2s;
-}
-
-@media screen and (max-width: 767px) {
-  nav {
-    right: -220px;
-    width: 220px;
-  }
+    display: block;
+    font-size: 22px;
+    margin: 3em 1.5em;
+    text-decoration: none;
+    transition-duration: 0.2s;
 }
 
 /*============
@@ -96,749 +121,1801 @@ nav .inner ul li a {
 =============*/
 
 .toggle_btn1 {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 27px;
-  width: 30px;
-  height: 30px;
-  transition: all .5s;
-  cursor: pointer;
-  z-index: 3;
-  margin-right: 25px;
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 10;
+    margin-right: 25px;
 }
 
 .toggle_btn1 span {
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 35px;
-  height: 3px;
-  background-color: white;
-  border-radius: 4px;
-  transition: all .5s;
-  border: 1px solid black;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all .5s;
+    border: 1px solid black;
 }
 
 .toggle_btn1 span:nth-child(1) {
-  top: 2px;
-  height: 4px;
+    top: 2px;
+    height: 4px;
 }
 
 .toggle_btn1 span:nth-child(2) {
-  top: 12px;
-  height: 4px;
+    top: 12px;
+    height: 4px;
 }
 
 .toggle_btn1 span:nth-child(3) {
-  bottom: 2px;
-  height: 4px;
+    bottom: 2px;
+    height: 4px;
 }
 
 .open .toggle_btn1 span {
-  background-color: black;
+    background-color: black;
 }
 
 .open .toggle_btn1 span:nth-child(1) {
-  -webkit-transform: translateY(10px) rotate(-315deg);
-  transform: translateY(10px) rotate(-315deg);
-  height: 5px;
-  background-color: #2BBF00;
-  top: 3px;
-  border: none;
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+    height: 5px;
+    background-color: #2BBF00;
+    top: 3px;
+    border: none;
 }
 
 .open .toggle_btn1 span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .open .toggle_btn1 span:nth-child(3) {
-  -webkit-transform: translateY(-10px) rotate(315deg);
-  transform: translateY(-10px) rotate(315deg);
-  height: 5px;
-  top: 23px;
-  background-color: #2BBF00;
-  border: none;
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+    height: 5px;
+    top: 23px;
+    background-color: #2BBF00;
+    border: none;
 }
 
 .toggle_btn2 {
-  display: block;
-  position: absolute;
-  top: 58px;
-  right: 27px;
-  width: 30px;
-  height: 30px;
-  transition: all .5s;
-  cursor: pointer;
-  z-index: 2;
-  margin-right: 25px;
+    display: block;
+    position: absolute;
+    top: 58px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 9;
+    margin-right: 25px;
 }
 
 .toggle_btn2 span {
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 35px;
-  height: 3px;
-  background-color: #2BBF00;
-  border-radius: 4px;
-  transition: all .5s;
-  border: 1px solid black;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: #2BBF00;
+    border-radius: 4px;
+    transition: all .5s;
+    border: 1px solid black;
 }
 
 .toggle_btn2 span:nth-child(1) {
-  top: 3px;
-  height: 3px;
+    top: 3px;
+    height: 3px;
 }
 
 .toggle_btn2 span:nth-child(2) {
-  top: 13px;
-  height: 3px;
+    top: 13px;
+    height: 3px;
 }
 
 .toggle_btn2 span:nth-child(3) {
-  bottom: 2px;
-  height: 3px;
+    bottom: 2px;
+    height: 3px;
 }
 
 .open .toggle_btn2 span {
-  opacity: 0;
+    opacity: 0;
 }
 
 .open .toggle_btn2 span:nth-child(1) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .open .toggle_btn2 span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .open .toggle_btn2 span:nth-child(3) {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* ハンバーガーメニュー見出し */
 
-.info a {
-  position: absolute;
-  color: #40C7FF;
-  z-index: 2;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+.illust a {
+    position: absolute;
+    color: #40C7FF;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    transition: all 0.2s;
+    top: -67px;
 }
 
-.info2 a {
-  position: relative;
-  color: white;
-  top: 2.5px;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+.illust a:hover {
+    transform: translate(0px, 3.5px);
+}
+
+.illust2 a {
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 .about a {
-  position: absolute;
-  color: #2BBF00;
-  z-index: 2;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: absolute;
+    color: #2BBF00;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.about a:hover {
+    transform: translate(0px, 3.5px);
 }
 
 .about2 a {
-  position: relative;
-  color: white;
-  top: 2.5px;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 .create a {
-  position: absolute;
-  color: #B479FF;
-  z-index: 2;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: absolute;
+    color: #B479FF;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.create a:hover {
+    transform: translate(0px, 3.5px);
 }
 
 .create2 a {
-  position: relative;
-  color: white;
-  top: 2.5px;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 .contact a {
-  position: absolute;
-  color: #FF0033;
-  z-index: 2;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: absolute;
+    color: #FF0033;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.contact a:hover {
+    transform: translate(0px, 3.5px);
 }
 
 .contact2 a {
-  position: relative;
-  color: white;
-  top: 2.5px;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.spt a {
+    position: absolute;
+    color: #ffa500;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.spt a:hover {
+    transform: translate(0px, 3.5px);
+}
+
+.spt2 a {
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 /* 国名一覧 */
 
 .triangle {
-  width: 0;
-  height: 0;
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-top: 17px solid #FF0033;
-  position: absolute;
-  margin-top: 70px;
-  left: 50px;
+    width: 0;
+    height: 0;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    border-top: 17px solid #FF0033;
+    position: absolute;
+    margin-top: 70px;
+    left: 50px;
+    transition: all 0.2s;
+}
+
+.triangle1:active {
+    transform: translate(9px, 0px);
 }
 
 .triangle1 {
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid white;
-  position: relative;
-  top: 70px;
-  left: 50px;
-  transition: 1s;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+    position: relative;
+    top: 70px;
+    left: 48px;
+    /* transition: 1s; */
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
 .acd-check {
-  display: none;
+    display: none;
 }
 
-.acd-label {}
-
 .acd-content {
-  height: 0;
-  opacity: 0;
-  transition: .5s;
-  visibility: hidden;
-  z-index: 3;
+    height: 0;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+    z-index: 3;
 }
 
 .acd-check:checked+.acd-label+.acd-content {
-  opacity: 1;
-  visibility: visible;
-  margin-top: 90px;
-
+    opacity: 1;
+    visibility: visible;
+    margin-top: 90px;
 }
 
 .acd-content ul {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba( 0, 0, 0, 0.8);
-  width: 100%;
-  position: relative;
-  z-index: 9999;
-  overflow-y: scroll;
-  height: 800px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    overflow-y: scroll;
+    height: 850px;
 }
 
 .acd-content li {
-  list-style: none;
-  color: white;
-  font-size: 14px;
-  text-align: left;
-  position: relative;
-  margin-left: 50px;
+    list-style: none;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    right: 20px;
 }
 
 .acd-content li h2 {
-  text-align: left;
+    text-align: left;
 }
 
-/* ポップアップ表示 */
+/* サブメニューから開くモーダルウィンドウ */
 
-.popup_wrap input {
-  display: none;
+.js-modal-none {
+    /* 販売前の国は透過し、クリック不可にする。 */
+    text-decoration: none;
+    color: white;
+    line-height: 3;
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
-.popup_overlay {
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background: rgba(100, 100, 100, 0.7);
-  opacity: 0;
-  transition: opacity 0.5s, transform 0s 0.5s;
-  transform: scale(0);
+.modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.popup_trigger {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.modal__bg {
+    background: rgba(255, 255, 255, 0.7);
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    right: 1px;
+    /* 何故か画面幅いっぱいに要素がかからないので、無理矢理位置をずらしている。 */
 }
 
-.popup_content {
-  position: relative;
-  align-self: center;
-  width: 45%;
-  height: 45%;
-  max-width: 800px;
-  padding: 15 30 50;
-  background: white;
-  transition: 0.5s;
-  border-radius: 12px;
+.modal__content {
+    background: white;
+    left: 50%;
+    top: 50%;
+    padding: 45px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border-radius: 10px;
 }
 
-.close_btn {
-  position: absolute;
-  top: 10px;
-  right: 18px;
-  font-size: 28px;
-  cursor: pointer;
-  color: #2BBF00;
-  z-index: 10;
+.js-modal-open {
+    text-decoration: none;
+    color: white;
+    line-height: 3;
+    z-index: 10;
 }
 
-.popup_wrap input:checked~.popup_overlay {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.5s;
+.js-modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #2BBF00;
+    text-decoration: none;
 }
 
-.open_btn {
-  cursor: pointer;
-  transition: .3s ease;
-  padding: 8px 0px;
-  display: block;
-  text-align: left;
+.content_midasi {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+    letter-spacing: 2px;
 }
 
-.open_btn:hover {
-  color: white;
-  transition: .3s ease;
+.content_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    padding: 10px 25px;
 }
 
-.pic {
-  float: left;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+.modal_logo {
+    width: 250px;
+    height: 250px;
 }
 
-.megami {
-  /* 後々イラスト画に差し替える */
-  position: relative;
-  width: 185px;
-  height: 200px;
+.wiki_link {
+    text-align: center;
+    text-decoration: none;
+    background-color: #FF9900;
+    color: white;
+    position: absolute;
+    padding: 5px 20px;
+    margin: 0 auto;
+    font-weight: bold;
+    border-radius: 5px;
+    bottom: 37px;
+    font-size: 18px;
+    margin: 0 auto;
 }
 
-.popup_content p {
-  font-size: 18px;
-  text-align: center;
+.content_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 25px;
 }
 
-.usa {
-  position: absolute;
-  font-size: 12px;
-  bottom: 20;
-  margin-left: 8%;
+.modal_text {
+    font-size: 14px;
 }
 
-.base_link {
-  position: absolute;
-  color: #2EC4B6;
-  text-decoration: none;
-  bottom: 20;
-  margin-left: 22%;
+.ranking_midasi {
+    background-color: #2EC4B6;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ranking_overall {
+    display: flex;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+.ranking {
+    color: #2EC4B6;
+    padding: 0px 5px;
+}
+
+.ranking_name {
+    color: #2EC4B6;
+}
+
+.shop_link {
+    position: relative;
+    color: #FF9900;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    top: 17px;
+    letter-spacing: 2px;
+}
+
+#modal02 {
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 /*旅する衣とは？のとこ*/
 
 .midasi {
-  border-radius: 15px 15px 15px 15px;
-  padding: 30px;
-  background: #2BBF00;
-  color: white;
-  z-index: 1;
-  margin-left: 20px;
-  position: absolute;
-  border: 1px solid black;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    border-radius: 10px;
+    padding: 30px;
+    background: white;
+    color: black;
+    z-index: 1;
+    margin-left: 20px;
+    position: absolute;
+    border: 1px solid black;
+    font-size: 22px;
 }
 
-.midasi_white {
-  border-radius: 15px 15px 15px 15px;
-  background: white;
-  padding: 30px;
-  color: white;
-  position: relative;
-  top: 25px;
-  left: 15px;
-  border: 1px solid black;
-  background-size: 10px 10px;
-  margin: 0 auto;
-  background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
-  background-position: 0 0, 15px 15px;
+.midasi_green {
+    border-radius: 10px;
+    background: #2BBF00;
+    padding: 25px 35px;
+    color: white;
+    position: relative;
+    top: 32px;
+    left: 20px;
+    border: 1px solid black;
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+.naname {
+    font-style: italic;
+}
+
+.text_midasi {
+    font-size: 16px;
+}
+
+.text_contents {
+    font-weight: bold;
 }
 
 .content_koromo {
-  text-align: center;
-  margin-top: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content_mini {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
-/* インフォメーション */
-
-.info {
-  background-color: #011627;
-  margin-top: 250px;
-  width: 100%;
-  height: 400px;
-  display: flex;
+.support {
+    text-align: center;
+    margin-top: 86px;
 }
 
-.info_green {
-  position: absolute;
-  color: #2BBF00;
-  left: 20px;
-  margin-top: 20px;
-  font-size: 40px;
+.support_green {
+    position: relative;
+    color: #2BBF00;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    letter-spacing: 1px;
 }
 
-.info_white {
-  position: relative;
-  color: white;
-  left: 20px;
-  font-size: 40px;
-  bottom: 17px;
+.support_white {
+    position: relative;
+    color: white;
+    bottom: 81px;
+    font-size: 35px;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    letter-spacing: 1px;
 }
 
-/* アバウト */
+.back_mask {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 2050px;
+    position: absolute;
+    top: 1493px;
+    z-index: -1;
+}
 
-.about_us {
-  margin-top: 250px;
+.supporter {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 30px;
+}
+
+.company_logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.company_name {
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    bottom: 20px;
+}
+
+/* 支援者はこちらのとこ */
+
+.support_info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.support_btn {
+    background-color: #2EC4B6;
+    width: 25%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+.support_btn:hover {
+    background-color: #ddffcc;
+}
+
+.support_btn:active {
+    transform: translate(5px, 5px);
+}
+
+.support_btn2 {
+    background-color: white;
+    width: 25%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 1px solid black;
+    position: absolute;
+    color: white;
+    top: 6px;
+    left: 37.8%;
+}
+
+/* ポストのとこ */
+
+#new_post {
+    background-color: #011627;
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+}
+
+.post_green {
+    position: absolute;
+    color: #2BBF00;
+    left: 30px;
+    margin-top: 20px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.post_white {
+    position: relative;
+    color: white;
+    left: 30px;
+    font-size: 40px;
+    bottom: -15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.post_overall {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 30px;
+}
+
+.post_single {
+    width: 200px;
+    height: 200px;
+}
+
+.post_name {
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+    color: white;
+    margin: 0px 15px;
+}
+
+/* アバウトのとこ */
+
+#about_us {
+    margin-top: 100px;
 }
 
 .content_about {
-  border-radius: 15px 15px 15px 15px;
-  background: #2BBF00;
-  width: 650px;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  bottom: 50px;
-  border: 1px solid black;
+    border-radius: 20px;
+    background: #2BBF00;
+    width: 625px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 50px;
+    border: 1px solid black;
 }
 
 .content_about2 {
-  border-radius: 15px 15px 15px 15px;
-  background: white;
-  padding: 45px 20px;
-  color: white;
-  display: flex;
-  align-items: center;
-  border: 1px solid black;
+    border-radius: 20px;
+    background: white;
+    padding: 45px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
 }
 
 .isenti_logo {
-  width: 200px;
-  height: 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
 }
 
-.text2 {
-  color: #000000;
-  font-size: 16px;
+.about_text {
+    color: #000000;
+    font-size: 16px;
+    position: relative;
+    left: 50px;
+    line-height: 2;
 }
 
 .about_green {
-  color: #2BBF00;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-  font-size: 30px;
-  position: relative;
-  text-align: center;
+    color: #2BBF00;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .about_white {
-  color: white;
-  font-weight: bold;
-  white-space: nowrap;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-  font-size: 30px;
-  position: relative;
-  text-align: center;
-  bottom: 74px;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    bottom: 81px;
+    letter-spacing: 1px;
 }
 
 .triangle_green {
-  width: 0;
-  height: 0;
-  border-left: 20px solid #2BBF00;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  position: relative;
-  left: 168px;
+    width: 0;
+    height: 0;
+    border-left: 17px solid #2BBF00;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    position: relative;
+    left: 203px;
 }
 
 .triangle_white {
-  width: 0;
-  height: 0;
-  border-left: 20px solid white;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  position: relative;
-  left: 144px;
+    width: 0;
+    height: 0;
+    border-left: 17px solid white;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    position: relative;
+    left: 180px;
 }
 
-.text3 {
-  position: relative;
-  color: black;
-  left: 150px;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 16px;
+.details {
+    position: relative;
+    color: black;
+    left: 180px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s;
 }
 
-/*フッター*/
+.details:hover {
+    transform: scale(1.2, 1.2);
+}
 
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  margin-top: 200px;
+/* その他サポーターのとこ */
+
+.other_support {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.other_green {
+    color: #2BBF00;
+    font-size: 35px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    letter-spacing: 1px;
+}
+
+.other_white {
+    color: white;
+    font-size: 35px;
+    position: relative;
+    bottom: 81px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    letter-spacing: 1px;
+}
+
+.other_pic {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 30px;
+}
+
+.other_company_logo {
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.other_company_name {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    bottom: 20px;
+}
+
+.other_text {
+    display: flex;
+    position: relative;
+    margin-top: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    right: 300px;
+}
+
+.other_flow {
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    left: 180px;
+    color: black;
+    transition: all 0.2s;
+}
+
+.other_flow:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.support_triangle_g {
+    width: 0;
+    height: 0;
+    border-left: 17px solid #2BBF00;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    position: relative;
+    left: 203px;
+}
+
+.support_triangle_w {
+    width: 0;
+    height: 0;
+    border-left: 17px solid white;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    position: relative;
+    left: 180px;
+}
+
+/* コンプリートのとこ */
+
+.complete_overall {
+    margin-top: 300px;
+}
+
+.complete {
+    position: relative;
+    left: 200px;
+}
+
+.complete_green {
+    position: absolute;
+    color: #2BBF00;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    letter-spacing: 1px;
+}
+
+.complete_white {
+    position: relative;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    letter-spacing: 1px;
+    top: 18px;
+}
+
+/* モアーのとこ */
+
+.more {
+    text-align: center;
+    margin-top: 200px;
 }
 
 .more_green {
-  position: relative;
-  color: #2BBF00;
-  font-size: 30px;
-  letter-spacing: 0.1em;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    color: #2BBF00;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 .more_white {
-  position: relative;
-  color: white;
-  font-size: 30px;
-  bottom: 75px;
-  letter-spacing: 0.1em;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    bottom: 81px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
-#maru {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  bottom: 75px;
+.maru {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 65px;
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #2BBF00;
-  /*背景色*/
-  border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2BBF00;
+    border: 1px solid black;
 }
 
 .circle2 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: white;
-  /*背景色*/
-  border: 1px solid black;
-  position: relative;
-  bottom: 5px;
-  background-size: 5px 5px;
-  margin: 0 auto;
-  background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
-  background-position: 0 0, 15px 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid black;
+    position: relative;
+    bottom: 5px;
+    background-size: 5px 5px;
+    margin: 0 auto;
+    background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
+    background-position: 0 0, 15px 15px;
 }
 
 .circle3 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #40C7FF;
-  /*背景色*/
-  border: 1px solid black;
-  position: relative;
-  bottom: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #40C7FF;
+    border: 1px solid black;
+    position: relative;
+    bottom: 10px;
+}
+
+.sns {
+    margin-top: 20px;
+    height: 400px;
 }
 
 .half_moon_a {
-  margin: 10px;
-  width: 100%;
-  height: 150px;
-  border-radius: 75px 0 0 75px;
-  background: #2BBF00;
-  border: 1px solid black;
-  position: relative;
-  z-index: 3;
-  bottom: 50px;
-  left: 550px;
-  display: flex;
-  align-items: center;
+    margin: 10px;
+    width: 100%;
+    height: 150px;
+    border-radius: 75px 0 0 75px;
+    background: #2BBF00;
+    border: 1px solid black;
+    position: relative;
+    z-index: 3;
+    bottom: 50px;
+    left: 45%;
+    display: flex;
+    align-items: center;
 }
 
 /* SNS */
 
 .sns_maru1 {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: white;
-  /*背景色*/
-  position: relative;
-  bottom: 3px;
-  margin-left: 55px;
-  margin-right: 50px;
-  top: 1;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    bottom: 3px;
+    margin-left: 55px;
+    margin-right: 50px;
+    top: 1;
 }
 
 .base {
-  width: 70px;
-  height: 70px;
-  position: relative;
-  top: 10px;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    top: 7px;
+    transition: all 0.2s;
+}
+
+@keyframes pulse {
+    25% {
+        transform: scale(1.1);
+    }
+
+    75% {
+        transform: scale(.9);
+    }
+}
+
+.base:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .sns_maru2 {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: white;
-  /*背景色*/
-  position: relative;
-  bottom: 3px;
-  margin-right: 50px;
-  top: 1;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    bottom: 3px;
+    margin-right: 50px;
+    top: 1;
 }
 
 .insta {
-  width: 45px;
-  height: 45px;
-  position: relative;
-  top: 23px;
+    width: 43px;
+    height: 43px;
+    position: relative;
+    top: 24px;
+    transition: all 0.2s;
+}
+
+.insta:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .sns_maru3 {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: white;
-  /*背景色*/
-  position: relative;
-  bottom: 3px;
-  top: 1;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    bottom: 3px;
+    top: 1;
 }
 
 .twitter {
-  width: 45px;
-  height: 40px;
-  position: relative;
-  top: 27px;
-  left: 2px;
+    width: 43px;
+    height: 38px;
+    position: relative;
+    top: 28px;
+    left: 2px;
+    transition: all 0.2s;
+}
+
+.twitter:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .sns_text {
-  position: relative;
-  color: white;
-  z-index: 1;
-  text-align: left;
-  left: 65px;
-  font-weight: bold;
-  font-size: 30px;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    color: white;
+    z-index: 1;
+    text-align: left;
+    left: 44px;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 .sns_text2 {
-  position: relative;
-  color: #FFD600;
-  text-align: left;
-  top: 4px;
-  right: 119px;
-  font-weight: bold;
-  font-size: 30px;
-  text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    color: #FFD600;
+    text-align: left;
+    top: 4px;
+    right: 140px;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 .half_moon_b {
-  margin: 10px;
-  width: 100%;
-  height: 150px;
-  border-radius: 75px 0 0 75px;
-  background: white;
-  border: 1px solid black;
-  position: relative;
-  bottom: 200px;
-  left: 555px;
-  z-index: 2;
+    margin: 10px;
+    width: 100%;
+    height: 150px;
+    border-radius: 75px 0 0 75px;
+    background: white;
+    border: 1px solid black;
+    position: relative;
+    bottom: 200px;
+    left: 45%;
+    z-index: 2;
 }
 
 .half_moon_c {
-  margin: 10px;
-  width: 100%;
-  height: 150px;
-  border-radius: 75px 0 0 75px;
-  background: white;
-  border: 1px solid black;
-  position: relative;
-  bottom: 250px;
-  right: 550px;
-  transform: scale(-1, 1);
-  z-index: 1;
-  background-size: 15px 15px;
-  margin: 0 auto;
-  background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
-  background-position: 0 0, 15px 15px;
+    margin: 10px;
+    width: 100%;
+    height: 150px;
+    border-radius: 75px 0 0 75px;
+    background: white;
+    border: 1px solid black;
+    position: relative;
+    bottom: 250px;
+    right: 45%;
+    transform: scale(-1, 1);
+    z-index: 1;
+    background-size: 15px 15px;
+    margin: 0 auto;
+    background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
+    background-position: 0 0, 15px 15px;
 }
 
 .half_moon_d {
-  margin: 10px;
-  width: 100%;
-  height: 150px;
-  border-radius: 75px 0 0 75px;
-  background: #FFD600;
-  border: 1px solid black;
-  position: relative;
-  bottom: 400px;
-  right: 560px;
-  transform: scale(-1, 1);
+    margin: 10px;
+    width: 100%;
+    height: 150px;
+    border-radius: 75px 0 0 75px;
+    background: #FFD600;
+    border: 1px solid black;
+    position: relative;
+    bottom: 400px;
+    right: 46%;
+    transform: scale(-1, 1);
 }
 
-.ibow {
-  position: relative;
-  z-index: 2;
-  width: 400px;
-  bottom: 820px;
-  right: 380px;
+.ibou {
+    -webkit-animation: ibou 3s infinite linear alternate;
+    animation: ibou 3s infinite linear alternate;
+    position: relative;
+    z-index: 2;
+    width: 400px;
+    bottom: 820px;
+    right: 30%;
 }
 
+@-webkit-keyframes ibou {
+    0% {
+        -webkit-transform: translate(0, 0) rotate(-5deg);
+    }
 
+    50% {
+        -webkit-transform: translate(0, -5px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0)rotate(5deg);
+    }
+}
+
+@keyframes ibou {
+    0% {
+        transform: translate(0, 0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(0, -5px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0)rotate(5deg);
+    }
+}
+
+/*フッター*/
+
+footer {
+    text-align: center;
+}
+
+small {
+    position: relative;
+    bottom: 10px;
+}
+
+.fuwafuwa {
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* iPad Pro用 */
+    .title {
+        left: 30px;
+    }
+
+    .title2 {
+        left: 30px;
+    }
+
+    .toggle_btn1 {
+        right: 20px;
+    }
+
+    .toggle_btn2 {
+        right: 20px;
+    }
+
+    modal {
+        width: 55%;
+    }
+
+    .support {
+        margin-top: 98px;
+    }
+
+    .support_green {
+        bottom: 12px;
+    }
+
+    .support_white {
+        bottom: 93px;
+    }
+
+    .support_btn {
+        width: 30%;
+        font-size: 25px;
+    }
+
+    .support_btn2 {
+        width: 30%;
+        font-size: 25px;
+        left: 35.5%;
+    }
+
+    .post_overall {
+        top: 40px;
+    }
+
+    .post_single {
+        width: 150px;
+        height: 150px;
+    }
+
+    .fuwafuwa {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about_white {
+        bottom: 81px;
+    }
+
+    .other_white {
+        bottom: 81px;
+    }
+
+    .more_white {
+        bottom: 81px;
+    }
+
+    .half_moon_a {
+        left: 32%;
+    }
+
+    .half_moon_b {
+        left: 33%;
+    }
+
+    .sns_text2 {
+        right: 140px;
+    }
+
+    .ibou {
+        right: 32%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* iPad用 */
+    .title {
+        left: 30px;
+    }
+
+    .tabi {
+        font-size: 65px;
+    }
+
+    .title2 {
+        left: 30px;
+    }
+
+    .toggle_btn1 {
+        right: 10px;
+        top: 50px;
+    }
+
+    .toggle_btn2 {
+        right: 10px;
+        top: 52px;
+    }
+
+    .support_green {
+        bottom: 12px;
+    }
+
+    .support_white {
+        bottom: 93px;
+    }
+
+    .support_btn {
+        width: 38%;
+        font-size: 25px;
+    }
+
+    .support_btn2 {
+        width: 38%;
+        font-size: 25px;
+        left: 31.5%;
+    }
+
+    .post_overall {
+        top: 50px;
+    }
+
+    .post_single {
+        width: 130px;
+        height: 130px;
+    }
+
+    .fuwafuwa {
+        width: 130px;
+        height: 130px;
+    }
+
+    .post_name {
+        top: 55px;
+    }
+
+    .about_white {
+        bottom: 81px;
+    }
+
+    .content_about {
+        width: 590px;
+    }
+
+    .other_white {
+        bottom: 81px;
+    }
+
+    .more_white {
+        bottom: 81px;
+    }
+
+    .half_moon_a {
+        left: 15%;
+    }
+
+    .half_moon_b {
+        left: 15%;
+    }
+
+    .sns_maru1 {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .sns_maru2 {
+        margin-right: 30px;
+    }
+
+    .sns_maru3 {
+        margin-right: 30px;
+    }
+
+    .sns_text2 {
+        right: 140px;
+    }
+
+    .ibou {
+        right: 28%;
+        width: 300px;
+        bottom: 900px;
+        z-index: 999;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    /* スマホ用 */
+    .title {
+        left: 10px;
+        letter-spacing: 0px;
+        top: 2px;
+    }
+
+    .tabi {
+        font-size: 35px;
+        top: 3px;
+    }
+
+    .title_text {
+        font-size: 16px;
+    }
+
+    .title_koromo {
+        font-size: 12px;
+    }
+
+    .title_koromo2 {
+        font-size: 12px;
+        bottom: 1px;
+    }
+
+    .title2 {
+        left: 10px;
+        letter-spacing: 0px;
+    }
+
+    .toggle_btn1 {
+        top: 23px;
+        right: -15px;
+    }
+
+    .toggle_btn1 span {
+        width: 25px;
+    }
+
+    .toggle_btn2 {
+        top: 25px;
+        right: -15px;
+    }
+
+    .toggle_btn2 span {
+        width: 25px;
+    }
+
+    .open nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .inner ul li {
+        top: 81px;
+    }
+
+    .triangle {
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-top: 13px solid #FF0033;
+    }
+
+    .triangle1 {
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-top: 11px solid white;
+    }
+
+    .acd-content ul {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: start;
+        align-items: center;
+    }
+
+    /* モーダルウィンドウ */
+    .modal__content {
+        left: 40%;
+        padding: 55px;
+    }
+
+    .content_midasi {
+        font-size: 20px;
+    }
+
+    .modal_logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .modal_text {
+        font-size: 10px;
+    }
+
+    .ranking_midasi {
+        font-size: 10px;
+    }
+
+    .ranking_overall {
+        font-size: 10px;
+    }
+
+    .wiki_link {
+        font-size: 10px;
+        left: 50px;
+    }
+
+    .shop_link {
+        font-size: 10px;
+        left: 50px;
+        top: 23px;
+    }
+
+    /* ここまで */
+    .content_koromo {
+        margin: 0;
+    }
+
+    .midasi {
+        margin-left: 0;
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .midasi_green {
+        left: 0;
+        font-size: 16px;
+        padding: 24px;
+        top: 10px;
+    }
+
+    .t-shirt {
+        width: 150px;
+        height: 150px;
+    }
+
+    .text_midasi {
+        font-size: 12px;
+    }
+
+    .back_mask {
+        top: 1295px;
+    }
+
+    .support {
+        margin-top: 100px;
+    }
+
+    .supporter {
+        bottom: 40px;
+    }
+
+    .company_logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .company_name {
+        font-size: 10px;
+    }
+
+    .support_btn {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .support_btn2 {
+        width: 50%;
+        font-size: 16px;
+        left: 26.5%;
+    }
+
+    #new_post {
+        height: 350px;
+    }
+
+    .post_overall {
+        overflow-y: scroll;
+        justify-content: start;
+    }
+
+    .fuwafuwa {
+        padding: 0px 15px;
+    }
+
+    .post_single {
+        padding: 0px 15px;
+    }
+
+    .post_name {
+        display: none;
+    }
+
+    .content_about {
+        width: 85%;
+        height: 202px;
+    }
+
+    .content_about2 {
+        padding: 0;
+        height: 94%;
+    }
+
+    .isenti_logo {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 20px;
+    }
+
+    .about_text {
+        font-size: 12px;
+    }
+
+    .details {
+        left: -27vw;
+        top: 150px;
+        font-size: 12px;
+    }
+
+    .triangle_green {
+        left: -65px;
+        top: 150px;
+    }
+
+    .triangle_white {
+        left: -90px;
+        top: 150px;
+    }
+
+    .other_support {
+        margin-top: 100px;
+    }
+
+    .other_green {
+        font-size: 30px;
+    }
+
+    .other_white {
+        font-size: 30px;
+        bottom: 69px;
+    }
+
+    .other_company_logo {
+        margin: 10px;
+    }
+
+    .other_company_name {
+        display: none;
+    }
+
+    .other_text {
+        right: 213px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .more {
+        margin-top: 100px;
+    }
+
+    .sns {
+        height: 250px;
+    }
+
+    .half_moon_a {
+        left: 5%;
+        height: 100px;
+        justify-content: center;
+    }
+
+    .sns_maru1 {
+        bottom: 0;
+        margin: 0;
+    }
+
+    .base {
+        width: 70px;
+        height: 70px;
+    }
+
+    .sns_maru2 {
+        bottom: 0;
+        margin: 0;
+    }
+
+    .insta {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sns_maru3 {
+        bottom: 0;
+    }
+
+    .twitter {
+        width: 40px;
+        height: 35px;
+    }
+
+    .sns_text {
+        display: none;
+    }
+
+    .sns_text2 {
+        display: none;
+    }
+
+    .half_moon_b {
+        height: 100px;
+        left: 5%;
+        bottom: 152px;
+    }
+
+    .half_moon_c {
+        height: 100px;
+        right: 5%;
+        bottom: 225px;
+    }
+
+    .half_moon_d {
+        height: 100px;
+        right: 8%;
+        bottom: 325px;
+    }
+
+    .ibou {
+        width: 150px;
+        right: 25%;
+        bottom: 592px;
+        z-index: 999;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .midasi {
+        font-size: 14px;
+    }
+
+    .midasi_green {
+        font-size: 14px;
+    }
+
+    .support_green {
+        font-size: 30px;
+    }
+
+    .support_white {
+        font-size: 30px;
+        bottom: 81px;
+    }
+
+    .post_green {
+        font-size: 30px;
+    }
+
+    .post_white {
+        font-size: 30px;
+        bottom: -17px;
+    }
+
+    .about_green {
+        font-size: 30px;
+    }
+
+    .about_white {
+        font-size: 30px;
+        bottom: 69px;
+    }
+
+    .other_green {
+        font-size: 25px;
+    }
+
+    .other_white {
+        font-size: 25px;
+        bottom: 58px;
+    }
+
+    .more_green {
+        font-size: 30px;
+    }
+
+    .more_white {
+        font-size: 30px;
+        bottom: 69px;
+    }
+
+    .text_midasi {
+        font-size: 10px;
+        position: relative;
+        right: 10px;
+    }
+
+    .about_text {
+        font-size: 10px;
+    }
+
+    .other_company_logo {
+        width: 250px;
+        height: 130px;
+    }
+}
