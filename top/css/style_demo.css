@@ -3,7 +3,6 @@
 body {
     margin: 0;
     padding: 0;
-    /*ブラウザごとの初期値を解除*/
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
     position: relative;
     background-repeat: no-repeat;
@@ -547,12 +546,11 @@ nav .inner ul li a {
 }
 
 .modal__bg {
-    /* 何故か画面幅いっぱいに要素がかからないので、無理矢理位置をずらしている。 */
     background: rgba(255, 255, 255, 0.7);
     width: 120%;
     height: 120%;
     position: absolute;
-    right: 1px;
+    right: 1px;  /* 何故か画面幅いっぱいに要素がかからないので、無理矢理位置をずらしている。 */
 }
 
 .modal__content {
