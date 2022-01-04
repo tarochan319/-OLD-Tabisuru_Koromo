@@ -418,6 +418,9 @@ nav .inner ul li a {
   height: 1490px;
   border-radius: 30px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .back span {
@@ -465,7 +468,6 @@ nav .inner ul li a {
   font-size: 18px;
   text-align: center;
   color: white;
-  margin-top: 195px;
 }
 
 /* 超全力サポーター */

@@ -635,28 +635,6 @@ nav .inner ul li a {
     margin-top: 50px;
 }
 
-.support {
-    text-align: center;
-    margin-top: 86px;
-}
-
-.support_green {
-    position: relative;
-    color: #2BBF00;
-    font-size: 35px;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    letter-spacing: 1px;
-}
-
-.support_white {
-    position: relative;
-    color: white;
-    bottom: 81px;
-    font-size: 35px;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    letter-spacing: 1px;
-}
-
 .back_mask {
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
@@ -699,7 +677,7 @@ nav .inner ul li a {
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 55px;
 }
 
 .support_btn {
@@ -1330,18 +1308,6 @@ small {
         width: 55%;
     }
 
-    .support {
-        margin-top: 98px;
-    }
-
-    .support_green {
-        bottom: 12px;
-    }
-
-    .support_white {
-        bottom: 93px;
-    }
-
     .support_btn {
         width: 30%;
         font-size: 25px;
@@ -1419,14 +1385,6 @@ small {
     .toggle_btn2 {
         right: 10px;
         top: 52px;
-    }
-
-    .support_green {
-        bottom: 12px;
-    }
-
-    .support_white {
-        bottom: 93px;
     }
 
     .support_btn {
@@ -1857,15 +1815,6 @@ small {
 
     .midasi_green {
         font-size: 14px;
-    }
-
-    .support_green {
-        font-size: 30px;
-    }
-
-    .support_white {
-        font-size: 30px;
-        bottom: 81px;
     }
 
     .post_green {
