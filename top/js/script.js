@@ -964,3 +964,25 @@ $(function () {
     return false;
   });
 });
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAEpfX_9ytjJt-NmoVoD0EEeEcEJ4iXC5E",
+  authDomain: "tabisuru-koromo.firebaseapp.com",
+  projectId: "tabisuru-koromo",
+  storageBucket: "tabisuru-koromo.appspot.com",
+  messagingSenderId: "10782823535",
+  appId: "1:10782823535:web:1f8c3296b3900679ae299a",
+  measurementId: "G-FJ7CF3TG9B"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);

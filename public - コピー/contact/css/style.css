@@ -1,0 +1,732 @@
+@charset "utf-8";
+/*文字コード*/
+
+body {
+    margin: 0;
+    padding: 0;
+    /*ブラウザごとの初期値を解除*/
+    background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
+    position: relative;
+    background-repeat: no-repeat;
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Maru Gothic ProN', 'ヒラギノ丸ゴ ProN', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+/*ヘッダー*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 旅する衣ロゴ */
+
+.logo {
+    padding: 5px 0px;
+}
+
+.title {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 40px;
+    z-index: 1;
+    letter-spacing: 2px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.title2 {
+    text-decoration: none;
+    color: #2BBF00;
+    position: absolute;
+    left: 40px;
+    letter-spacing: 2px;
+    top: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.tabi {
+    display: inline-block;
+    font-size: 70px;
+    position: relative;
+    top: 5px;
+    transform: rotate(12deg);
+    margin: 0px 5px;
+}
+
+.title_text {
+    font-size: 35px;
+}
+
+.title_koromo {
+    font-size: 20px;
+}
+
+.title_koromo2 {
+    position: relative;
+    font-size: 20px;
+    bottom: 3px;
+}
+
+/* ハンバーガーメニュー */
+
+nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    bottom: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.78);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s;
+    z-index: 3;
+    opacity: 0;
+}
+
+.open nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    opacity: 1;
+    width: 370px;
+    z-index: 10;
+}
+
+nav .inner {}
+
+nav .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .inner ul li {
+    position: relative;
+    margin: 0;
+    top: 80px;
+    letter-spacing: 0.5px;
+}
+
+nav .inner ul li a {
+    display: block;
+    font-size: 22px;
+    margin: 3em 1.5em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+/*============
+.toggle_btn
+=============*/
+
+.toggle_btn1 {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 10;
+    margin-right: 25px;
+}
+
+.toggle_btn1 span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all .5s;
+    border: 1px solid black;
+}
+
+.toggle_btn1 span:nth-child(1) {
+    top: 2px;
+    height: 4px;
+}
+
+.toggle_btn1 span:nth-child(2) {
+    top: 12px;
+    height: 4px;
+}
+
+.toggle_btn1 span:nth-child(3) {
+    bottom: 2px;
+    height: 4px;
+}
+
+.open .toggle_btn1 span {
+    background-color: black;
+}
+
+.open .toggle_btn1 span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+    height: 5px;
+    background-color: #2BBF00;
+    top: 3px;
+    border: none;
+}
+
+.open .toggle_btn1 span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .toggle_btn1 span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+    height: 5px;
+    top: 23px;
+    background-color: #2BBF00;
+    border: none;
+}
+
+.toggle_btn2 {
+    display: block;
+    position: absolute;
+    top: 58px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 9;
+    margin-right: 25px;
+}
+
+.toggle_btn2 span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: #2BBF00;
+    border-radius: 4px;
+    transition: all .5s;
+    border: 1px solid black;
+}
+
+.toggle_btn2 span:nth-child(1) {
+    top: 3px;
+    height: 3px;
+}
+
+.toggle_btn2 span:nth-child(2) {
+    top: 13px;
+    height: 3px;
+}
+
+.toggle_btn2 span:nth-child(3) {
+    bottom: 2px;
+    height: 3px;
+}
+
+.open .toggle_btn2 span {
+    opacity: 0;
+}
+
+.open .toggle_btn2 span:nth-child(1) {
+    opacity: 0;
+}
+
+.open .toggle_btn2 span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .toggle_btn2 span:nth-child(3) {
+    opacity: 0;
+}
+
+/* ハンバーガーメニュー見出し */
+
+.illust a {
+    position: absolute;
+    color: #40C7FF;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    transition: all 0.2s;
+    top: -68px;
+}
+
+.illust a:hover {
+    transform: translate(0px, 3.5px);
+    /* transform: scale(1.1, 1.1); */
+}
+
+.illust2 a {
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.about a {
+    position: absolute;
+    color: #2BBF00;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.about a:hover {
+    transform: translate(0px, 3.5px);
+    /* transform: scale(1.1, 1.1); */
+}
+
+.about2 a {
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.create a {
+    position: absolute;
+    color: #B479FF;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.create a:hover {
+    transform: translate(0px, 3.5px);
+    /* transform: scale(1.1, 1.1); */
+}
+
+.create2 a {
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.contact a {
+    position: absolute;
+    color: #FF0033;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.contact a:hover {
+    transform: translate(0px, 3.5px);
+    /* transform: scale(1.1, 1.1); */
+}
+
+.contact2 a {
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+.spt a {
+    position: absolute;
+    color: #ffa500;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    top: -68px;
+    transition: all 0.2s;
+}
+
+.spt a:hover {
+    transform: translate(0px, 3.5px);
+    /* transform: scale(1.1, 1.1); */
+}
+
+.spt2 a {
+    position: relative;
+    color: white;
+    top: 2.5px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+}
+
+/* コンテンツ */
+
+.midasi_big {
+    display: flex;
+    position: relative;
+    left: 130px;
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    z-index: 1;
+    letter-spacing: 5px;
+}
+
+.contact {
+    color: #2BBF00;
+    position: relative;
+    top: 6px;
+    left: 4px;
+}
+
+.contact2 {
+    color: white;
+    position: absolute;
+}
+
+.midasi_small {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    z-index: 1;
+    font-size: 24px;
+    justify-content: center;
+    right: 200px;
+    letter-spacing: 5px;
+}
+
+.to {
+    color: #2BBF00;
+    position: relative;
+    top: 4px;
+    left: 3px;
+}
+
+.to2 {
+    color: white;
+    position: absolute;
+}
+
+.text {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.midasi2 {
+    display: flex;
+    position: relative;
+    left: 200px;
+    margin-top: 100px;
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    z-index: 1;
+    letter-spacing: 5px;
+}
+
+.form {
+    color: #2BBF00;
+    position: relative;
+    top: 5px;
+    left: 3px;
+}
+
+.form2 {
+    color: white;
+    position: absolute;
+}
+
+.name {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    font-size: 20px;
+}
+
+.mail {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    font-size: 20px;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    position: relative;
+    font-size: 20px;
+}
+
+.contact_form {
+    line-height: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.name_form {
+    width: 550px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 3px black;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.mail_form {
+    width: 550px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 3px black;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.message {
+    width: 550px;
+    height: 300px;
+    border: solid 3px black;
+    border-radius: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+dt {
+    position: relative;
+    letter-spacing: 2px;
+}
+
+dd {
+    text-align: center;
+}
+
+#btn {
+    margin-left: 50%;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: white;
+    width: 100px;
+    height: 35px;
+    position: relative;
+    left: 190px;
+    bottom: 36px;
+    z-index: 1;
+    font-weight: bold;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+#btn:hover {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+.btn2 {
+    position: absolute;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    right: 338px;
+    bottom: 119px;
+    background-color: #2BBF00;
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    left: 20px;
+    margin-top: 50px;
+}
+
+small {
+    position: relative;
+    bottom: 10px;
+}
+
+/* レスポンシブPCファースト */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* iPad Pro用 */
+    .btn2 {
+        right: 218px;
+        bottom: 118px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* iPad用 */
+    .btn2 {
+        right: 90px;
+        bottom: 118px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    /* スマホ用 */
+    .title {
+        left: 10px;
+        letter-spacing: 1px;
+        top: 2px;
+    }
+    .tabi {
+        font-size: 30px;
+        margin: 0px;
+        top: 3px;
+    }
+    .title_text {
+        font-size: 15px;
+    }
+    .title_koromo {
+        font-size: 10px;
+        top: 0;
+    }
+    .title_koromo2 {
+        font-size: 10px;
+    }
+    .title2 {
+        left: 10px;
+        letter-spacing: 1px;
+    }
+    .toggle_btn1 {
+        margin: 0;
+        top: 17px;
+        width: 8px;
+    }
+    .toggle_btn1 span {
+        width: 25px;
+    }
+    .toggle_btn2 {
+        margin: 0;
+        top: 20px;
+        width: 8px;
+    }
+    .toggle_btn2 span {
+        width: 25px;
+    }
+    .open nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav .inner {}
+    nav .inner ul li {
+        top: 80px;
+    }
+    .midasi_big {
+        font-size: 20px;
+        left: 25px;
+        letter-spacing: 1px;
+    }
+    .contact {
+        top: 4px;
+        left: 2px;
+    }
+    .midasi_small {
+        font-size: 20px;
+        right: 106px;
+    }
+    .text {
+        font-size: 18px;
+        bottom: 25px;
+    }
+    .midasi2 {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        margin-top: 50px;
+        letter-spacing: 2px;
+    }
+    .form {
+        top: 4px;
+        left: 2px;
+    }
+    .contact_form {
+        display: flex;
+        flex-direction: column;
+    }
+    dt {
+        padding: 0 10px;
+    }
+    dd {
+        display: flex;
+        align-items: center;
+        margin: 0 50px;
+    }
+    .name_form {
+        width: 100%;
+        height: 35px;
+        font-size: 12px;
+    }
+    .mail_form {
+        width: 100%;
+        height: 35px;
+        font-size: 12px;
+    }
+    .message {
+        width: 100%;
+        height: 95px;
+        font-size: 12px;
+    }
+    .btn {
+        margin-left: 0;
+        left: 241px;
+        bottom: 77px;
+        position: absolute;
+        font-size: 12px;
+        width: 20%;
+        height: 30px;
+    }
+    .btn2 {
+        right: 56px;
+        bottom: 72px;
+        width: 20%;
+        height: 30px;
+    }
+    footer {
+        font-size: 10px;
+        margin-top: 100px;
+    }
+}
