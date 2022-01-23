@@ -1,5 +1,4 @@
 @charset "utf-8";
-/*文字コード*/
 
 body {
   margin: 0;
@@ -8,11 +7,15 @@ body {
   background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
   position: relative;
   background-repeat: no-repeat;
-  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Maru Gothic ProN', 'ヒラギノ丸ゴ ProN', sans-serif;
+  font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
 }
 
 .wrap {
   overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /*ヘッダー*/
@@ -412,9 +415,12 @@ nav .inner ul li a {
 .back {
   background: rgba(0, 146, 146, 0.3);
   width: 80%;
-  height: 1490px;
+  height: 750px;
   border-radius: 30px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .back span {
@@ -462,7 +468,6 @@ nav .inner ul li a {
   font-size: 18px;
   text-align: center;
   color: white;
-  margin-top: 195px;
 }
 
 /* 超全力サポーター */
@@ -493,153 +498,188 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
+
   /* iPad Pro用 */
   .title {
     left: 30px;
   }
+
   .title2 {
     left: 30px;
   }
+
   .toggle_btn1 {
     right: 20px;
   }
+
   .toggle_btn2 {
     right: 20px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+
   /* iPad用 */
   .title {
     left: 30px;
   }
+
   .tabi {
     font-size: 65px;
   }
+
   .title2 {
     left: 30px;
   }
+
   .toggle_btn1 {
     right: 10px;
     top: 50px;
   }
+
   .toggle_btn2 {
     right: 10px;
     top: 52px;
   }
+
   .under_line {
     width: 613px;
   }
 }
 
 @media screen and (max-width: 767px) {
+
   /* スマホ用 */
   .title {
     left: 10px;
     letter-spacing: 0px;
     top: 2px;
-}
-.tabi {
+  }
+
+  .tabi {
     font-size: 35px;
     top: 3px;
-}
-.title_text {
+  }
+
+  .title_text {
     font-size: 16px;
-}
-.title_koromo {
+  }
+
+  .title_koromo {
     font-size: 12px;
-    top: 0;
-}
-.title_koromo2 {
+  }
+
+  .title_koromo2 {
     font-size: 12px;
     bottom: 1px;
-}
-.title2 {
+  }
+
+  .title2 {
     left: 10px;
     letter-spacing: 0px;
-}
-.toggle_btn1 {
+  }
+
+  .toggle_btn1 {
     top: 23px;
     right: -15px;
-}
-.toggle_btn1 span {
+  }
+
+  .toggle_btn1 span {
     width: 25px;
-}
-.toggle_btn2 {
+  }
+
+  .toggle_btn2 {
     top: 25px;
     right: -15px;
-}
-.toggle_btn2 span {
+  }
+
+  .toggle_btn2 span {
     width: 25px;
-}
+  }
+
   .open nav {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   nav .inner {}
+
   nav .inner ul li {
     top: 80px;
   }
+
   .back {
     overflow: scroll;
     margin-top: 10px;
     height: 500px;
   }
+
   .midasi_big {
     font-size: 20px;
     left: 25px;
     letter-spacing: 1px;
     margin-top: 50px;
   }
+
   .support {
     top: 4px;
     left: 2px;
   }
+
   .under_line {
     width: 300px;
     bottom: 5px;
   }
+
   .midasi {
     display: flex;
     flex-direction: column;
     font-size: 14px;
     top: 50px;
   }
+
   .midasi2 {
     display: flex;
     flex-direction: column;
     font-size: 14px;
     margin-top: 100px;
   }
+
   .indivi {
     display: flex;
     flex-direction: column;
   }
+
   .midasi3 {
     display: flex;
     flex-direction: column;
     font-size: 14px;
     margin-top: 50px;
   }
+
   .max_power {
     display: flex;
     flex-direction: column;
   }
+
   .midasi4 {
     display: flex;
     flex-direction: column;
     font-size: 14px;
     margin-top: 50px;
   }
+
   .full_power {
     display: flex;
     flex-direction: column;
   }
+
   .back span {
     margin: 20px;
   }
+
   footer {
     margin-top: 90px;
     font-size: 10px;
