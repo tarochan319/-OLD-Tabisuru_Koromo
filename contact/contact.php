@@ -7,22 +7,22 @@ if (isset($_POST['send'])) {
     mb_internal_encoding("UTF-8");
 
     $to = "isenti.fashion@gmail.com";  //宛先
-$subject = $_POST['name']."からお問い合わせが届いたよ！";  //件名
-$body = "お問い合わせ内容：\n".$_POST['message'];  //本文
-$from = $_POST['email'];  //差出人
-$fromname = $_POST['name'];  //差し出し人名
+    $subject = $_POST['name']."からお問い合わせが届いたよ！";  //件名
+    $body = "お問い合わせ内容：\n".$_POST['message'];  //本文
+    $from = $_POST['email'];  //差出人
+    $fromname = $_POST['name'];  //差し出し人名
 
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
     $mail->CharSet = "iso-2022-jp";
     $mail->Encoding = "7bit";
 
     $mail->IsSMTP();    //「SMTPサーバーを使うよ」設定
-$mail->SMTPAuth = true;   //「SMTP認証を使うよ」設定
-$mail->Host = 'smtp.gmail.com:587';   // SMTPサーバーアドレス:ポート番号
-$mail->Username = 'isenti.fashion@gmail.com';   // SMTP認証用のユーザーID
-$mail->Password = 'senty@55';   // SMTP認証用のパスワード
+    $mail->SMTPAuth = true;   //「SMTP認証を使うよ」設定
+    $mail->Host = 'smtp.gmail.com:587';   // SMTPサーバーアドレス:ポート番号
+    $mail->Username = 'isenti.fashion@gmail.com';   // SMTP認証用のユーザーID
+    $mail->Password = 'senty@55';   // SMTP認証用のパスワード
 
-$mail->AddAddress($to);
+    $mail->AddAddress($to);
     $mail->From = $from;
     $mail->FromName = mb_encode_mimeheader(mb_convert_encoding($fromname, "JIS", "UTF-8"));
     $mail->Subject = mb_encode_mimeheader(mb_convert_encoding($subject, "JIS", "UTF-8"));

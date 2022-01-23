@@ -1675,12 +1675,9 @@ small {
         justify-content: start;
     }
 
-    .fuwafuwa {
-        padding: 0px 15px;
-    }
-
     .post_single {
         padding: 0px 15px;
+        height: 150px;
     }
 
     .post_name {
