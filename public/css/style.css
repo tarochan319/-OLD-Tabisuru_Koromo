@@ -743,7 +743,7 @@ nav .inner ul li a {
 .post_overall {
     display: flex;
     position: relative;
-    top: 30px;
+    top: 20px;
     overflow-x: scroll;
 }
 
@@ -757,45 +757,46 @@ nav .inner ul li a {
 }
 
 .post_name {
-    display: flex;
-    justify-content: space-around;
     font-size: 18px;
     font-weight: bold;
     position: relative;
-    top: 40px;
     color: white;
-    margin: 0px 15px;
 }
 
 .post1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .post1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .post2 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .post3 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .post4 {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* アバウトのとこ */
 
 #about_us {
-    margin-top: 200px;
+    margin-top: 300px;
 }
 
 .content_about {
@@ -1423,8 +1424,7 @@ small {
     }
 
     .post_single {
-        width: 130px;
-        height: 130px;
+        height: 200px;
     }
 
     .fuwafuwa {
@@ -1677,6 +1677,7 @@ small {
 
     .post_single {
         padding: 0px 15px;
+        height: 150px;
     }
 
     .post_name {
