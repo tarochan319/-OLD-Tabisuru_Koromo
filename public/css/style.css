@@ -4,9 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
-    position: relative;
     background-repeat: no-repeat;
     font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -742,13 +742,24 @@ nav .inner ul li a {
 
 .post_overall {
     display: flex;
+    flex-direction: row;
     position: relative;
     top: 20px;
-    overflow-x: scroll;
+    overflow: scroll;
+    /* animation: loop-slide 20s infinite linear 1s both; */
 }
 
+/* @keyframes loop-slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  } */
+
 .post_overall::-webkit-scrollbar {
-    display:none;
+    display: none;
 }
 
 .post_single {
@@ -788,6 +799,12 @@ nav .inner ul li a {
 }
 
 .post4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post5 {
     display: flex;
     flex-direction: column;
     align-items: center;
