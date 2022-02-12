@@ -6,7 +6,6 @@ body {
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
     background-repeat: no-repeat;
     font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
-    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -720,31 +719,22 @@ nav .inner ul li a {
     height: 470px;
 }
 
-.post_green {
+.post_midasi {
     position: absolute;
-    color: #2BBF00;
+    color: white;
     left: 30px;
     margin-top: 20px;
     font-size: 40px;
     letter-spacing: 1px;
     font-weight: bold;
-}
-
-.post_white {
-    position: relative;
-    color: white;
-    left: 30px;
-    font-size: 40px;
-    bottom: -15px;
-    letter-spacing: 1px;
-    font-weight: bold;
+    text-shadow: 3px 3px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
 }
 
 .post_overall {
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 20px;
+    top: 110px;
     overflow: scroll;
     /* animation: loop-slide 20s infinite linear 1s both; */
 }
@@ -823,7 +813,6 @@ nav .inner ul li a {
     height: 300px;
     margin: 0 auto;
     position: relative;
-    bottom: 50px;
     border: 1px solid black;
 }
 
@@ -852,25 +841,12 @@ nav .inner ul li a {
 }
 
 .about_green {
-    color: #2BBF00;
-    font-weight: bold;
-    white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    font-size: 35px;
-    position: relative;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.about_white {
     color: white;
     font-weight: bold;
     white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    font-size: 35px;
-    position: relative;
+    text-shadow: 0px 5px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
+    font-size: 40px;
     text-align: center;
-    bottom: 81px;
     letter-spacing: 1px;
 }
 
@@ -914,34 +890,21 @@ nav .inner ul li a {
 .other_support {
     text-align: center;
     position: relative;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .other_green {
-    color: #2BBF00;
-    font-size: 35px;
-    font-weight: bold;
-    white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    letter-spacing: 1px;
-}
-
-.other_white {
     color: white;
-    font-size: 35px;
-    position: relative;
-    bottom: 81px;
+    font-size: 40px;
     font-weight: bold;
-    white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    text-shadow: 0px 5px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
     letter-spacing: 1px;
 }
 
 .other_pic {
     display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    bottom: 30px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .other_company_logo {
@@ -951,12 +914,7 @@ nav .inner ul li a {
 }
 
 .other_company_name {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 12px;
     font-weight: bold;
-    position: relative;
-    bottom: 20px;
 }
 
 .other_text {
@@ -1039,30 +997,17 @@ nav .inner ul li a {
 }
 
 .more_green {
-    position: relative;
-    color: #2BBF00;
-    font-size: 35px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-}
-
-.more_white {
-    position: relative;
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
-    bottom: 81px;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    text-shadow: 0px 5px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
 }
 
 .maru {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    bottom: 65px;
 }
 
 .circle {
@@ -1098,8 +1043,7 @@ nav .inner ul li a {
 }
 
 .sns {
-    margin-top: 20px;
-    height: 400px;
+    margin-top: 75px;
 }
 
 .half_moon_a {
@@ -1363,7 +1307,7 @@ small {
     }
 
     .post_overall {
-        top: 40px;
+        top: 100x;
     }
 
     .fuwafuwa {
@@ -1437,7 +1381,7 @@ small {
     }
 
     .post_overall {
-        top: 50px;
+        top: 110px;
     }
 
     .post_single {
@@ -1553,7 +1497,7 @@ small {
     }
 
     .open nav {
-        width: 100%;
+        width: 110%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1680,7 +1624,7 @@ small {
     }
 
     #new_post {
-        height: 350px;
+        height: 300px;
     }
 
     .post_overall {
@@ -1739,7 +1683,7 @@ small {
     }
 
     .other_support {
-        margin-top: 100px;
+        margin-top: 150px;
     }
 
     .other_green {
