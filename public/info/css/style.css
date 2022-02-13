@@ -9,19 +9,12 @@ body {
   position: relative;
   overflow-x: hidden;
   background-repeat: no-repeat;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  /* font-family: 'Helvetica','Arial','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'sans-serif; */
+  font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;  
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
-
-.wrap {}
-
-/*ヘッダー*/
-
-header {}
 
 /* 旅する衣ロゴ */
 
@@ -464,7 +457,7 @@ nav .inner ul li a {
   background: #2EC4B6;
   position: absolute;
   right: 60px;
-  top: 530px;
+  top: 525px;
   transform: rotate(15deg);
   z-index: -1;
 }
@@ -796,7 +789,6 @@ small {}
     flex-direction: column;
     align-items: center;
   }
-  nav .inner {}
   nav .inner ul li {
     top: 80px;
   }
@@ -805,7 +797,6 @@ small {}
     left: 25px;
     letter-spacing: 1px;
   }
-  .info {}
   #porigon1 {
     width: 338px;
     height: 235px;
@@ -820,8 +811,8 @@ small {}
     bottom: 48px;
   }
   .isenti {
-    font-size: 12px;
-    left: 73px;
+    font-size: 13px;
+    left: 65px;
     top: 83px;
   }
   #porigon2 {
@@ -838,9 +829,9 @@ small {}
     bottom: 48px;
   }
   .name {
-    left: 190px;
+    left: 230px;
     top: 148px;
-    font-size: 12px;
+    font-size: 13px;
   }
   #porigon3 {
     width: 338px;
@@ -857,9 +848,9 @@ small {}
     bottom: 48px;
   }
   .date {
-    left: 93px;
-    top: 198px;
-    font-size: 12px;
+    left: 85px;
+    top: 210px;
+    font-size: 13px;
   }
   #porigon4 {
     width: 338px;
@@ -876,8 +867,8 @@ small {}
     bottom: 48px;
   }
   .address {
-    font-size: 12px;
-    left: 225px;
+    font-size: 13px;
+    left: 230px;
     top: 190px;
   }
   footer {
