@@ -993,7 +993,7 @@ nav .inner ul li a {
 
 .more {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .more_green {
@@ -1168,7 +1168,7 @@ nav .inner ul li a {
     color: #FFD600;
     text-align: left;
     top: 4px;
-    right: 140px;
+    right: 120px;
     font-weight: bold;
     font-size: 30px;
     text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
@@ -1258,10 +1258,6 @@ nav .inner ul li a {
 
 /*フッター*/
 
-footer {
-    text-align: center;
-}
-
 small {
     position: relative;
     bottom: 10px;
@@ -1336,7 +1332,7 @@ small {
     }
 
     .sns_text2 {
-        right: 140px;
+        right: 120px;
     }
 
     .ibou {
@@ -1435,7 +1431,7 @@ small {
     }
 
     .sns_text2 {
-        right: 140px;
+        right: 120px;
     }
 
     .ibou {
