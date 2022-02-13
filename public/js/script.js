@@ -894,12 +894,12 @@ $("#vmap").on("DOMSubtreeModified propertychange", function () {
 
 // メインメニュー
 $(document).ready(function () {
-
-  // (function ($) {
   let $nav = $("#navArea");
   let $btn = $(".toggle_btn1");
   let $mask = $("#mask");
-  let open = "open"; // class
+  let open = "open";
+  let $illsut = $(".illust");
+  let $about = $(".about");
   // menu open close
   $btn.on("click", function () {
     if (!$nav.hasClass(open)) {
@@ -912,8 +912,10 @@ $(document).ready(function () {
   $mask.on("click", function () {
     $nav.removeClass(open);
   });
+  $('#navArea a').on('click',function () {
+    $nav.removeClass(open);
+  });
 });
-
 
 
 // サブメニュー 
@@ -940,7 +942,7 @@ $(function () {
   // #で始まるアンカーをクリックした場合に処理
   $('a[href^=#new_post]').click(function () {
     // スクロールの速度
-    let speed = 1500;
+    let speed = 1300;
     // アンカーの値取得
     let href = $(this).attr("href");
     // 移動先を取得
@@ -958,7 +960,7 @@ $(function () {
   // #で始まるアンカーをクリックした場合に処理
   $('a[href^=#about_us]').click(function () {
     // スクロールの速度
-    let speed = 1500; // ミリ秒
+    let speed = 1300; // ミリ秒
     // アンカーの値取得
     let href = $(this).attr("href");
     // 移動先を取得

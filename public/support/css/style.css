@@ -411,7 +411,7 @@ nav .inner ul li a {
 .back {
   background: rgba(0, 146, 146, 0.3);
   width: 70%;
-  height: 750px;
+  height: 800px;
   border-radius: 30px;
   margin: 0 auto;
   margin-top: 100px;
@@ -428,16 +428,6 @@ nav .inner ul li a {
   margin: 30px;
 }
 
-/* 法人サポーター */
-
-.midasi {
-  position: relative;
-  font-size: 18px;
-  text-align: center;
-  color: white;
-  top: 95px;
-}
-
 .under_line {
   border-bottom: solid 2px white;
   position: relative;
@@ -446,45 +436,25 @@ nav .inner ul li a {
   bottom: 20px;
 }
 
-.top1 {
-  font-size: 18px;
-}
-
-.top2 {
-  font-size: 18px;
-}
-
-.top3 {
-  font-size: 18px;
-}
-
 /* 個人サポーター */
 
 .midasi2 {
   position: relative;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   color: white;
+  letter-spacing: 3px;
 }
 
 /* 超全力サポーター */
 
 .midasi3 {
   position: relative;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   color: white;
-  margin-top: 100px;
-}
-
-/* 全力サポーター */
-
-.midasi4 {
-  position: relative;
-  font-size: 18px;
-  text-align: center;
-  color: white;
-  margin-top: 100px;
+  margin-top: 80px;
+  letter-spacing: 3px;
 }
 
 footer {
