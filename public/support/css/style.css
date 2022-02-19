@@ -10,12 +10,12 @@ body {
   font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
 }
 
-.wrap {
-  overflow: hidden;
-}
-
 body::-webkit-scrollbar {
   display: none;
+}
+
+.wrap {
+  overflow: hidden;
 }
 
 /*ヘッダー*/

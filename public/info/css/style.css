@@ -6,14 +6,16 @@ body {
   padding: 0;
   /*ブラウザごとの初期値を解除*/
   background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
-  position: relative;
-  overflow-x: hidden;
   background-repeat: no-repeat;
   font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;  
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+.wrap {
+  overflow-x: hidden;
 }
 
 /* 旅する衣ロゴ */
