@@ -14,10 +14,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.wrap {
-  overflow: hidden;
-}
-
 /*ヘッダー*/
 
 header {

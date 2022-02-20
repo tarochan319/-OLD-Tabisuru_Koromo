@@ -14,10 +14,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.wrap {
-  overflow-x: hidden;
-}
-
 /* 旅する衣ロゴ */
 
 .logo {
