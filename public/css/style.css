@@ -5,7 +5,7 @@ body {
     padding: 0;
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
     background-repeat: no-repeat;
-    font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -365,7 +365,7 @@ nav .inner ul li a {
 
 /* 国名一覧 */
 
-.triangle {
+.submenu_red {
     width: 0;
     height: 0;
     border-left: 17px solid transparent;
@@ -377,11 +377,11 @@ nav .inner ul li a {
     transition: all 0.2s;
 }
 
-.triangle1:active {
+.submenu_white:active {
     transform: translate(9px, 0px);
 }
 
-.triangle1 {
+.submenu_white {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
@@ -390,7 +390,6 @@ nav .inner ul li a {
     position: relative;
     top: 70px;
     left: 48px;
-    /* transition: 1s; */
     transition: all 0.2s;
     cursor: pointer;
 }
@@ -1417,20 +1416,20 @@ small {
     }
 
     .tabi {
-        font-size: 35px;
+        font-size: 45px;
         top: 3px;
     }
 
     .title_text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .title_koromo {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .title_koromo2 {
-        font-size: 12px;
+        font-size: 14px;
         bottom: 1px;
     }
 
@@ -1468,16 +1467,22 @@ small {
         top: 81px;
     }
 
-    .triangle {
-        border-left: 13px solid transparent;
-        border-right: 13px solid transparent;
-        border-top: 13px solid #FF0033;
+    .acd-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    .triangle1 {
-        border-left: 11px solid transparent;
-        border-right: 11px solid transparent;
-        border-top: 11px solid white;
+    .submenu_red {
+        display: none;
+    }
+
+    .submenu_white {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid white;
+        left: 0;
+        z-index: 1;
     }
 
     .acd-content ul {
@@ -1490,7 +1495,7 @@ small {
     /* モーダルウィンドウ */
     .modal__content {
         left: 40%;
-        padding: 55px;
+        padding: 50px;
     }
 
     .content_midasi {
@@ -1503,24 +1508,25 @@ small {
     }
 
     .modal_text {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .ranking_midasi {
-        font-size: 10px;
+        font-size: 12px;
+        padding: 10px 5px;
     }
 
     .ranking_overall {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .wiki_link {
-        font-size: 10px;
+        font-size: 12px;
         left: 50px;
     }
 
     .shop_link {
-        font-size: 10px;
+        font-size: 12px;
         left: 50px;
         top: 23px;
     }
