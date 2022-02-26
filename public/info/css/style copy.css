@@ -6,9 +6,10 @@ body {
   padding: 0;
   /*ブラウザごとの初期値を解除*/
   background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
-  background-repeat: no-repeat;
   position: relative;
-  font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;  
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -96,6 +97,8 @@ nav {
   width: 370px;
   z-index: 10;
 }
+
+nav .inner {}
 
 nav .inner ul {
   list-style: none;
@@ -259,6 +262,7 @@ nav .inner ul li a {
 
 .illust a:hover {
   transform: translate(0px, 3.5px);
+  /* transform: scale(1.1, 1.1); */
 }
 
 .illust2 a {
@@ -283,6 +287,7 @@ nav .inner ul li a {
 
 .about a:hover {
   transform: translate(0px, 3.5px);
+  /* transform: scale(1.1, 1.1); */
 }
 
 .about2 a {
@@ -307,6 +312,7 @@ nav .inner ul li a {
 
 .create a:hover {
   transform: translate(0px, 3.5px);
+  /* transform: scale(1.1, 1.1); */
 }
 
 .create2 a {
@@ -331,6 +337,7 @@ nav .inner ul li a {
 
 .contact a:hover {
   transform: translate(0px, 3.5px);
+  /* transform: scale(1.1, 1.1); */
 }
 
 .contact2 a {
@@ -355,6 +362,7 @@ nav .inner ul li a {
 
 .spt a:hover {
   transform: translate(0px, 3.5px);
+  /* transform: scale(1.1, 1.1); */
 }
 
 .spt2 a {
@@ -405,6 +413,10 @@ nav .inner ul li a {
   z-index: -2;
 }
 
+#midasi {
+  text-align: center;
+}
+
 .org {
   position: relative;
   color: #2BBF00;
@@ -445,7 +457,7 @@ nav .inner ul li a {
   background: #2EC4B6;
   position: absolute;
   right: 60px;
-  top: 525px;
+  top: 530px;
   transform: rotate(15deg);
   z-index: -1;
 }
@@ -777,6 +789,7 @@ small {}
     flex-direction: column;
     align-items: center;
   }
+  nav .inner {}
   nav .inner ul li {
     top: 80px;
   }
@@ -785,6 +798,7 @@ small {}
     left: 25px;
     letter-spacing: 1px;
   }
+  .info {}
   #porigon1 {
     width: 338px;
     height: 235px;
@@ -799,8 +813,8 @@ small {}
     bottom: 48px;
   }
   .isenti {
-    font-size: 13px;
-    left: 65px;
+    font-size: 12px;
+    left: 73px;
     top: 83px;
   }
   #porigon2 {
@@ -817,9 +831,9 @@ small {}
     bottom: 48px;
   }
   .name {
-    left: 230px;
+    left: 190px;
     top: 148px;
-    font-size: 13px;
+    font-size: 12px;
   }
   #porigon3 {
     width: 338px;
@@ -836,9 +850,9 @@ small {}
     bottom: 48px;
   }
   .date {
-    left: 85px;
-    top: 210px;
-    font-size: 13px;
+    left: 93px;
+    top: 198px;
+    font-size: 12px;
   }
   #porigon4 {
     width: 338px;
@@ -855,8 +869,8 @@ small {}
     bottom: 48px;
   }
   .address {
-    font-size: 13px;
-    left: 230px;
+    font-size: 12px;
+    left: 225px;
     top: 190px;
   }
   footer {
