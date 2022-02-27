@@ -461,8 +461,9 @@ nav .inner ul li a {
     width: 120%;
     height: 120%;
     position: absolute;
-    right: 1px;
-    /* 何故か画面幅いっぱいに要素がかからないので、無理矢理位置をずらしている。 */
+    -webkit-position: absolute;
+    -ms-position: absolute;
+    right: 1px; /* 何故か画面全体に要素がかからないので、無理矢理位置をずらしている。*/
 }
 
 .modal__content {
