@@ -403,7 +403,6 @@ nav .inner ul li a {
     opacity: 0;
     transition: .5s;
     visibility: hidden;
-    z-index: 3;
 }
 
 .acd-check:checked+.acd-label+.acd-content {
@@ -449,6 +448,7 @@ nav .inner ul li a {
 .modal {
     display: none;
     height: 100vh;
+    min-height: 100vh;
     position: fixed;
     -webkit-position: fixed; /*Chrome, Safariのベンダープレフィックス*/
     -ms-position: fixed; /*Firefoxのベンダープレフィックス*/
@@ -456,7 +456,7 @@ nav .inner ul li a {
     width: 100%;
 }
 
-.modal__bg {
+.modal_bg {
     background: rgba(255, 255, 255, 0.7);
     width: 120%;
     height: 120%;
@@ -466,9 +466,9 @@ nav .inner ul li a {
     right: 1px; /* 何故か画面全体に要素がかからないので、無理矢理位置をずらしている。*/
 }
 
-.modal__content {
+.modal_content {
     background: white;
-    left: 50%;
+    left: 45%;
     top: 50%;
     padding: 45px;
     position: absolute;
@@ -738,17 +738,7 @@ nav .inner ul li a {
     position: relative;
     top: 110px;
     overflow: scroll;
-    /* animation: loop-slide 20s infinite linear 1s both; */
 }
-
-/* @keyframes loop-slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  } */
 
 .post_overall::-webkit-scrollbar {
     display: none;
@@ -1490,7 +1480,6 @@ small {
 
     .acd-content ul {
         flex-direction: column;
-        flex-wrap: nowrap;
         justify-content: start;
         align-items: center;
     }
@@ -1590,7 +1579,7 @@ small {
     .support_btn2 {
         width: 50%;
         font-size: 16px;
-        left: 26.5%;
+        left: 26%;
     }
 
     #new_post {
