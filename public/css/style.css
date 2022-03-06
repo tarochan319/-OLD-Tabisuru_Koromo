@@ -12,6 +12,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.wrap {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* 旅する衣ロゴ */
 
 .logo {
@@ -446,29 +451,29 @@ nav .inner ul li a {
 
 .modal {
     display: none;
-    height: 100vh;
-    min-height: 100vh;
+    height: 100%;
     position: fixed;
-    -webkit-position: fixed; /*Chrome, Safariのベンダープレフィックス*/
-    -ms-position: fixed; /*Firefoxのベンダープレフィックス*/
+    -webkit-position: fixed;
+    /*Chrome, Safariのベンダープレフィックス*/
+    -ms-position: fixed;
+    /*Firefoxのベンダープレフィックス*/
     top: 0;
     width: 100%;
 }
 
-.modal_bg {
+/* .modal_bg {
     background: rgba(255, 255, 255, 0.7);
     width: 120%;
     height: 120%;
     position: absolute;
     -webkit-position: absolute;
     -ms-position: absolute;
-    right: 1px; /* 何故か画面全体に要素がかからないので、無理矢理位置をずらしている。*/
-}
+} */
 
 .modal_content {
     background: white;
     left: 45%;
-    top: 50%;
+    top: 45%;
     padding: 45px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -537,8 +542,6 @@ nav .inner ul li a {
     flex-direction: column;
     align-items: center;
     padding: 10px 25px;
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 .modal_text {
@@ -1005,7 +1008,6 @@ nav .inner ul li a {
 }
 
 .half_moon_a {
-    margin: 10px;
     width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
@@ -1133,14 +1135,13 @@ nav .inner ul li a {
 }
 
 .half_moon_b {
-    margin: 10px;
     width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: white;
     border: 1px solid black;
     position: relative;
-    bottom: 200px;
+    bottom: 188px;
     left: 45%;
     z-index: 2;
 }
@@ -1486,6 +1487,11 @@ small {
     }
 
     /* モーダルウィンドウ */
+    .modal {
+        overflow-y: auto;
+        overflow-y: scroll;
+    }
+
     .modal_content {
         left: 40%;
         padding: 50px;
@@ -1495,17 +1501,21 @@ small {
         font-size: 20px;
     }
 
+    .content_left {
+        padding: 0px 25px;
+    }
+
     .modal_logo {
         width: 150px;
         height: 150px;
     }
 
     .modal_text {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .ranking_midasi {
-        font-size: 12px;
+        font-size: 14px;
         padding: 10px 5px;
     }
 
@@ -1514,14 +1524,12 @@ small {
     }
 
     .wiki_link {
-        font-size: 12px;
-        left: 50px;
+        font-size: 14px;
     }
 
     .shop_link {
-        font-size: 12px;
-        left: 50px;
-        top: 23px;
+        font-size: 14px;
+        top: 70px;
     }
 
     /* ここまで */
