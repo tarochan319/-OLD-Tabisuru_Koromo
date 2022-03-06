@@ -418,7 +418,6 @@ nav .inner ul li a {
     width: 100%;
     position: relative;
     z-index: 9999;
-    overflow-y: scroll;
     height: 850px;
 }
 
@@ -538,6 +537,8 @@ nav .inner ul li a {
     flex-direction: column;
     align-items: center;
     padding: 10px 25px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .modal_text {
@@ -1485,7 +1486,7 @@ small {
     }
 
     /* モーダルウィンドウ */
-    .modal__content {
+    .modal_content {
         left: 40%;
         padding: 50px;
     }
