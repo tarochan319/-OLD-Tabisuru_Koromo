@@ -473,7 +473,7 @@ nav .inner ul li a {
 .modal_content {
     background: white;
     left: 45%;
-    top: 50%;
+    top: 45%;
     padding: 45px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -513,7 +513,6 @@ nav .inner ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    float: left;
     padding: 10px 25px;
 }
 
@@ -523,11 +522,13 @@ nav .inner ul li a {
 }
 
 .wiki_link {
+    text-align: center;
     text-decoration: none;
     background-color: #FF9900;
     color: white;
     position: absolute;
     padding: 5px 20px;
+    margin: 0 auto;
     font-weight: bold;
     border-radius: 5px;
     bottom: 37px;
@@ -1432,7 +1433,7 @@ small {
     }
 
     .toggle_btn1 {
-        top: 23px;
+        top: 30px;
         right: -15px;
     }
 
@@ -1441,7 +1442,7 @@ small {
     }
 
     .toggle_btn2 {
-        top: 25px;
+        top: 32.5px;
         right: -15px;
     }
 
@@ -1450,7 +1451,7 @@ small {
     }
 
     .open nav {
-        width: 110%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1486,16 +1487,10 @@ small {
 
     /* モーダルウィンドウ */
     .modal {
-        position: absolute;
         left: 0%;
     }
 
     .modal_content {
-        height: 76%;
-        top: 30%;
-        position: absolute;
-        width: 47%;
-        padding: 45px;
     }
 
     .content_midasi {
@@ -1513,7 +1508,6 @@ small {
 
     .modal_text {
         font-size: 14px;
-        line-height: 1.5;
     }
 
     .ranking_midasi {
@@ -1530,7 +1524,8 @@ small {
     }
 
     .shop_link {
-        font-size: 16px;
+        font-size: 14px;
+        top: 70px;
     }
 
     /* ここまで */
