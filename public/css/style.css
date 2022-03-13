@@ -12,11 +12,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.wrap {
-    /* width: 100%;
-    overflow-x: hidden; */
-}
-
 /* 旅する衣ロゴ */
 
 .logo {
@@ -421,7 +416,11 @@ nav .inner ul li a {
     position: relative;
     z-index: 9999;
     height: 850px;
-    overflow: scroll;
+    overflow: auto;
+}
+
+.acd-content ul::-webkit-scrollbar {
+    display: none;
 }
 
 .acd-content li {
@@ -1277,11 +1276,9 @@ small {
         bottom: 81px;
     }
 
-    .half_moon_a {
-    }
+    .half_moon_a {}
 
-    .half_moon_b {
-    }
+    .half_moon_b {}
 
     .sns_text2 {
         right: 120px;
@@ -1361,11 +1358,9 @@ small {
         bottom: 81px;
     }
 
-    .half_moon_a {
-    }
+    .half_moon_a {}
 
-    .half_moon_b {
-    }
+    .half_moon_b {}
 
     .sns_maru1 {
         margin-left: 30px;
@@ -1481,17 +1476,13 @@ small {
     /* モーダルウィンドウ */
     .modal {
         left: 0%;
-    }
-
-    .modal_bg {
-        display: block;
+        position: absolute;
     }
 
     .modal_content {
-        top: 90%;
-        position: absolute;
+        top: 50%;
         padding: 50px;
-        height: 128%;
+        height: 78%;
     }
 
     .content_midasi {
