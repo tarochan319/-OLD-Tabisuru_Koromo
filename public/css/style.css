@@ -129,12 +129,11 @@ nav .inner ul li a {
     position: absolute;
     top: 55px;
     right: 30px;
-    width: 30px;
+    width: 55px;
     height: 30px;
     transition: all .5s;
     cursor: pointer;
     z-index: 10;
-    margin-right: 25px;
 }
 
 .toggle_btn1 span {
@@ -195,12 +194,11 @@ nav .inner ul li a {
     position: absolute;
     top: 58px;
     right: 30px;
-    width: 30px;
+    width: 55px;
     height: 30px;
     transition: all .5s;
     cursor: pointer;
     z-index: 9;
-    margin-right: 25px;
 }
 
 .toggle_btn2 span {
@@ -420,10 +418,10 @@ nav .inner ul li a {
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
     position: relative;
     z-index: 9999;
     height: 850px;
+    overflow: scroll;
 }
 
 .acd-content li {
@@ -461,24 +459,26 @@ nav .inner ul li a {
     width: 100%;
 }
 
-/* .modal_bg {
+.modal_bg {
+    display: none;
     background: rgba(255, 255, 255, 0.7);
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     -webkit-position: absolute;
     -ms-position: absolute;
-} */
+}
 
 .modal_content {
     background: white;
-    left: 45%;
+    left: 50%;
     top: 50%;
     padding: 45px;
     position: absolute;
     transform: translate(-50%, -50%);
+    border-radius: 20px;
     width: 50%;
-    border-radius: 10px;
+    max-width: 50%;
 }
 
 .js-modal-open {
@@ -513,12 +513,10 @@ nav .inner ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    float: left;
     padding: 10px 25px;
 }
 
 .modal_logo {
-    width: 250px;
     height: 250px;
 }
 
@@ -1006,17 +1004,18 @@ nav .inner ul li a {
 }
 
 .half_moon_a {
-    width: 100%;
     height: 150px;
+    bottom: 50px;
     border-radius: 75px 0 0 75px;
     background: #2BBF00;
     border: 1px solid black;
     position: relative;
     z-index: 3;
-    bottom: 50px;
-    left: 45%;
     display: flex;
     align-items: center;
+    /* ▼幅が合計で100%じゃないとはみ出る */
+    width: 60%;
+    left: 40%;
 }
 
 /* SNS */
@@ -1133,20 +1132,19 @@ nav .inner ul li a {
 }
 
 .half_moon_b {
-    width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: white;
     border: 1px solid black;
     position: relative;
     bottom: 188px;
-    left: 45%;
+    width: 60%;
+    left: 40%;
     z-index: 2;
 }
 
 .half_moon_c {
     margin: 10px;
-    width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: white;
@@ -1164,7 +1162,6 @@ nav .inner ul li a {
 
 .half_moon_d {
     margin: 10px;
-    width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: #FFD600;
@@ -1281,11 +1278,9 @@ small {
     }
 
     .half_moon_a {
-        left: 32%;
     }
 
     .half_moon_b {
-        left: 33%;
     }
 
     .sns_text2 {
@@ -1367,11 +1362,9 @@ small {
     }
 
     .half_moon_a {
-        left: 15%;
     }
 
     .half_moon_b {
-        left: 15%;
     }
 
     .sns_maru1 {
@@ -1450,7 +1443,7 @@ small {
     }
 
     .open nav {
-        width: 110%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1482,20 +1475,23 @@ small {
         flex-direction: column;
         justify-content: start;
         align-items: center;
+        overflow: scroll;
     }
 
     /* モーダルウィンドウ */
     .modal {
-        position: absolute;
         left: 0%;
     }
 
+    .modal_bg {
+        display: block;
+    }
+
     .modal_content {
-        height: 76%;
-        top: 30%;
+        top: 90%;
         position: absolute;
-        width: 47%;
-        padding: 45px;
+        padding: 50px;
+        height: 128%;
     }
 
     .content_midasi {
@@ -1507,7 +1503,6 @@ small {
     }
 
     .modal_logo {
-        width: 150px;
         height: 150px;
     }
 
@@ -1596,10 +1591,7 @@ small {
         height: 300px;
     }
 
-    .post_overall {
-        overflow-y: scroll;
-        justify-content: start;
-    }
+    .post_overall {}
 
     .fuwafuwa {
         padding: 0px 15px;
@@ -1688,6 +1680,7 @@ small {
 
     .half_moon_a {
         left: 5%;
+        width: 95%;
         height: 100px;
         justify-content: center;
     }
@@ -1732,7 +1725,8 @@ small {
     .half_moon_b {
         height: 100px;
         left: 5%;
-        bottom: 152px;
+        width: 95%;
+        bottom: 143px;
     }
 
     .half_moon_c {
@@ -1750,7 +1744,7 @@ small {
     .ibou {
         width: 150px;
         right: 25%;
-        bottom: 567px;
+        bottom: 570px;
         z-index: 999;
     }
 
