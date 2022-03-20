@@ -23,7 +23,7 @@ jQuery(document).ready(function () {
       if (window.matchMedia("(max-width: 768px)").matches) {
 
       } else {
-        
+
         // ！！！アメリカ！！！
         if (code == 'us') {
           let modal = $("<div></div>", {
@@ -892,14 +892,12 @@ $("#vmap").on("DOMSubtreeModified propertychange", function () {
 });
 
 
-// メインメニュー
+// Humburger menu
 $(document).ready(function () {
   let $nav = $("#navArea");
   let $btn = $(".toggle_btn1");
   let $mask = $("#mask");
   let open = "open";
-  let $illsut = $(".illust");
-  let $about = $(".about");
   // menu open close
   $btn.on("click", function () {
     if (!$nav.hasClass(open)) {
@@ -912,29 +910,35 @@ $(document).ready(function () {
   $mask.on("click", function () {
     $nav.removeClass(open);
   });
-  $('#navArea a').on('click',function () {
+  $('#navArea a').on('click', function () {
     $nav.removeClass(open);
   });
 });
 
 
-// サブメニュー 
+// Sub menu
 // ※時折ポップアップ表示がイカれる？
 $(function () {
+  let body = $("body");
   $('.js-modal-open').each(function () {
     $(this).on('click', function () {
       let target = $(this).data('target');
       let modal = document.getElementById(target);
       $(modal).fadeIn();
+      body.css({
+        overflow: "hidden",
+      });
       return false;
     });
   });
   $('.js-modal-close-btn').on('click', function () {
     $('.js-modal').fadeOut();
+    body.css({
+      overflow: "auto",
+    });
     return false;
   });
 });
-
 
 
 // メインメニュー：illustration
@@ -942,7 +946,7 @@ $(function () {
   // #で始まるアンカーをクリックした場合に処理
   $('a[href^=#new_post]').click(function () {
     // スクロールの速度
-    let speed = 1300;
+    let speed = 1500;
     // アンカーの値取得
     let href = $(this).attr("href");
     // 移動先を取得
@@ -950,7 +954,7 @@ $(function () {
     // 移動先を数値で取得
     let position = target.offset().top;
     // スムーススクロール
-    $('body,html').animate({ scrollTop: position }, speed, 'swing');
+    $('body,html').animate({ scrollTop: position }, speed, "swing");
     return false;
   });
 });
@@ -960,7 +964,7 @@ $(function () {
   // #で始まるアンカーをクリックした場合に処理
   $('a[href^=#about_us]').click(function () {
     // スクロールの速度
-    let speed = 1300; // ミリ秒
+    let speed = 1500;
     // アンカーの値取得
     let href = $(this).attr("href");
     // 移動先を取得
@@ -973,18 +977,18 @@ $(function () {
   });
 });
 
+
 if (navigator.userAgent.indexOf('iPhone') > 0) {
-    let body = document.getElementsByTagName('body')[0];
-    body.classList.add('iPhone');
-}
- 
-if (navigator.userAgent.indexOf('iPad') > 0) {
-    let body = document.getElementsByTagName('body')[0];
-    body.classList.add('iPad');
-}
- 
-if (navigator.userAgent.indexOf('Android') > 0) {
-    let body = document.getElementsByTagName('body')[0];
-    body.classList.add('Android');
+  let body = document.getElementsByTagName('body')[0];
+  body.classList.add('iPhone');
 }
 
+if (navigator.userAgent.indexOf('iPad') > 0) {
+  let body = document.getElementsByTagName('body')[0];
+  body.classList.add('iPad');
+}
+
+if (navigator.userAgent.indexOf('Android') > 0) {
+  let body = document.getElementsByTagName('body')[0];
+  body.classList.add('Android');
+}
