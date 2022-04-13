@@ -1482,7 +1482,6 @@ small {
     /* モーダルウィンドウ */
     .modal {
         left: 0%;
-        position: absolute;
     }
 
     .modal_bg {
@@ -1492,7 +1491,6 @@ small {
     .modal_content {
         display: flex;
         flex-direction: column;
-        top: 80%;
         padding: 50px;
         height: auto;
     }
@@ -1517,6 +1515,7 @@ small {
     .ranking_midasi {
         font-size: 14px;
         padding: 10px 5px;
+        white-space: nowrap;
     }
 
     .ranking_overall {
