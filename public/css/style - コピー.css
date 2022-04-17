@@ -6,10 +6,15 @@ body {
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
     background-repeat: no-repeat;
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+#header {
+    margin-bottom: 50px;
 }
 
 /* 旅する衣ロゴ */
@@ -366,30 +371,33 @@ nav .inner ul li a {
 .submenu_red {
     width: 0;
     height: 0;
-    border-left: 17px solid transparent;
-    border-right: 17px solid transparent;
-    border-top: 17px solid #FF0033;
-    position: absolute;
-    margin-top: 70px;
-    left: 50px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #FF0033;
     transition: all 0.2s;
+    margin: 0 auto;
+    position: relative;
+    top: 40px;
 }
 
 .submenu_white:active {
-    transform: translate(9px, 0px);
+    transform: translate(0px, 10px);
 }
 
 .submenu_white {
     width: 0;
     height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid white;
     position: relative;
-    top: 70px;
-    left: 48px;
     transition: all 0.2s;
     cursor: pointer;
+    margin: 0 auto;
+}
+
+#acd-check1 {
+    padding: 10px;
 }
 
 .acd-check {
@@ -406,7 +414,6 @@ nav .inner ul li a {
 .acd-check:checked+.acd-label+.acd-content {
     opacity: 1;
     visibility: visible;
-    margin-top: 90px;
 }
 
 .acd-content ul {
@@ -448,7 +455,7 @@ nav .inner ul li a {
 
 .modal {
     display: none;
-    height: 100%;
+    height: 100vh;
     position: fixed;
     -webkit-position: fixed;
     /*Chrome, Safariのベンダープレフィックス*/
@@ -459,13 +466,12 @@ nav .inner ul li a {
 }
 
 .modal_bg {
-    display: none;
     background: rgba(255, 255, 255, 0.7);
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     position: absolute;
-    -webkit-position: absolute;
-    -ms-position: absolute;
+    right: 20px;
 }
 
 .modal_content {
@@ -499,8 +505,7 @@ nav .inner ul li a {
 }
 
 .content_midasi {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
     position: relative;
@@ -512,6 +517,7 @@ nav .inner ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    float: left;
     padding: 10px 25px;
 }
 
@@ -1390,6 +1396,10 @@ small {
 @media screen and (max-width:767px) {
 
     /* スマホ用 */
+    #vmap {
+        top: -30px;
+    }
+
     .title {
         left: 10px;
         letter-spacing: 0px;
@@ -1448,22 +1458,18 @@ small {
         top: 81px;
     }
 
-    .acd-label {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
     .submenu_red {
-        display: none;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #FF0033;
+        top: 0px;
     }
 
     .submenu_white {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         border-top: 20px solid white;
-        left: 0;
-        z-index: 1;
+        bottom: 26px;
     }
 
     .acd-content ul {
@@ -1476,13 +1482,17 @@ small {
     /* モーダルウィンドウ */
     .modal {
         left: 0%;
-        position: absolute;
+    }
+
+    .modal_bg {
+        display: none;
     }
 
     .modal_content {
-        top: 50%;
+        display: flex;
+        flex-direction: column;
         padding: 50px;
-        height: 78%;
+        height: auto;
     }
 
     .content_midasi {
@@ -1505,6 +1515,7 @@ small {
     .ranking_midasi {
         font-size: 14px;
         padding: 10px 5px;
+        white-space: nowrap;
     }
 
     .ranking_overall {
@@ -1513,10 +1524,12 @@ small {
 
     .wiki_link {
         font-size: 14px;
+        bottom: 15px;
     }
 
     .shop_link {
         font-size: 16px;
+        top: 0;
     }
 
     /* ここまで */
@@ -1581,8 +1594,6 @@ small {
     #new_post {
         height: 300px;
     }
-
-    .post_overall {}
 
     .fuwafuwa {
         padding: 0px 15px;

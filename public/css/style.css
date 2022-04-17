@@ -92,7 +92,7 @@ nav {
     right: 0;
     opacity: 1;
     width: 370px;
-    z-index: 10;
+    z-index: 9999;
 }
 
 nav .inner {
@@ -108,7 +108,7 @@ nav .inner ul {
 nav .inner ul li {
     position: relative;
     margin: 0;
-    top: 81px;
+    top: 50px;
     letter-spacing: 0.5px;
 }
 
@@ -133,7 +133,7 @@ nav .inner ul li a {
     height: 30px;
     transition: all .5s;
     cursor: pointer;
-    z-index: 10;
+    z-index: 10001;
 }
 
 .toggle_btn1 span {
@@ -198,7 +198,7 @@ nav .inner ul li a {
     height: 30px;
     transition: all .5s;
     cursor: pointer;
-    z-index: 9;
+    z-index: 10000;
 }
 
 .toggle_btn2 span {
@@ -368,6 +368,12 @@ nav .inner ul li a {
 
 /* 国名一覧 */
 
+.acd-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .submenu_red {
     width: 0;
     height: 0;
@@ -375,7 +381,6 @@ nav .inner ul li a {
     border-right: 30px solid transparent;
     border-top: 30px solid #FF0033;
     transition: all 0.2s;
-    margin: 0 auto;
     position: relative;
     top: 40px;
 }
@@ -393,7 +398,6 @@ nav .inner ul li a {
     position: relative;
     transition: all 0.2s;
     cursor: pointer;
-    margin: 0 auto;
 }
 
 #acd-check1 {
@@ -421,7 +425,7 @@ nav .inner ul li a {
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
-    z-index: 9999;
+    z-index: 9998;
     height: 850px;
     overflow: auto;
 }
@@ -483,7 +487,7 @@ nav .inner ul li a {
     transform: translate(-50%, -50%);
     border-radius: 20px;
     width: 50%;
-    max-width: 50%;
+    max-width: 45%;
 }
 
 .js-modal-open {
@@ -1454,10 +1458,6 @@ small {
         align-items: center;
     }
 
-    nav .inner ul li {
-        top: 81px;
-    }
-
     .submenu_red {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
@@ -1496,7 +1496,7 @@ small {
     }
 
     .content_midasi {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .content_left {

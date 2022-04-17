@@ -927,6 +927,7 @@ $(function () {
       $(modal).fadeIn();
       body.css({
         overflow: "hidden",
+        zIndex: "9999",
       });
       return false;
     });
@@ -978,6 +979,17 @@ $(function () {
 });
 
 
+// 国名タップスクロール
+$(function(){
+  const pagetop = $('.js-modal-open');
+  pagetop.click(function () {
+     $('body, html').animate({ scrollTop: 0 }, 500);
+     return false;
+  });
+});
+
+
+// ユーザー使用端末識別（いらんかも？）
 if (navigator.userAgent.indexOf('iPhone') > 0) {
   let body = document.getElementsByTagName('body')[0];
   body.classList.add('iPhone');

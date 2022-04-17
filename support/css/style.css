@@ -107,8 +107,6 @@ nav {
   z-index: 5;
 }
 
-nav .inner {}
-
 nav .inner ul {
   list-style: none;
   margin: 0;
