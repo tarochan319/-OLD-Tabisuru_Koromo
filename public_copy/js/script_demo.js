@@ -29,16 +29,6 @@ jQuery(document).ready(function () {
   });
 });
 
-// $(function () {
-//   $(document).click(function (code) {
-//     var target = $(code.target);
-
-//     if (target == us) {
-//       alert("あめりかだよ");
-//     }
-//   });
-// });
-
 //   #vmap配下に変更があったとき
 $("#vmap").on("DOMSubtreeModified propertychange", function () {
   //   svg要素を作成する

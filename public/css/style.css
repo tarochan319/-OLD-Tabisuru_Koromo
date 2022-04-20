@@ -386,7 +386,7 @@ nav .inner ul li a {
 }
 
 .submenu_white:active {
-    transform: translate(0px, 10px);
+    transform: translate(0px, 15px);
 }
 
 .submenu_white {
@@ -481,7 +481,7 @@ nav .inner ul li a {
 .modal_content {
     background: white;
     left: 50%;
-    top: 50%;
+    top: 70%;
     padding: 45px;
     position: absolute;
     transform: translate(-50%, -50%);

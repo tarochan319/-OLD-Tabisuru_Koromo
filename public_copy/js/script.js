@@ -1,5 +1,10 @@
 "use script";
 
+// ▼Test modal
+$(".inline").modaal({
+  content_source: '#inline'
+});
+
 // 世界地図
 jQuery(document).ready(function () {
   jQuery("#vmap").vectorMap({
@@ -890,10 +895,10 @@ $("#vmap").on("DOMSubtreeModified propertychange", function () {
 $(document).ready(function () {
 
   // (function ($) {
-  let $nav = $("#navArea");
-  let $btn = $(".toggle_btn1");
-  let $mask = $("#mask");
-  let open = "open"; // class
+  var $nav = $("#navArea");
+  var $btn = $(".toggle_btn1");
+  var $mask = $("#mask");
+  var open = "open"; // class
   // menu open close
   $btn.on("click", function () {
     if (!$nav.hasClass(open)) {
@@ -911,21 +916,20 @@ $(document).ready(function () {
 
 
 // サブメニュー 
-// ※時折ポップアップ表示がイカれる？
-$(function () {
-  $('.js-modal-open').each(function () {
-    $(this).on('click', function () {
-      let target = $(this).data('target');
-      let modal = document.getElementById(target);
-      $(modal).fadeIn();
-      return false;
-    });
-  });
-  $('.js-modal-close-btn').on('click', function () {
-    $('.js-modal').fadeOut();
-    return false;
-  });
-});
+// $(function () {
+//   $('.js-modal-open').each(function () {
+//     $(this).on('click', function () {
+//       let target = $(this).data('target');
+//       let modal = document.getElementById(target);
+//       $(modal).fadeIn();
+//       return false;
+//     });
+//   });
+//   $('.js-modal-close-btn').on('click', function () {
+//     $('.js-modal').fadeOut();
+//     return false;
+//   });
+// });
 
 
 
