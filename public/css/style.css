@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat;
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -68,6 +69,7 @@ body::-webkit-scrollbar {
     position: relative;
     font-size: 20px;
     bottom: 1.5px;
+    left: 5px;
 }
 
 /* ハンバーガーメニュー */
@@ -128,8 +130,7 @@ nav .inner ul li a {
     display: block;
     position: absolute;
     top: 55px;
-    right: 30px;
-    width: 55px;
+    right: 6%;
     height: 30px;
     transition: all .5s;
     cursor: pointer;
@@ -155,7 +156,7 @@ nav .inner ul li a {
 
 .toggle_btn1 span:nth-child(2) {
     top: 12px;
-    height: 4px;
+    height: 3.5px;
 }
 
 .toggle_btn1 span:nth-child(3) {
@@ -192,9 +193,8 @@ nav .inner ul li a {
 .toggle_btn2 {
     display: block;
     position: absolute;
-    top: 58px;
-    right: 30px;
-    width: 55px;
+    top: 57px;
+    right: 6%;
     height: 30px;
     transition: all .5s;
     cursor: pointer;
@@ -481,10 +481,9 @@ nav .inner ul li a {
 .modal_content {
     background: white;
     left: 50%;
-    top: 70%;
     padding: 45px;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 30%);
     border-radius: 20px;
     width: 50%;
     max-width: 45%;
@@ -546,7 +545,6 @@ nav .inner ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 25px;
 }
 
 .modal_text {
@@ -768,7 +766,7 @@ nav .inner ul li a {
 /* アバウトのとこ */
 
 #about_us {
-    margin-top: 300px;
+    margin-top: 10em;
 }
 
 .content_about {
@@ -855,7 +853,7 @@ nav .inner ul li a {
 .other_support {
     text-align: center;
     position: relative;
-    margin-top: 100px;
+    margin-top: 10em;
 }
 
 .other_green {
@@ -959,7 +957,6 @@ nav .inner ul li a {
 
 .more {
     text-align: center;
-    margin-top: 150px;
 }
 
 .more_green {
@@ -1008,13 +1005,8 @@ nav .inner ul li a {
     bottom: 10px;
 }
 
-.sns {
-    margin-top: 75px;
-}
-
 .half_moon_a {
     height: 150px;
-    bottom: 50px;
     border-radius: 75px 0 0 75px;
     background: #2BBF00;
     border: 1px solid black;
@@ -1022,8 +1014,6 @@ nav .inner ul li a {
     z-index: 3;
     display: flex;
     align-items: center;
-    /* ▼幅が合計で100%じゃないとはみ出る */
-    width: 60%;
     left: 40%;
 }
 
@@ -1119,11 +1109,11 @@ nav .inner ul li a {
 }
 
 .sns_text {
+    margin-left: 6%;
     position: relative;
     color: white;
     z-index: 1;
     text-align: left;
-    left: 44px;
     font-weight: bold;
     font-size: 30px;
     text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
@@ -1134,7 +1124,7 @@ nav .inner ul li a {
     color: #FFD600;
     text-align: left;
     top: 4px;
-    right: 120px;
+    right: 5.45em;
     font-weight: bold;
     font-size: 30px;
     text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
@@ -1146,9 +1136,8 @@ nav .inner ul li a {
     background: white;
     border: 1px solid black;
     position: relative;
-    bottom: 188px;
-    width: 60%;
     left: 40%;
+    top: -9em;
     z-index: 2;
 }
 
@@ -1159,7 +1148,6 @@ nav .inner ul li a {
     background: white;
     border: 1px solid black;
     position: relative;
-    bottom: 250px;
     right: 45%;
     transform: scale(-1, 1);
     z-index: 1;
@@ -1167,6 +1155,7 @@ nav .inner ul li a {
     margin: 0 auto;
     background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
     background-position: 0 0, 15px 15px;
+    top: -15em;
 }
 
 .half_moon_d {
@@ -1176,9 +1165,9 @@ nav .inner ul li a {
     background: #FFD600;
     border: 1px solid black;
     position: relative;
-    bottom: 400px;
-    right: 46%;
+    right: 45%;
     transform: scale(-1, 1);
+    top: -24.5em;
 }
 
 .ibou {
@@ -1186,9 +1175,9 @@ nav .inner ul li a {
     animation: ibou 3s infinite linear alternate;
     position: relative;
     z-index: 2;
-    width: 400px;
-    bottom: 820px;
+    width: 30%;
     right: 30%;
+    top: 10em;
 }
 
 @-webkit-keyframes ibou {
@@ -1231,6 +1220,11 @@ small {
     height: 200px;
 }
 
+footer {
+    position: relative;
+    top: -1em;
+}
+
 @media screen and (max-width: 1024px) {
 
     /* iPad Pro用 */
@@ -1240,14 +1234,6 @@ small {
 
     .title2 {
         left: 30px;
-    }
-
-    .toggle_btn1 {
-        right: 20px;
-    }
-
-    .toggle_btn2 {
-        right: 20px;
     }
 
     modal {
@@ -1285,18 +1271,6 @@ small {
     .more_white {
         bottom: 81px;
     }
-
-    .half_moon_a {}
-
-    .half_moon_b {}
-
-    .sns_text2 {
-        right: 120px;
-    }
-
-    .ibou {
-        right: 32%;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1312,16 +1286,6 @@ small {
 
     .title2 {
         left: 30px;
-    }
-
-    .toggle_btn1 {
-        right: 10px;
-        top: 50px;
-    }
-
-    .toggle_btn2 {
-        right: 10px;
-        top: 52px;
     }
 
     .support_btn {
@@ -1368,10 +1332,6 @@ small {
         bottom: 81px;
     }
 
-    .half_moon_a {}
-
-    .half_moon_b {}
-
     .sns_maru1 {
         margin-left: 30px;
         margin-right: 30px;
@@ -1383,17 +1343,6 @@ small {
 
     .sns_maru3 {
         margin-right: 30px;
-    }
-
-    .sns_text2 {
-        right: 120px;
-    }
-
-    .ibou {
-        right: 28%;
-        width: 300px;
-        bottom: 900px;
-        z-index: 999;
     }
 }
 
@@ -1435,7 +1384,7 @@ small {
 
     .toggle_btn1 {
         top: 23px;
-        right: -15px;
+        right: 10%;
     }
 
     .toggle_btn1 span {
@@ -1444,7 +1393,7 @@ small {
 
     .toggle_btn2 {
         top: 25px;
-        right: -15px;
+        right: 10%;
     }
 
     .toggle_btn2 span {
@@ -1482,6 +1431,7 @@ small {
     /* モーダルウィンドウ */
     .modal {
         left: 0%;
+        overflow-y: scroll;
     }
 
     .modal_bg {
@@ -1600,7 +1550,6 @@ small {
     }
 
     .post_single {
-        padding: 0px 15px;
         height: 150px;
     }
 
@@ -1626,13 +1575,14 @@ small {
     }
 
     .about_text {
-        font-size: 12px;
+        font-size: 14px;
+        font-weight: bold;    
     }
 
     .details {
-        left: -27vw;
+        left: -30vw;
         top: 150px;
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .triangle_green {
@@ -1643,10 +1593,6 @@ small {
     .triangle_white {
         left: -90px;
         top: 150px;
-    }
-
-    .other_support {
-        margin-top: 150px;
     }
 
     .other_green {
@@ -1668,12 +1614,12 @@ small {
 
     .other_text {
         right: 213px;
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 10px;
     }
 
     .more {
-        margin-top: 100px;
+        margin-top: 10em;
     }
 
     .sns {
@@ -1682,8 +1628,7 @@ small {
 
     .half_moon_a {
         left: 5%;
-        width: 95%;
-        height: 100px;
+        height: auto;
         justify-content: center;
     }
 
@@ -1725,33 +1670,32 @@ small {
     }
 
     .half_moon_b {
-        height: 100px;
+        height: 30%;
         left: 5%;
-        width: 95%;
-        bottom: 143px;
+        top: -4em;
     }
 
     .half_moon_c {
-        height: 100px;
+        height: 30%;
         right: 5%;
-        bottom: 225px;
+        top: -6em;
     }
 
     .half_moon_d {
-        height: 100px;
+        height: 30%;
         right: 8%;
-        bottom: 325px;
+        top: -10.5em;
     }
 
     .ibou {
-        width: 150px;
+        width: 30%;
         right: 25%;
-        bottom: 570px;
+        top: 2em;
         z-index: 999;
     }
 
     footer {
-        font-size: 10px;
+        top: -2em;
     }
 }
 
