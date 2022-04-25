@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -1480,6 +1484,7 @@ footer {
     .shop_link {
         font-size: 16px;
         top: 0;
+        margin: 5px 0px;
     }
 
     /* ここまで */
@@ -1575,7 +1580,7 @@ footer {
     }
 
     .about_text {
-        font-size: 14px;
+        font-size: 13px;
         font-weight: bold;    
     }
 
