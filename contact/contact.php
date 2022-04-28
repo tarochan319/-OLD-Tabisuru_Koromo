@@ -61,9 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <header>
       <div class="logo">
-        <a href="../top/index_demo.html" class="title"><span class="tabi">旅</span> <span class="title_text">する衣 </span>
+        <a href="../index.html" class="title"><span class="tabi">旅</span> <span class="title_text">する衣 </span>
           <span class="title_koromo">-TABISURU KOROMO-</span></a>
-        <a href="../top/index_demo.html" class="title2"><span class="tabi">旅</span> <span class="title_text2">する衣 </span>
+        <a href="../index.html" class="title2"><span class="tabi">旅</span> <span class="title_text2">する衣 </span>
           <span class="title_koromo2">-TABISURU KOROMO-</span></a>
       </div>
 
@@ -72,11 +72,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <nav>
           <div class="inner">
             <ul>
-              <li class="illust"><a href="../top/index_demo.html #new_post">■ ILLUSTRATION</a></li>
-              <li class="illust2"><a href="../top/index_demo.html #new_post">■ ILLUSTRATION</a></li>
+              <li class="illust"><a href="../index.html #new_post">■ ILLUSTRATION</a></li>
+              <li class="illust2"><a href="../index.html #new_post">■ ILLUSTRATION</a></li>
 
-              <li class="about"><a href="../top/index_demo.html #about_us">■ ABOUT US</a></li>
-              <li class="about2"><a href="../top/index_demo.html #about_us">■ ABOUT US</a></li>
+              <li class="about"><a href="../index.html #about_us">■ ABOUT US</a></li>
+              <li class="about2"><a href="../index.html #about_us">■ ABOUT US</a></li>
 
               <li class="create"><a href="../info/info.html">■ WHO CREATE?</a></li>
               <li class="create2"><a href="../info/info.html">■ WHO CREATE?</a></li>
@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </footer>
   </div>
 
-  <script src="js/script_oshimo.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

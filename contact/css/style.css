@@ -1,4 +1,5 @@
 @charset "utf-8";
+/*文字コード*/
 
 body {
     margin: 0;
@@ -7,15 +8,15 @@ body {
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
     position: relative;
     background-repeat: no-repeat;
-    font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
-}
-
-.wrap {
-    overflow: hidden;
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Maru Gothic ProN', 'ヒラギノ丸ゴ ProN', sans-serif;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+.wrap {
+    overflow: hidden;
 }
 
 /*ヘッダー*/
@@ -69,12 +70,6 @@ header {
     font-size: 35px;
 }
 
-.title_text2 {
-    font-size: 35px;
-    bottom: 2px;
-    position: relative;
-}
-
 .title_koromo {
     font-size: 20px;
 }
@@ -113,6 +108,8 @@ nav {
     z-index: 10;
 }
 
+nav .inner {}
+
 nav .inner ul {
     list-style: none;
     margin: 0;
@@ -123,7 +120,7 @@ nav .inner ul li {
     position: relative;
     margin: 0;
     top: 80px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 nav .inner ul li a {
@@ -294,7 +291,7 @@ nav .inner ul li a {
     font-weight: bold;
     white-space: nowrap;
     text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    top: -67px;
+    top: -68px;
     transition: all 0.2s;
 }
 
@@ -350,6 +347,7 @@ nav .inner ul li a {
 
 .contact a:hover {
     transform: translate(0px, 3.5px);
+    /* transform: scale(1.1, 1.1); */
 }
 
 .contact2 a {
@@ -388,7 +386,7 @@ nav .inner ul li a {
 
 /* コンテンツ */
 
-.midasi_us {
+.midasi_big {
     display: flex;
     position: relative;
     left: 130px;
@@ -401,14 +399,14 @@ nav .inner ul li a {
     letter-spacing: 5px;
 }
 
-.contact_midasi {
+.contact {
     color: #2BBF00;
     position: relative;
     top: 6px;
     left: 4px;
 }
 
-.contact_midasi2 {
+.contact2 {
     color: white;
     position: absolute;
 }
@@ -437,7 +435,7 @@ nav .inner ul li a {
     position: absolute;
 }
 
-.mail-text {
+.text {
     text-align: center;
     color: white;
     font-weight: bold;
@@ -448,7 +446,7 @@ nav .inner ul li a {
     letter-spacing: 2px;
 }
 
-.midasi_form {
+.midasi2 {
     display: flex;
     position: relative;
     left: 200px;
@@ -529,10 +527,8 @@ nav .inner ul li a {
     height: 300px;
     border: solid 3px black;
     border-radius: 10px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    resize: none;
-    white-space: pre-wrap;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
 dt {
@@ -544,7 +540,7 @@ dd {
     text-align: center;
 }
 
-#confi-btn {
+#btn {
     margin-left: 50%;
     margin-right: auto;
     border-radius: 10px;
@@ -560,128 +556,20 @@ dd {
     font-size: 16px;
 }
 
-#confi-btn:hover {
+#btn:hover {
     box-shadow: none;
-    transform: translate(4px, 4px);
+    transform: translate(3px, 3px);
 }
 
-.confi-btn2 {
+.btn2 {
     position: absolute;
     border-radius: 10px;
     width: 100px;
     height: 35px;
-    right: 417px;
-    bottom: 120px;
+    right: 338px;
+    bottom: 119px;
     background-color: #2BBF00;
 }
-
-/* 送信確認モーダル */
-
-/* モーダルウィンドウ */
-.modal-window {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: white;
-    border-radius: 5px;
-    z-index: 11;
-    padding: 2rem;
-}
-
-.modal-window h1 {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 45px;
-}
-
-/* 閉じるボタン */
-.close-btn {
-    font-size: 3rem;
-    position: relative;
-    color: #2BBF00;
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-
-.modal-btn {
-    display: flex;
-    justify-content: end;
-}
-
-#back {
-    margin-right: 20px;
-    background-color: white;
-    border-radius: 5px;
-    width: 55px;
-    height: 35px;
-    font-weight: bold;
-}
-
-#back:active {
-    color: white;
-    background-color: #2BBF00;
-}
-
-#send {
-    margin-right: 20px;
-    background-color: white;
-    border-radius: 5px;
-    width: 55px;
-    height: 35px;
-    font-weight: bold;
-}
-
-#send:active {
-    color: white;
-    background-color: #2BBF00;
-}
-
-/* 送信完了モーダル */
-
-.comp-modal {
-    display: none;
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: auto;
-    z-index: 11;
-}
-
-.back-band {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 12;
-}
-
-.comp-text {
-    font-size: 28px;
-    letter-spacing: 10px;
-    color: white;
-    text-align: center;
-    z-index: 13;
-}
-
-/* フッター */
 
 footer {
     position: relative;
@@ -698,112 +586,91 @@ small {
 /* レスポンシブPCファースト */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
     /* iPad Pro用 */
-    .confi-btn2 {
+    .btn2 {
         right: 218px;
         bottom: 118px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
     /* iPad用 */
-    .confi-btn2 {
+    .btn2 {
         right: 90px;
         bottom: 118px;
     }
 }
 
 @media screen and (max-width:767px) {
-
     /* スマホ用 */
     .title {
         left: 10px;
         letter-spacing: 1px;
         top: 2px;
     }
-
+    .tabi {
+        font-size: 30px;
+        margin: 0px;
+        top: 3px;
+    }
+    .title_text {
+        font-size: 15px;
+    }
+    .title_koromo {
+        font-size: 10px;
+        top: 0;
+    }
+    .title_koromo2 {
+        font-size: 10px;
+    }
     .title2 {
         left: 10px;
         letter-spacing: 1px;
     }
-
-    .tabi {
-        font-size: 35px;
-        top: 3px;
-    }
-
-    .title_text {
-        font-size: 16px;
-    }
-
-    .title_text2 {
-        font-size: 16px;
-    }
-
-    .title_koromo {
-        font-size: 12px;
-        top: 0;
-    }
-
-    .title_koromo2 {
-        font-size: 12px;
-    }
-
     .toggle_btn1 {
         margin: 0;
         top: 17px;
         width: 8px;
     }
-
     .toggle_btn1 span {
         width: 25px;
     }
-
     .toggle_btn2 {
         margin: 0;
         top: 20px;
         width: 8px;
     }
-
     .toggle_btn2 span {
         width: 25px;
     }
-
     .open nav {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    nav .inner {}
     nav .inner ul li {
         top: 80px;
     }
-
-    .midasi_us {
+    .midasi_big {
         font-size: 20px;
         left: 25px;
         letter-spacing: 1px;
     }
-
-    .contact_midasi {
+    .contact {
         top: 4px;
         left: 2px;
     }
-
     .midasi_small {
         font-size: 20px;
         right: 106px;
     }
-
-    .confi {
-        font-size: 14px;
+    .text {
+        font-size: 18px;
         bottom: 25px;
     }
-
-    .midasi_form {
+    .midasi2 {
         font-size: 20px;
         display: flex;
         flex-direction: column;
@@ -812,99 +679,54 @@ small {
         margin-top: 50px;
         letter-spacing: 2px;
     }
-
     .form {
         top: 4px;
         left: 2px;
     }
-
     .contact_form {
         display: flex;
         flex-direction: column;
     }
-
     dt {
-        padding: 0 15px;
+        padding: 0 10px;
     }
-
     dd {
         display: flex;
         align-items: center;
         margin: 0 50px;
     }
-
     .name_form {
         width: 100%;
         height: 35px;
         font-size: 12px;
     }
-
     .mail_form {
         width: 100%;
         height: 35px;
         font-size: 12px;
     }
-
     .message {
         width: 100%;
         height: 95px;
         font-size: 12px;
     }
-
-    #confi-btn {
+    .btn {
         margin-left: 0;
-        left: 280px;
+        left: 241px;
         bottom: 77px;
         position: absolute;
+        font-size: 12px;
         width: 20%;
         height: 30px;
     }
-
-    .confi-btn2 {
+    .btn2 {
         right: 56px;
         bottom: 72px;
         width: 20%;
         height: 30px;
     }
-
     footer {
         font-size: 10px;
         margin-top: 100px;
-    }
-
-    .modal-window {
-        width: 200px;
-    }
-
-    .close-btn {
-        font-size: 2rem;
-    }
-
-    .modal-window h1 {
-        font-size: 22px;
-    }
-
-    #back {
-        width: 45px;
-        height: 30px;
-        font-size: 12px;
-    }
-
-    #send {
-        width: 45px;
-        height: 30px;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width:375px) {
-    #confi-btn {
-        left: 240px;
-    }
-}
-
-@media screen and (max-width:320px) {
-    #confi-btn {
-        left: 195px;
     }
 }

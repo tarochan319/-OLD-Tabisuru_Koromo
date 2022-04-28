@@ -1,5 +1,10 @@
 "use script";
 
+// ▼送信ボタン挙動
+document.getElementById("btn").onclick = function () {
+  document.getElementById("text").innerHTML = "クリックされた！";
+};
+
 // メインメニュー
 $(document).ready(function () {
 
@@ -59,7 +64,6 @@ $(function () {
   });
 });
 
-
 // メインメニュー：about
 $(function () {
   // #で始まるアンカーをクリックした場合に処理
@@ -77,25 +81,4 @@ $(function () {
     return false;
   });
 });
-
-// 送信確認モーダル
-$(function () {
-  $('#confi-btn').click(function () {
-    $('#overlay, .modal-window').fadeIn();
-  });
-  // オーバーレイクリックでもモーダルを閉じるように
-  $('.close-btn, #overlay, #back').click(function () {
-    $('#overlay, .modal-window').fadeOut();
-  });
-});
-
-$(function () {
-  $('#send').click(function () {
-    $('#overlay, .modal-window').fadeOut();
-    $('.comp-modal').fadeIn();
-    $('.comp-modal').fadeOut(4000);
-    formElement.reset();
-  });
-});
-
 
