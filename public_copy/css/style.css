@@ -1,16 +1,25 @@
 @charset "utf-8";
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
     background: linear-gradient(180deg, #40C7FF 0%, #FFFFFF 100%);
-    position: relative;
     background-repeat: no-repeat;
-    font-family: 'Helvetica', 'Arial', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic'sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+#header {
+    margin-bottom: 50px;
 }
 
 /* 旅する衣ロゴ */
@@ -64,6 +73,7 @@ body::-webkit-scrollbar {
     position: relative;
     font-size: 20px;
     bottom: 1.5px;
+    left: 5px;
 }
 
 /* ハンバーガーメニュー */
@@ -88,7 +98,7 @@ nav {
     right: 0;
     opacity: 1;
     width: 370px;
-    z-index: 10;
+    z-index: 9999;
 }
 
 nav .inner {
@@ -104,7 +114,7 @@ nav .inner ul {
 nav .inner ul li {
     position: relative;
     margin: 0;
-    top: 81px;
+    top: 50px;
     letter-spacing: 0.5px;
 }
 
@@ -124,13 +134,11 @@ nav .inner ul li a {
     display: block;
     position: absolute;
     top: 55px;
-    right: 30px;
-    width: 30px;
+    right: 6%;
     height: 30px;
     transition: all .5s;
     cursor: pointer;
-    z-index: 10;
-    margin-right: 25px;
+    z-index: 10001;
 }
 
 .toggle_btn1 span {
@@ -152,7 +160,7 @@ nav .inner ul li a {
 
 .toggle_btn1 span:nth-child(2) {
     top: 12px;
-    height: 4px;
+    height: 3.5px;
 }
 
 .toggle_btn1 span:nth-child(3) {
@@ -189,14 +197,12 @@ nav .inner ul li a {
 .toggle_btn2 {
     display: block;
     position: absolute;
-    top: 58px;
-    right: 30px;
-    width: 30px;
+    top: 57px;
+    right: 6%;
     height: 30px;
     transition: all .5s;
     cursor: pointer;
-    z-index: 9;
-    margin-right: 25px;
+    z-index: 10000;
 }
 
 .toggle_btn2 span {
@@ -366,34 +372,40 @@ nav .inner ul li a {
 
 /* 国名一覧 */
 
-.triangle {
+.acd-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submenu_red {
     width: 0;
     height: 0;
-    border-left: 17px solid transparent;
-    border-right: 17px solid transparent;
-    border-top: 17px solid #FF0033;
-    position: absolute;
-    margin-top: 70px;
-    left: 50px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #FF0033;
     transition: all 0.2s;
+    position: relative;
+    top: 40px;
 }
 
-.triangle1:active {
-    transform: translate(9px, 0px);
+.submenu_white:active {
+    transform: translate(0px, 15px);
 }
 
-.triangle1 {
+.submenu_white {
     width: 0;
     height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid white;
     position: relative;
-    top: 70px;
-    left: 48px;
-    /* transition: 1s; */
     transition: all 0.2s;
     cursor: pointer;
+}
+
+#acd-check1 {
+    padding: 10px;
 }
 
 .acd-check {
@@ -405,24 +417,25 @@ nav .inner ul li a {
     opacity: 0;
     transition: .5s;
     visibility: hidden;
-    z-index: 3;
 }
 
 .acd-check:checked+.acd-label+.acd-content {
     opacity: 1;
     visibility: visible;
-    margin-top: 90px;
 }
 
 .acd-content ul {
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
     position: relative;
-    z-index: 9999;
-    overflow-y: scroll;
+    z-index: 9998;
     height: 850px;
+    overflow: auto;
+}
+
+.acd-content ul::-webkit-scrollbar {
+    display: none;
 }
 
 .acd-content li {
@@ -437,9 +450,143 @@ nav .inner ul li a {
     text-align: left;
 }
 
-#inline {
-    display: none;
+/* サブメニューから開くモーダルウィンドウ */
+
+.js-modal-none {
+    /* 販売前の国は透過し、クリック不可にする。 */
     text-decoration: none;
+    color: white;
+    line-height: 3;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    -webkit-position: fixed;
+    /*Chrome, Safariのベンダープレフィックス*/
+    -ms-position: fixed;
+    /*Firefoxのベンダープレフィックス*/
+    top: 0;
+    width: 100%;
+}
+
+.modal_bg {
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: absolute;
+    right: 20px;
+}
+
+.modal_content {
+    background: white;
+    left: 50%;
+    padding: 45px;
+    position: absolute;
+    transform: translate(-50%, 30%);
+    border-radius: 20px;
+    width: 50%;
+    max-width: 45%;
+}
+
+.js-modal-open {
+    text-decoration: none;
+    color: white;
+    line-height: 3;
+    z-index: 10;
+    font-size: 16px;
+}
+
+.js-modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #2BBF00;
+    text-decoration: none;
+}
+
+.content_midasi {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.content_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    padding: 10px 25px;
+}
+
+.modal_logo {
+    height: 250px;
+}
+
+.wiki_link {
+    text-decoration: none;
+    background-color: #FF9900;
+    color: white;
+    position: absolute;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    bottom: 37px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.content_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal_text {
+    font-size: 14px;
+}
+
+.ranking_midasi {
+    background-color: #2EC4B6;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ranking_overall {
+    display: flex;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+.ranking {
+    color: #2EC4B6;
+    padding: 0px 5px;
+}
+
+.ranking_name {
+    color: #2EC4B6;
+}
+
+.shop_link {
+    position: relative;
+    color: #FF9900;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    top: 17px;
+    letter-spacing: 2px;
 }
 
 /*旅する衣とは？のとこ*/
@@ -585,35 +732,27 @@ nav .inner ul li a {
     height: 470px;
 }
 
-.post_green {
+.post_midasi {
     position: absolute;
-    color: #2BBF00;
+    color: white;
     left: 30px;
     margin-top: 20px;
     font-size: 40px;
     letter-spacing: 1px;
     font-weight: bold;
-}
-
-.post_white {
-    position: relative;
-    color: white;
-    left: 30px;
-    font-size: 40px;
-    bottom: -15px;
-    letter-spacing: 1px;
-    font-weight: bold;
+    text-shadow: 3px 3px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
 }
 
 .post_overall {
     display: flex;
+    flex-direction: row;
     position: relative;
-    top: 30px;
-    overflow-x: scroll;
+    top: 110px;
+    overflow: scroll;
 }
 
 .post_overall::-webkit-scrollbar {
-    display:none;
+    display: none;
 }
 
 .post_single {
@@ -622,45 +761,16 @@ nav .inner ul li a {
 }
 
 .post_name {
-    display: flex;
-    justify-content: space-around;
     font-size: 18px;
     font-weight: bold;
-    position: relative;
-    top: 40px;
     color: white;
-    margin: 0px 15px;
-}
-
-.post1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.post1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.post2 {
-    display: flex;
-    flex-direction: column;
-}
-
-.post3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.post4 {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
 /* アバウトのとこ */
 
 #about_us {
-    margin-top: 200px;
+    margin-top: 10em;
 }
 
 .content_about {
@@ -670,7 +780,6 @@ nav .inner ul li a {
     height: 300px;
     margin: 0 auto;
     position: relative;
-    bottom: 50px;
     border: 1px solid black;
 }
 
@@ -699,25 +808,12 @@ nav .inner ul li a {
 }
 
 .about_green {
-    color: #2BBF00;
-    font-weight: bold;
-    white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    font-size: 35px;
-    position: relative;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.about_white {
     color: white;
     font-weight: bold;
     white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    font-size: 35px;
-    position: relative;
+    text-shadow: 0px 5px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
+    font-size: 40px;
     text-align: center;
-    bottom: 81px;
     letter-spacing: 1px;
 }
 
@@ -761,34 +857,22 @@ nav .inner ul li a {
 .other_support {
     text-align: center;
     position: relative;
-    margin-top: 50px;
+    margin-top: 10em;
 }
 
 .other_green {
-    color: #2BBF00;
-    font-size: 35px;
-    font-weight: bold;
-    white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-    letter-spacing: 1px;
-}
-
-.other_white {
     color: white;
-    font-size: 35px;
-    position: relative;
-    bottom: 81px;
+    font-size: 40px;
     font-weight: bold;
-    white-space: nowrap;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    text-shadow: 0px 5px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
     letter-spacing: 1px;
 }
 
 .other_pic {
     display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .other_company_logo {
@@ -798,12 +882,7 @@ nav .inner ul li a {
 }
 
 .other_company_name {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 12px;
     font-weight: bold;
-    position: relative;
-    bottom: 20px;
 }
 
 .other_text {
@@ -882,34 +961,20 @@ nav .inner ul li a {
 
 .more {
     text-align: center;
-    margin-top: 200px;
 }
 
 .more_green {
-    position: relative;
-    color: #2BBF00;
-    font-size: 35px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
-}
-
-.more_white {
-    position: relative;
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
-    bottom: 81px;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
+    text-shadow: 0px 5px 0 #2BBF00, 2px 2px 0 #2BBF00, -1px -1px 0 #2BBF00;
 }
 
 .maru {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    bottom: 65px;
 }
 
 .circle {
@@ -944,24 +1009,16 @@ nav .inner ul li a {
     bottom: 10px;
 }
 
-.sns {
-    margin-top: 20px;
-    height: 400px;
-}
-
 .half_moon_a {
-    margin: 10px;
-    width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: #2BBF00;
     border: 1px solid black;
     position: relative;
     z-index: 3;
-    bottom: 50px;
-    left: 45%;
     display: flex;
     align-items: center;
+    left: 40%;
 }
 
 /* SNS */
@@ -1056,11 +1113,11 @@ nav .inner ul li a {
 }
 
 .sns_text {
+    margin-left: 6%;
     position: relative;
     color: white;
     z-index: 1;
     text-align: left;
-    left: 44px;
     font-weight: bold;
     font-size: 30px;
     text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
@@ -1071,34 +1128,30 @@ nav .inner ul li a {
     color: #FFD600;
     text-align: left;
     top: 4px;
-    right: 140px;
+    right: 5.45em;
     font-weight: bold;
     font-size: 30px;
     text-shadow: 1px 1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000, -1px -1px 0px #000000, 1px 0px 0px #000000, 0px 1px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000;
 }
 
 .half_moon_b {
-    margin: 10px;
-    width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: white;
     border: 1px solid black;
     position: relative;
-    bottom: 200px;
-    left: 45%;
+    left: 40%;
+    top: -9em;
     z-index: 2;
 }
 
 .half_moon_c {
     margin: 10px;
-    width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: white;
     border: 1px solid black;
     position: relative;
-    bottom: 250px;
     right: 45%;
     transform: scale(-1, 1);
     z-index: 1;
@@ -1106,19 +1159,19 @@ nav .inner ul li a {
     margin: 0 auto;
     background-image: radial-gradient(#2BBF00 15%, transparent 20%), radial-gradient(#2BBF00 15%, transparent 20%);
     background-position: 0 0, 15px 15px;
+    top: -15em;
 }
 
 .half_moon_d {
     margin: 10px;
-    width: 100%;
     height: 150px;
     border-radius: 75px 0 0 75px;
     background: #FFD600;
     border: 1px solid black;
     position: relative;
-    bottom: 400px;
-    right: 46%;
+    right: 45%;
     transform: scale(-1, 1);
+    top: -24.5em;
 }
 
 .ibou {
@@ -1126,9 +1179,9 @@ nav .inner ul li a {
     animation: ibou 3s infinite linear alternate;
     position: relative;
     z-index: 2;
-    width: 400px;
-    bottom: 820px;
+    width: 30%;
     right: 30%;
+    top: 10em;
 }
 
 @-webkit-keyframes ibou {
@@ -1161,10 +1214,6 @@ nav .inner ul li a {
 
 /*フッター*/
 
-footer {
-    text-align: center;
-}
-
 small {
     position: relative;
     bottom: 10px;
@@ -1173,6 +1222,11 @@ small {
 .fuwafuwa {
     width: 200px;
     height: 200px;
+}
+
+footer {
+    position: relative;
+    top: -1em;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1184,14 +1238,6 @@ small {
 
     .title2 {
         left: 30px;
-    }
-
-    .toggle_btn1 {
-        right: 20px;
-    }
-
-    .toggle_btn2 {
-        right: 20px;
     }
 
     modal {
@@ -1210,7 +1256,7 @@ small {
     }
 
     .post_overall {
-        top: 40px;
+        top: 100x;
     }
 
     .fuwafuwa {
@@ -1229,22 +1275,6 @@ small {
     .more_white {
         bottom: 81px;
     }
-
-    .half_moon_a {
-        left: 32%;
-    }
-
-    .half_moon_b {
-        left: 33%;
-    }
-
-    .sns_text2 {
-        right: 140px;
-    }
-
-    .ibou {
-        right: 32%;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1262,16 +1292,6 @@ small {
         left: 30px;
     }
 
-    .toggle_btn1 {
-        right: 10px;
-        top: 50px;
-    }
-
-    .toggle_btn2 {
-        right: 10px;
-        top: 52px;
-    }
-
     .support_btn {
         width: 38%;
         font-size: 25px;
@@ -1284,12 +1304,11 @@ small {
     }
 
     .post_overall {
-        top: 50px;
+        top: 110px;
     }
 
     .post_single {
-        width: 130px;
-        height: 130px;
+        height: 200px;
     }
 
     .fuwafuwa {
@@ -1317,14 +1336,6 @@ small {
         bottom: 81px;
     }
 
-    .half_moon_a {
-        left: 15%;
-    }
-
-    .half_moon_b {
-        left: 15%;
-    }
-
     .sns_maru1 {
         margin-left: 30px;
         margin-right: 30px;
@@ -1337,22 +1348,15 @@ small {
     .sns_maru3 {
         margin-right: 30px;
     }
-
-    .sns_text2 {
-        right: 140px;
-    }
-
-    .ibou {
-        right: 28%;
-        width: 300px;
-        bottom: 900px;
-        z-index: 999;
-    }
 }
 
 @media screen and (max-width:767px) {
 
     /* スマホ用 */
+    #vmap {
+        top: -30px;
+    }
+
     .title {
         left: 10px;
         letter-spacing: 0px;
@@ -1360,20 +1364,20 @@ small {
     }
 
     .tabi {
-        font-size: 35px;
+        font-size: 45px;
         top: 3px;
     }
 
     .title_text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .title_koromo {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .title_koromo2 {
-        font-size: 12px;
+        font-size: 14px;
         bottom: 1px;
     }
 
@@ -1384,7 +1388,7 @@ small {
 
     .toggle_btn1 {
         top: 23px;
-        right: -15px;
+        right: 10%;
     }
 
     .toggle_btn1 span {
@@ -1393,7 +1397,7 @@ small {
 
     .toggle_btn2 {
         top: 25px;
-        right: -15px;
+        right: 10%;
     }
 
     .toggle_btn2 span {
@@ -1407,65 +1411,80 @@ small {
         align-items: center;
     }
 
-    nav .inner ul li {
-        top: 81px;
+    .submenu_red {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #FF0033;
+        top: 0px;
     }
 
-    .triangle {
-        border-left: 13px solid transparent;
-        border-right: 13px solid transparent;
-        border-top: 13px solid #FF0033;
-    }
-
-    .triangle1 {
-        border-left: 11px solid transparent;
-        border-right: 11px solid transparent;
-        border-top: 11px solid white;
+    .submenu_white {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid white;
+        bottom: 26px;
     }
 
     .acd-content ul {
         flex-direction: column;
-        flex-wrap: nowrap;
         justify-content: start;
         align-items: center;
+        overflow: scroll;
     }
 
     /* モーダルウィンドウ */
-    .modal__content {
-        left: 40%;
-        padding: 55px;
+    .modal {
+        left: 0%;
+        overflow-y: scroll;
+    }
+
+    .modal_bg {
+        display: none;
+    }
+
+    .modal_content {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        height: auto;
     }
 
     .content_midasi {
-        font-size: 20px;
+        font-size: 24px;
+    }
+
+    .content_left {
+        padding: 0px 25px;
     }
 
     .modal_logo {
-        width: 150px;
         height: 150px;
     }
 
     .modal_text {
-        font-size: 10px;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .ranking_midasi {
-        font-size: 10px;
+        font-size: 14px;
+        padding: 10px 5px;
+        white-space: nowrap;
     }
 
     .ranking_overall {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .wiki_link {
-        font-size: 10px;
-        left: 50px;
+        font-size: 14px;
+        bottom: 15px;
     }
 
     .shop_link {
-        font-size: 10px;
-        left: 50px;
-        top: 23px;
+        font-size: 16px;
+        top: 0;
+        margin: 5px 0px;
     }
 
     /* ここまで */
@@ -1524,16 +1543,11 @@ small {
     .support_btn2 {
         width: 50%;
         font-size: 16px;
-        left: 26.5%;
+        left: 26%;
     }
 
     #new_post {
-        height: 350px;
-    }
-
-    .post_overall {
-        overflow-y: scroll;
-        justify-content: start;
+        height: 300px;
     }
 
     .fuwafuwa {
@@ -1541,7 +1555,7 @@ small {
     }
 
     .post_single {
-        padding: 0px 15px;
+        height: 150px;
     }
 
     .post_name {
@@ -1566,13 +1580,14 @@ small {
     }
 
     .about_text {
-        font-size: 12px;
+        font-size: 13px;
+        font-weight: bold;    
     }
 
     .details {
-        left: -27vw;
+        left: -30vw;
         top: 150px;
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .triangle_green {
@@ -1583,10 +1598,6 @@ small {
     .triangle_white {
         left: -90px;
         top: 150px;
-    }
-
-    .other_support {
-        margin-top: 100px;
     }
 
     .other_green {
@@ -1608,12 +1619,12 @@ small {
 
     .other_text {
         right: 213px;
-        font-size: 12px;
+        font-size: 14px;
         margin-top: 10px;
     }
 
     .more {
-        margin-top: 100px;
+        margin-top: 10em;
     }
 
     .sns {
@@ -1622,7 +1633,7 @@ small {
 
     .half_moon_a {
         left: 5%;
-        height: 100px;
+        height: auto;
         justify-content: center;
     }
 
@@ -1664,32 +1675,32 @@ small {
     }
 
     .half_moon_b {
-        height: 100px;
+        height: 30%;
         left: 5%;
-        bottom: 152px;
+        top: -4em;
     }
 
     .half_moon_c {
-        height: 100px;
+        height: 30%;
         right: 5%;
-        bottom: 225px;
+        top: -6em;
     }
 
     .half_moon_d {
-        height: 100px;
+        height: 30%;
         right: 8%;
-        bottom: 325px;
+        top: -10.5em;
     }
 
     .ibou {
-        width: 150px;
+        width: 30%;
         right: 25%;
-        bottom: 592px;
+        top: 2em;
         z-index: 999;
     }
 
     footer {
-        font-size: 10px;
+        top: -2em;
     }
 }
 
