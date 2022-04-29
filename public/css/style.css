@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-/* html {
-    overflow-x: hidden;
-} */
-
 body {
     margin: 0;
     padding: 0;
@@ -67,13 +63,6 @@ body::-webkit-scrollbar {
 
 .title_koromo {
     font-size: 20px;
-}
-
-.title_koromo2 {
-    position: relative;
-    font-size: 20px;
-    bottom: 1.5px;
-    left: 5px;
 }
 
 /* ハンバーガーメニュー */
@@ -487,10 +476,10 @@ nav .inner ul li a {
     left: 50%;
     padding: 45px;
     position: absolute;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, 20%);
     border-radius: 20px;
     width: 50%;
-    max-width: 45%;
+    max-width: 50%;
 }
 
 .js-modal-open {
@@ -1019,6 +1008,7 @@ nav .inner ul li a {
     display: flex;
     align-items: center;
     left: 40%;
+    width: 60%;
 }
 
 /* SNS */
@@ -1140,9 +1130,10 @@ nav .inner ul li a {
     background: white;
     border: 1px solid black;
     position: relative;
-    left: 40%;
     top: -9em;
     z-index: 2;
+    left: 40%;
+    width: 60%;
 }
 
 .half_moon_c {
@@ -1375,11 +1366,6 @@ footer {
         font-size: 14px;
     }
 
-    .title_koromo2 {
-        font-size: 14px;
-        bottom: 1px;
-    }
-
     .title2 {
         left: 10px;
         letter-spacing: 0px;
@@ -1447,6 +1433,7 @@ footer {
         flex-direction: column;
         padding: 50px;
         height: auto;
+        transform: translate(-50%, 30%);
     }
 
     .content_midasi {
@@ -1581,7 +1568,7 @@ footer {
 
     .about_text {
         font-size: 13px;
-        font-weight: bold;    
+        font-weight: bold;
     }
 
     .details {

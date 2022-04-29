@@ -1,5 +1,4 @@
 @charset "utf-8";
-/*文字コード*/
 
 body {
   margin: 0;
@@ -59,14 +58,7 @@ body::-webkit-scrollbar {
 }
 
 .title_koromo {
-  position: relative;
   font-size: 20px;
-}
-
-.title_koromo2 {
-  position: relative;
-  font-size: 20px;
-  bottom: 1.5px;
 }
 
 /* ハンバーガーメニュー */
@@ -736,22 +728,16 @@ small {}
   .title {
     left: 10px;
     letter-spacing: 0px;
-    top: 2px;
   }
   .tabi {
-    font-size: 35px;
+    font-size: 45px;
     top: 3px;
   }
   .title_text {
-    font-size: 16px;
+    font-size: 18px;
   }
   .title_koromo {
-    font-size: 12px;
-    top: 0;
-  }
-  .title_koromo2 {
-    font-size: 12px;
-    bottom: 1px;
+    font-size: 14px;
   }
   .title2 {
     left: 10px;

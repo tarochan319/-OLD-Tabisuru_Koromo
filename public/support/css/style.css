@@ -69,12 +69,6 @@ header {
   font-size: 20px;
 }
 
-.title_koromo2 {
-  position: relative;
-  font-size: 20px;
-  bottom: 1.5px;
-}
-
 /* ハンバーガーメニュー */
 
 nav {
@@ -516,7 +510,6 @@ footer {
   .title {
     left: 10px;
     letter-spacing: 0px;
-    top: 2px;
   }
 
   .tabi {
@@ -529,12 +522,7 @@ footer {
   }
 
   .title_koromo {
-    font-size: 12px;
-  }
-
-  .title_koromo2 {
-    font-size: 12px;
-    bottom: 1px;
+    font-size: 14px;
   }
 
   .title2 {
