@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-html {
+/* html {
     overflow-x: hidden;
-}
+} */
 
 body {
     margin: 0;
@@ -160,7 +160,7 @@ nav .inner ul li a {
 
 .toggle_btn1 span:nth-child(2) {
     top: 12px;
-    height: 3.5px;
+    height: 4px;
 }
 
 .toggle_btn1 span:nth-child(3) {
@@ -1360,7 +1360,6 @@ footer {
     .title {
         left: 10px;
         letter-spacing: 0px;
-        top: 2px;
     }
 
     .tabi {
@@ -1384,6 +1383,7 @@ footer {
     .title2 {
         left: 10px;
         letter-spacing: 0px;
+        top: 9px;
     }
 
     .toggle_btn1 {
